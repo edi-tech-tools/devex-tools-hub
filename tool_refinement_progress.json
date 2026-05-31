@@ -1,0 +1,62 @@
+{
+  "b2b-software.net": {
+    "last_refined": "2026-05-25",
+    "total": 76,
+    "completed": 6,
+    "refined": [
+      "salesforce-crm",
+      "hubspot-crm",
+      "monday-com",
+      "zoho-crm",
+      "freshsales",
+      "pipedrive"
+    ],
+    "queue": []
+  },
+  "aitoolsnav.net": {
+    "last_refined": "2026-05-25",
+    "total": 86,
+    "completed": 6,
+    "refined": [
+      "chatgpt",
+      "jasper-ai",
+      "copy-ai",
+      "grammarly",
+      "rytr",
+      "claude"
+    ],
+    "queue": []
+  },
+  "cyber-tools.net": {
+    "last_refined": "2026-05-25",
+    "total": 81,
+    "completed": 6,
+    "refined": [
+      "palo-alto-networks",
+      "crowdstrike-falcon",
+      "sentinelone",
+      "wiz",
+      "splunk",
+      "microsoft-sentinel"
+    ],
+    "queue": []
+  },
+  "martech-tools-hub.com": {
+    "last_refined": "2026-05-22",
+    "total": 58,
+    "completed": 3,
+    "refined": [
+      "mailchimp",
+      "salesforce",
+      "semrush"
+    ],
+    "queue": [
+      "mailchimp",
+      "salesforce",
+      "semrush",
+      "hubspot",
+      "google-analytics",
+      "hootsuite"
+    ]
+  }
+}
