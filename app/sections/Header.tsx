@@ -40,7 +40,7 @@ export default function Header() {
             <Sparkles className="w-4 h-4 text-white" />
           </div>
           <span className="text-lg font-bold text-[#F0F4F8] group-hover:text-[#3B82F6] transition-colors">
-            B2B SaaS Hub
+            DevEx Hub
           </span>
         </Link>
 
