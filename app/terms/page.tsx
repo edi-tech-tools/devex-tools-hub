@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using the B2B Software List website (the "Site"), you agree to be
+              By accessing or using the DevEx Tools Hub website (the "Site"), you agree to be
               bound by these Terms of Service ("Terms"). If you do not agree to all of these
               Terms, you are prohibited from using the Site. We reserve the right to modify these
               Terms at any time, and your continued use constitutes acceptance of any changes.
@@ -37,7 +37,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">2. Description of Service</h2>
             <p>
-              B2B Software List is a curated directory platform that provides information,
+              DevEx Tools Hub is a curated directory platform that provides information,
               comparisons, reviews, and pricing details about business-to-business software-as-a-
               service tools. Our platform serves as a research and discovery resource. We do not
               sell, license, or distribute the software products listed on our Site unless
@@ -83,7 +83,7 @@ export default function TermsPage() {
             <p className="mb-3">
               The Site and its original content, features, and functionality — including but not
               limited to the layout, design, logos, trademarks, database structure, and written
-              content — are owned by B2B Software List and are protected by international
+              content — are owned by DevEx Tools Hub and are protected by international
               copyright, trademark, and intellectual property laws.
             </p>
             <p>
@@ -102,7 +102,7 @@ export default function TermsPage() {
             </p>
             <p className="mb-3">
               User reviews reflect the opinions of individual users and do not represent the views
-              of B2B Software List. We reserve the right to moderate, edit, or remove reviews
+              of DevEx Tools Hub. We reserve the right to moderate, edit, or remove reviews
               that violate our content guidelines or Terms.
             </p>
             <p>
@@ -116,7 +116,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">7. Third-Party Links and Services</h2>
             <p>
               Our Site contains links to third-party websites and services that are not owned or
-              controlled by B2B Software List. We have no control over, and assume no
+              controlled by DevEx Tools Hub. We have no control over, and assume no
               responsibility for, the content, privacy policies, or practices of any third-party
               sites. You acknowledge that we shall not be liable for any damages or losses caused
               by your use of third-party services.
@@ -131,7 +131,7 @@ export default function TermsPage() {
               vendors. We encourage users to verify pricing directly with the tool provider.
             </p>
             <p>
-              B2B Software List offers free access to our directory and comparison features.
+              DevEx Tools Hub offers free access to our directory and comparison features.
               Premium features or advertising services may be offered at additional cost in the
               future. Any paid services will be governed by separate terms provided at the time
               of purchase.
@@ -141,7 +141,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">9. Limitation of Liability</h2>
             <p>
-              To the fullest extent permitted by law, B2B Software List, its officers, directors,
+              To the fullest extent permitted by law, DevEx Tools Hub, its officers, directors,
               employees, and affiliates shall not be liable for any indirect, incidental, special,
               consequential, or punitive damages arising out of or relating to your use of the
               Site. This includes, without limitation, loss of profits, data, use, or goodwill.
@@ -163,7 +163,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">11. Indemnification</h2>
             <p>
-              You agree to indemnify, defend, and hold harmless B2B Software List and its
+              You agree to indemnify, defend, and hold harmless DevEx Tools Hub and its
               affiliates, officers, agents, and employees from any claims, damages, losses,
               liabilities, and expenses (including reasonable attorneys' fees) arising out of
               your use of the Site, your violation of these Terms, or your violation of any
@@ -195,9 +195,9 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">14. Contact Information</h2>
             <div className="mt-4 p-5 bg-[#0F1D32] border border-[#1E3A5F] rounded-xl">
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> legal@b2b-software.net</p>
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@b2b-software.net</p>
-              <p><strong className="text-[#F0F4F8]">Address:</strong> 548 Market Street, Suite 19530, San Francisco, CA 94104</p>
+              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> legal@devex-tools.net</p>
+              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@devex-tools.net</p>
+              <p><strong className="text-[#F0F4F8]">Address:</strong> 400 1st Ave S, Suite 300, Seattle, WA 98104</p>
             </div>
           </section>
         </div>

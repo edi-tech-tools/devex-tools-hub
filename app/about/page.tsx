@@ -45,7 +45,7 @@ export default function AboutPage() {
             <span className="text-gradient">Software Decisions</span>
           </h1>
           <p className="text-lg text-[#8BA3BE] leading-relaxed max-w-2xl mx-auto">
-            B2B Software List is an independent directory that helps businesses
+            DevEx Tools Hub is an independent directory that helps businesses
             discover, compare, and evaluate enterprise software. We aggregate
             information from publicly available sources to give you a clear
             picture of what each tool offers.
@@ -57,7 +57,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">What We Do</h2>
           <div className="space-y-4 text-[#8BA3BE] leading-relaxed">
             <p>
-              B2B Software List was created to solve a common problem: finding
+              DevEx Tools Hub was created to solve a common problem: finding
               reliable, up-to-date information about enterprise software is
               harder than it should be. Review sites are often biased by
               sponsorship, pricing is hidden behind sales calls, and feature

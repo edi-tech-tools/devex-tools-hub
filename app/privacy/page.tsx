@@ -27,9 +27,9 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Introduction</h2>
             <p>
-              B2B Software List ("we," "our," or "us") is committed to protecting your privacy.
+              DevEx Tools Hub ("we," "our," or "us") is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
-              information when you visit our website b2b-software.net (the "Site"). Please read this
+              information when you visit our website devex-tools.net (the "Site"). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.
             </p>
           </section>
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
               <li><strong>Right to Opt Out (CCPA):</strong> California residents may opt out of the sale of their personal information. We do not sell personal information.</li>
             </ul>
             <p className="mt-3">
-              To exercise any of these rights, please contact us at privacy@b2b-software.net. We
+              To exercise any of these rights, please contact us at privacy@devex-tools.net. We
               will respond to your request within 30 days.
             </p>
           </section>
@@ -182,7 +182,7 @@ export default function PrivacyPage() {
               knowingly collect personal information from children. If we become aware that a
               child has provided us with personal data, we will delete it immediately. Parents
               or guardians who believe their child has submitted information to us should contact
-              us at privacy@b2b-software.net.
+              us at privacy@devex-tools.net.
             </p>
           </section>
 
@@ -212,9 +212,9 @@ export default function PrivacyPage() {
               contact us:
             </p>
             <div className="mt-4 p-5 bg-[#0F1D32] border border-[#1E3A5F] rounded-xl">
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> privacy@b2b-software.net</p>
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@b2b-software.net</p>
-              <p><strong className="text-[#F0F4F8]">Address:</strong> 548 Market Street, Suite 19530, San Francisco, CA 94104</p>
+              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> privacy@devex-tools.net</p>
+              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@devex-tools.net</p>
+              <p><strong className="text-[#F0F4F8]">Address:</strong> 400 1st Ave S, Suite 300, Seattle, WA 98104</p>
             </div>
           </section>
         </div>

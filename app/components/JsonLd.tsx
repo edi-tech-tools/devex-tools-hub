@@ -8,8 +8,8 @@ interface JsonLdProps {
 }
 
 export default function JsonLd({
-  siteName = 'B2B Software List',
-  siteUrl = 'https://b2b-saas-tool-hub.com',
+  siteName = 'DevEx Tools Hub',
+  siteUrl = 'https://devex-tools.net',
   description = 'Comprehensive B2B SaaS directory and tool hub for modern enterprises.',
 }: JsonLdProps) {
   useEffect(() => {

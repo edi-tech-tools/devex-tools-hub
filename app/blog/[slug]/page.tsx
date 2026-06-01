@@ -175,12 +175,12 @@ export default async function BlogPostPage({
     post.title,
     post.author,
     post.date,
-    'B2B Software List',
+    'DevEx Tools Hub',
     post.excerpt
   );
   const orgJsonLd = organizationSchema(
-    'B2B Software List',
-    'https://b2b-saas-tool-hub.com',
+    'DevEx Tools Hub',
+    'https://devex-tools.net',
     'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
   );
 

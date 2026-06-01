@@ -65,8 +65,8 @@ export default function ToolDetailPage() {
     scripts.push(s1);
 
     const org = organizationSchema(
-      'B2B Software List',
-      'https://b2b-saas-tool-hub.com',
+      'DevEx Tools Hub',
+      'https://devex-tools.net',
       'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
     );
     const s2 = document.createElement('script');

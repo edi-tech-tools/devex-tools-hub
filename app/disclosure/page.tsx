@@ -27,7 +27,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Transparency First</h2>
             <p>
-              B2B Software List is committed to transparency. This Affiliate Disclosure
+              DevEx Tools Hub is committed to transparency. This Affiliate Disclosure
               explains how we may earn compensation through links on our website.
             </p>
           </section>
@@ -35,7 +35,7 @@ export default function DisclosurePage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">Affiliate Links</h2>
             <p>
-              Some of the links on B2B Software List are affiliate links. This means that
+              Some of the links on DevEx Tools Hub are affiliate links. This means that
               if you click on a link and make a purchase or sign up for a service, we may
               receive a commission at no additional cost to you.
             </p>

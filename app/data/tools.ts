@@ -1474,7 +1474,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1521,7 +1521,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1568,7 +1568,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1615,7 +1615,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1662,7 +1662,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1709,7 +1709,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1756,7 +1756,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1803,7 +1803,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1850,7 +1850,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1897,7 +1897,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1944,7 +1944,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -1991,7 +1991,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2038,7 +2038,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2085,7 +2085,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2132,7 +2132,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2179,7 +2179,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2226,7 +2226,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2273,7 +2273,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2320,7 +2320,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2367,7 +2367,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2414,7 +2414,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2461,7 +2461,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2508,7 +2508,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2555,7 +2555,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2602,7 +2602,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2650,7 +2650,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2698,7 +2698,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2746,7 +2746,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2794,7 +2794,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2842,7 +2842,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2890,7 +2890,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2938,7 +2938,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -2986,7 +2986,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3034,7 +3034,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3082,7 +3082,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3130,7 +3130,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3178,7 +3178,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3226,7 +3226,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3274,7 +3274,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3322,7 +3322,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3370,7 +3370,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3418,7 +3418,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3466,7 +3466,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3514,7 +3514,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3562,7 +3562,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3610,7 +3610,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3658,7 +3658,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3706,7 +3706,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3754,7 +3754,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3802,7 +3802,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3850,7 +3850,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3898,7 +3898,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3946,7 +3946,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
@@ -3994,7 +3994,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Industry Consensus",
-      company: "B2B Software Review",
+      company: "DevEx Review",
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },

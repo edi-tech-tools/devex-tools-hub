@@ -17,7 +17,6 @@ const BLOG_SLUGS = [
   "marketing-automation-platforms-comparison-2026",
   "customer-success-software-reduce-churn",
   "best-remote-work-tools-2026",
-  "b2b-saas-pricing-models-comparison",
   "best-hr-software-2026-comparison",
   "best-video-conferencing-tools-2026",
   "accounting-software-enterprise-2026",
@@ -29,7 +28,6 @@ const BLOG_SLUGS = [
   "enterprise-ai-agent-orchestration-2026",
   "google-io-2026-gemini-enterprise-ai",
   "hubspot-saas-growth-signals-2026",
-  "b2b-saas-gtm-strategy-2026",
   "mixpanel-vs-amplitude-vs-hotjar-2026",
 
   "outreach-vs-salesloft-vs-gong-b2b-sales-engagement-2026",
@@ -115,7 +113,7 @@ const TOOL_SLUGS = [
 ];
 
 export async function GET() {
-  const baseUrl = "https://b2b-software.net";
+  const baseUrl = "https://devex-tools.net";
   
   const urls: string[] = [];
   
