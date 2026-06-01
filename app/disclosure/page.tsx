@@ -78,8 +78,8 @@ export default function DisclosurePage() {
             <p>
               If you have any questions about our affiliate relationships or this
               disclosure, please contact us at{" "}
-              <a href="mailto:longfeixiang7650@gmail.com" className="text-[#3B82F6] hover:underline">
-                longfeixiang7650@gmail.com
+              <a href="mailto:info@devex-tools.net" className="text-[#3B82F6] hover:underline">
+                info@devex-tools.net
               </a>
               .
             </p>
