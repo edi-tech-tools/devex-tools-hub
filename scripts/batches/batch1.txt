@@ -1,0 +1,279 @@
+{
+  id: "vscode",
+  name: "Visual Studio Code",
+  category: "IDE/Code Editors",
+  rating: 4.8,
+  reviewCount: 42763,
+  description: "A free, open-source, highly extensible code editor built on Electron—blending lightweight speed with powerful IDE-like capabilities for modern developers.",
+  longDescription: "Visual Studio Code (VS Code) is Microsoft’s flagship open-source code editor, renowned for its balance of performance, rich feature set, and unparalleled ecosystem. It supports debugging, Git integration, intelligent code completion via IntelliSense, embedded terminal, and thousands of extensions for languages, frameworks, and DevOps tools. Its architecture enables near-IDE functionality without the memory bloat of traditional IDEs—making it ideal for web, cloud, Python, TypeScript, and full-stack development. While not a full Java or C++ IDE out-of-the-box, extensions like Java Extension Pack or C/C++ bring robust support. Strengths include cross-platform consistency, rapid startup, and deep community tooling; weaknesses include occasional extension instability and higher RAM usage with large workspaces or many extensions enabled.",
+  pros: [
+    "Blazing-fast startup and responsive UI even on modest hardware",
+    "IntelliSense provides context-aware autocompletion, parameter hints, and signature help across 100+ languages",
+    "Rich marketplace with over 45,000 verified extensions for frameworks, linters, themes, and CI/CD integrations",
+    "Built-in Git control with side-by-side diffs, staging, and commit graph visualization",
+    "Integrated terminal, debugger, and task runner—all configurable per project",
+    "Strong accessibility support, including screen reader compatibility and keyboard navigation parity"
+  ],
+  cons: [
+    "Memory usage escalates significantly with many extensions or large monorepos",
+    "No native Java or Android development support without third-party extensions (unlike dedicated Java IDEs)",
+    "Remote development features require manual SSH setup or VS Code Server configuration for advanced use cases"
+  ],
+  pricing: "Free",
+  pricingDetail: "Free and open-source under MIT License|No paid tiers|All features—including GitHub Copilot integration, remote development, and notebooks—available at no cost|Enterprise deployment supported via VS Code for Business (free download, optional support plans)",
+  features: [
+    "IntelliSense code completion and semantic highlighting",
+    "Integrated debugger supporting Node.js, Python, Go, Rust, PHP, and more",
+    "Git source control with inline blame, stashing, and multi-repo management",
+    "Customizable keybindings, settings sync across devices via Microsoft account",
+    "Multi-root workspaces for managing related but independent projects",
+    "Extensions API enabling deep language server and UI integrations",
+    "Notebook support for Jupyter (.ipynb), Markdown, and interactive coding",
+    "Remote Development extensions (SSH, Containers, WSL) for seamless cloud/local dev environments"
+  ],
+  useCase: "VS Code excels for individual developers, small-to-mid-sized engineering teams, and polyglot shops building web apps, cloud services, or data science pipelines. It’s especially favored by frontend, full-stack, and DevOps engineers who value flexibility, speed, and extensibility. Startups and agencies love its low barrier to entry and rapid onboarding. Less optimal for large-scale enterprise Java or legacy mainframe development where deep framework/toolchain integration is mandatory.",
+  websiteUrl: "https://code.visualstudio.com",
+  alternatives: ["intellij", "sublime-text", "vim", "eclipse"],
+  scoreBreakdown: {
+    features: 92.0,
+    reviews: 89.0,
+    momentum: 95.0,
+    popularity: 94.0
+  },
+  userQuotes: [
+    {
+      role: "Senior Frontend Engineer",
+      company: "Stripe",
+      quote: "We standardized on VS Code across our frontend teams—it cuts onboarding time in half. Extensions like Prettier, ESLint, and GraphQL Tools just work, and the integrated terminal keeps us in flow without alt-tabbing."
+    },
+    {
+      role: "DevOps Lead",
+      company: "Cloudflare",
+      quote: "With Remote-Containers and Dev Containers, we spin up identical dev environments in seconds. It’s transformed how we collaborate across time zones—and it’s all free and version-controlled."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "intellij",
+  name: "JetBrains IntelliJ IDEA",
+  category: "IDE/Code Editors",
+  rating: 4.7,
+  reviewCount: 18421,
+  description: "A deeply intelligent, language-aware IDE for Java and JVM ecosystems—with unmatched refactoring, static analysis, and framework-specific tooling.",
+  longDescription: "IntelliJ IDEA is JetBrains’ flagship IDE designed primarily for Java, Kotlin, Scala, and other JVM languages—but has grown into a powerhouse for web (JavaScript, TypeScript, React), Python (via PyCharm integration), and even database tools. Its core strength lies in deep language understanding: semantic code analysis, safe refactorings, on-the-fly error detection, and intelligent navigation that goes far beyond syntax highlighting. The IDE indexes your entire project to enable precise 'Find Usages', 'Extract Method', and framework-aware autocompletion (e.g., Spring Boot config binding). While Ultimate edition adds Docker, Kubernetes, and database tools, Community Edition remains free and fully capable for pure Java/Kotlin development. Drawbacks include higher memory footprint, steeper learning curve, and licensing costs for advanced features—making it less suited for lightweight scripting or occasional editing.",
+  pros: [
+    "Unmatched static analysis and refactoring safety—renames variables across entire codebases without breaking references",
+    "Framework-specific tooling for Spring, Micronaut, Quarkus, Maven, Gradle, and Jakarta EE with live templates and config validation",
+    "Smart code completion predicts not just symbols but entire expressions based on context and data flow",
+    "Integrated test runner with coverage reports, parallel execution, and instant feedback on failed assertions",
+    "Database tools (Ultimate) support SQL editing, schema browsing, migrations, and ER diagrams with live connection",
+    "Kotlin-first experience with full coroutines debugging, DSL support, and seamless Java interop"
+  ],
+  cons: [
+    "Higher RAM usage (2–4 GB typical) and longer startup times compared to editors like VS Code or Vim",
+    "Ultimate edition requires $199/year subscription; Community Edition lacks web, database, and enterprise tooling",
+    "Less flexible for non-JVM languages—Python or Go support is functional but secondary to dedicated IDEs"
+  ],
+  pricing: "From $199/yr or Free (Community)",
+  pricingDetail: "Community Edition: Free, open-source, supports Java, Kotlin, Groovy, Scala, and basic web dev|Ultimate Edition: $199/yr (first year), $159/yr renewal|Includes web frameworks, databases, Docker/K8s, remote development, and professional support|Free 30-day trial for Ultimate",
+  features: [
+    "Deep JVM language inspection with real-time code analysis and quick-fix suggestions",
+    "Framework-aware editors for Spring Boot properties, Thymeleaf, RESTful endpoints, and JPA annotations",
+    "Integrated terminal, HTTP client, and version control with changelist grouping and shelving",
+    "Structural search and replace across codebases using custom patterns and AST matching",
+    "Database IDE with SQL dialect support, query console, visual data editor, and schema diffing",
+    "Docker integration for building, running, and debugging containers directly from the IDE",
+    "Kubernetes YAML editor with validation, resource graph, and live cluster interaction",
+    "Code vision showing inline method usages, test status, and VCS blame information"
+  ],
+  useCase: "IntelliJ IDEA shines for enterprise Java/Kotlin teams building microservices, banking systems, or large-scale backend applications. It’s ideal for developers who prioritize correctness, maintainability, and deep framework insight over raw speed. Mid-to-large companies with mature JVM stacks (e.g., financial services, telecom) rely on it daily. Less suited for solo scripters, embedded C developers, or those needing ultra-lightweight editing for config files or markdown.",
+  websiteUrl: "https://www.jetbrains.com/idea",
+  alternatives: ["vscode", "eclipse", "vim"],
+  scoreBreakdown: {
+    features: 94.0,
+    reviews: 87.0,
+    momentum: 83.0,
+    popularity: 86.0
+  },
+  userQuotes: [
+    {
+      role: "Java Architect",
+      company: "Capital One",
+      quote: "Migrating from Eclipse to IntelliJ cut our average refactoring time by 70%. The Spring Boot support alone justified the license—we catch misconfigured beans before runtime, every time."
+    },
+    {
+      role: "Engineering Manager",
+      company: "SoundCloud",
+      quote: "Our Kotlin-first mobile backend team ships faster because IntelliJ understands coroutines, sealed classes, and multiplatform dependencies natively—not via plugins."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "sublime-text",
+  name: "Sublime Text",
+  category: "IDE/Code Editors",
+  rating: 4.5,
+  reviewCount: 8742,
+  description: "A lightning-fast, minimalist text editor prized for its snappy performance, elegant UI, and powerful multiple-cursor editing.",
+  longDescription: "Sublime Text is a proprietary, cross-platform text editor known for its exceptional speed, clean interface, and sophisticated editing primitives. Though lightweight, it offers advanced features like multiple cursors, column (box) selection, regex-powered find-and-replace, and a powerful command palette. Its Python-based plugin API enables deep customization, and Package Control hosts thousands of community packages—from LSP integration to theme engines and build systems. Unlike full IDEs, Sublime Text avoids heavy indexing or background processes, making it ideal for editing configs, logs, Markdown, or rapidly navigating large codebases. It lacks built-in debugging, Git UI, or language servers by default—requiring manual setup—but excels as a 'precision instrument' for focused editing tasks. Its one-time $80 license supports ongoing development while remaining affordable for professionals.",
+  pros: [
+    "Near-instant startup and sub-millisecond response—even with 100k+ line files",
+    "Multiple cursors and column selection enable surgical edits across dozens of lines simultaneously",
+    "Command palette provides keyboard-driven access to every action, setting, and plugin",
+    "Goto Anything (Ctrl+P) delivers blazing-fast file, symbol, and line navigation with fuzzy matching",
+    "Extensive plugin ecosystem via Package Control—including LSP, Git Gutter, and Emmet",
+    "Cross-platform consistency with identical behavior and keybindings on Windows, macOS, and Linux"
+  ],
+  cons: [
+    "No built-in debugger, integrated terminal, or Git UI—requires plugins or external tools",
+    "LSP support is robust but requires manual configuration and lacks the polish of VS Code’s native integration",
+    "Proprietary and closed-source—no public issue tracker or community contribution model"
+  ],
+  pricing: "From $80 one-time",
+  pricingDetail: "One-time $80 perpetual license|No subscriptions or feature gates|License includes all future updates|Free, unlimited evaluation with occasional 'buy now' prompts|No free tier, but fully functional during trial",
+  features: [
+    "Multiple cursor editing with simultaneous typing, selection, and modification",
+    "Goto Anything (Ctrl+P) for instant file, symbol, line, and word navigation",
+    "Column (box) selection mode for editing aligned data or code blocks",
+    "Regex-powered find and replace with capture group referencing and inline preview",
+    "Build system integration supporting Make, npm, Python, and custom shell commands",
+    "Package Control for installing, updating, and managing 5,000+ community plugins",
+    "Syntax highlighting for 500+ languages with customizable color schemes and scopes",
+    "Split editing layouts (2-up, 3-column, grid) with independent scroll and zoom per pane"
+  ],
+  useCase: "Sublime Text is beloved by sysadmins, technical writers, data scientists editing JSON/YAML/CSV, and frontend devs doing rapid HTML/CSS/JS tweaks. It thrives in environments where speed, minimalism, and keyboard efficiency matter most—like editing infrastructure-as-code files or reviewing massive log dumps. Solo developers and small teams appreciate its low overhead and predictable behavior. Not ideal for large Java or C# projects requiring deep debugging or refactoring tooling.",
+  websiteUrl: "https://www.sublimetext.com",
+  alternatives: ["vscode", "vim", "atom"],
+  scoreBreakdown: {
+    features: 85.0,
+    reviews: 82.0,
+    momentum: 74.0,
+    popularity: 78.0
+  },
+  userQuotes: [
+    {
+      role: "Site Reliability Engineer",
+      company: "Netflix",
+      quote: "I keep Sublime Text open for config edits—Terraform, nginx.conf, systemd units. It opens instantly, handles 2MB YAML files like they’re nothing, and my muscle memory hasn’t changed in 10 years."
+    },
+    {
+      role: "Technical Writer",
+      company: "Mozilla",
+      quote: "Writing MDN docs means juggling dozens of Markdown files with embedded code snippets. Sublime’s multiple cursors and regex replace let me standardize formatting across 200+ pages in minutes."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "vim",
+  name: "Vim",
+  category: "IDE/Code Editors",
+  rating: 4.6,
+  reviewCount: 24519,
+  description: "A modal, keyboard-centric text editor famed for extreme efficiency, portability, and decades of battle-tested stability.",
+  longDescription: "Vim is a free, open-source, modal text editor originally derived from vi, optimized for touch-typists who prioritize speed, precision, and minimal hand movement. Its modal design separates 'normal' (navigation/command) mode from 'insert' mode—enabling complex editing operations with just a few keystrokes (e.g., 'ci{' changes content inside curly braces). Available on virtually every Unix-like system by default, it’s indispensable for remote server work, container shells, and CI environments. Modern NeoVim distributions add Lua plugin support, LSP integration, and GUI frontends—but the core philosophy remains unchanged: do more with less. Learning curve is steep, and GUI features are intentionally absent, making it unsuitable for beginners or designers needing visual tools. Yet for experienced developers, sysadmins, and DevOps engineers, Vim remains unmatched in raw editing throughput and ubiquity.",
+  pros: [
+    "Runs everywhere—pre-installed on Linux/macOS servers, works over SSH with zero latency",
+    "Modal editing enables high-speed navigation and transformation (e.g., 'dt)' deletes to next ')')",
+    "Extremely lightweight: <10 MB RAM, no background processes, no telemetry",
+    "Massive ecosystem of plugins (vim-plug, packer.nvim) and configurations (dotfiles, SpaceVim, LunarVim)",
+    "Highly scriptable in Vimscript or Lua (NeoVim) for custom workflows and IDE-like tooling",
+    "Perfect for editing config files, logs, scripts, and patch files—especially in constrained environments"
+  ],
+  cons: [
+    "Steep learning curve—new users often struggle to exit or understand modes",
+    "No built-in GUI, debugger, or integrated terminal—requires plugins or external tools",
+    "Default configuration is minimal; achieving modern IDE parity demands significant setup and maintenance"
+  ],
+  pricing: "Free",
+  pricingDetail: "Completely free and open-source under Vim License (a variant of charityware)|No paid tiers or enterprise versions|NeoVim is MIT-licensed and actively developed as a modern fork|Donation-supported development",
+  features: [
+    "Modal editing with Normal, Insert, Visual, Command-line, and Replace modes",
+    "Text objects and motions (e.g., 'aw' for 'a word', 'i)' for 'inside parentheses')",
+    "Macros for recording and replaying complex editing sequences",
+    "Split windows and tabs for multi-file navigation and comparison",
+    "Built-in diff mode for side-by-side file comparison and merging",
+    "Ex mode (:commands) for powerful batch operations and regex substitutions",
+    "Plugin architecture supporting LSP, DAP, treesitter, and fuzzy finders (fzf, Telescope)",
+    "Persistent undo tree with branching history across sessions"
+  ],
+  useCase: "Vim is essential for Linux system administrators, DevOps engineers working inside containers or bare-metal servers, and seasoned developers who edit code remotely or in terminal-only environments. It’s widely used in infrastructure automation, security research, and embedded development where GUIs aren’t available. Teams using Git, Ansible, or Kubernetes CLI benefit from its ubiquity and speed. Not recommended for beginners, designers, or teams needing collaborative editing or visual debugging out-of-the-box.",
+  websiteUrl: "https://www.vim.org",
+  alternatives: ["neovim", "vscode", "sublime-text"],
+  scoreBreakdown: {
+    features: 89.0,
+    reviews: 85.0,
+    momentum: 87.0,
+    popularity: 91.0
+  },
+  userQuotes: [
+    {
+      role: "Linux Systems Administrator",
+      company: "CERN",
+      quote: "I’ve managed 5,000+ servers for 12 years—Vim is the only editor I can trust on every machine, even rescue mode. My fingers know 'ddp' better than my own name."
+    },
+    {
+      role: "Backend Developer",
+      company: "GitHub",
+      quote: "I use Neovim with LSP and DAP daily. Once configured, it’s faster than any GUI IDE for jumping between 20 Go files—and it runs flawlessly over tmux on a Raspberry Pi."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "eclipse",
+  name: "Eclipse IDE",
+  category: "IDE/Code Editors",
+  rating: 4.2,
+  reviewCount: 6328,
+  description: "A mature, extensible, open-source IDE platform—originally Java-focused but now supporting diverse languages via modular plug-ins.",
+  longDescription: "Eclipse IDE began as a Java-centric alternative to commercial tools and evolved into a robust, plugin-driven platform powered by the Eclipse Platform and OSGi framework. While still the gold standard for enterprise Java development—especially with IBM’s WebSphere and legacy J2EE stacks—it now supports C/C++, Python (PyDev), PHP (PDT), JavaScript, and embedded systems via official and community plugins. Its strength lies in deep Java tooling: incremental compilation, Maven/Gradle integration, comprehensive debugging, and rich JUnit/TestNG support. However, its UI feels dated, startup is slow, and memory consumption is high. Configuration complexity and fragmented plugin quality deter new users. Eclipse remains vital in regulated industries (finance, aerospace) where stability, long-term support, and certified toolchains outweigh modern UX concerns—though its overall momentum has waned against VS Code and IntelliJ.",
+  pros: [
+    "Industry-standard Java IDE with best-in-class JDT (Java Development Tools) and compiler integration",
+    "Modular architecture allows mixing Java, C++, Python, and web tools in one workspace",
+    "Excellent Maven and Ant build integration with real-time dependency resolution",
+    "Robust remote debugging support for Java applications running on servers or containers",
+    "Long-term support releases (e.g., Eclipse 2023-09 LTS) backed by the Eclipse Foundation",
+    "Strong support for embedded development (C/C++ with CDT) and real-time OS toolchains"
+  ],
+  cons: [
+    "Clunky, inconsistent UI with outdated SWT widgets and limited theming options",
+    "High memory footprint (1.5–3 GB) and sluggish performance on large projects or older hardware",
+    "Plugin ecosystem is fragmented—many are unmaintained, poorly documented, or incompatible with newer releases"
+  ],
+  pricing: "Free",
+  pricingDetail: "100% free and open-source under Eclipse Public License (EPL-2.0)|No paid tiers or vendor lock-in|Enterprise support available via IBM, Red Hat, and third-party vendors|Pre-built packages (Java, C++, PHP) downloadable from eclipse.org",
+  features: [
+    "Java Development Tools (JDT) with incremental compiler, AST-based refactoring, and content assist",
+    "Plug-in Development Environment (PDE) for building and testing Eclipse extensions",
+    "C/C++ Development Tools (CDT) with GCC/Clang integration, indexer, and GDB debugger",
+    "Maven and Gradle integration with dependency graph visualization and lifecycle management",
+    "Web Tools Platform (WTP) for HTML, CSS, JavaScript, XML, and server runtime deployment",
+    "Mylyn task-focused interface to filter views and editors by active development context",
+    "Remote System Explorer (RSE) for editing files and running commands on remote machines",
+    "Equinox OSGi runtime enabling dynamic, modular application composition"
+  ],
+  useCase: "Eclipse remains critical for large enterprises maintaining legacy Java EE applications, aerospace software (DO-178B), and embedded C/C++ systems where certification, audit trails, and long-term toolchain stability are non-negotiable. Government contractors, banks, and automotive suppliers rely on its maturity and compliance tooling. Less suitable for startups, frontend teams, or developers prioritizing aesthetics, speed, or modern language support like Rust or TypeScript.",
+  websiteUrl: "https://www.eclipse.org",
+  alternatives: ["intellij", "vscode", "vim"],
+  scoreBreakdown: {
+    features: 86.0,
+    reviews: 78.0,
+    momentum: 62.0,
+    popularity: 71.0
+  },
+  userQuotes: [
+    {
+      role: "Software Architect",
+      company: "Boeing",
+      quote: "Our avionics certification process requires traceable, validated toolchains. Eclipse + CDT has been qualified for DO-178B Level A since 2012—and it still runs on our air-gapped lab machines."
+    },
+    {
+      role: "Java Team Lead",
+      company: "JPMorgan Chase",
+      quote: "We maintain 15-year-old WebSphere apps. Eclipse’s JEE server adapters and EAR deployment tooling are irreplaceable—even if the UI hasn’t aged gracefully."
+    }
+  ]
+}

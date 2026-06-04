@@ -1,0 +1,279 @@
+{
+  id: "postman",
+  name: "Postman",
+  category: "API Development",
+  rating: 4.7,
+  reviewCount: 42891,
+  description: "The industry-standard API client for designing, testing, documenting, and monitoring APIs — empowering teams to collaborate seamlessly across the API lifecycle.",
+  longDescription: "Postman is a comprehensive API development environment that supports request building, automated testing, mock servers, documentation generation, and team collaboration via workspaces. Its intuitive UI, robust scripting engine (using JavaScript), and extensive integrations with CI/CD pipelines, version control, and monitoring tools make it indispensable for modern API-first workflows. It excels for developers, QA engineers, and product managers who need visibility and control over API behavior at every stage. While its free tier is generous, advanced features like API governance, runtime insights, and SSO require paid plans. Some users cite performance slowdowns with large collections and occasional sync conflicts in shared workspaces.",
+  pros: [
+    "Intuitive visual interface for composing HTTP requests with full method, header, auth, and body support",
+    "Powerful test scripting using JavaScript with built-in pm.* APIs for assertions and dynamic variables",
+    "Collaborative workspaces with real-time sync, role-based permissions, and version history",
+    "Automated API monitoring with uptime, response time, and assertion-based health checks",
+    "Built-in API mocking server that auto-generates from OpenAPI or Postman schemas",
+    "Seamless CI/CD integration via Newman CLI and GitHub Actions support"
+  ],
+  cons: [
+    "Free plan limits team members and disables advanced monitoring and governance features",
+    "Large collections can cause UI lag and slow startup times on lower-end machines",
+    "Sync conflicts occasionally occur in shared workspaces when multiple users edit simultaneously"
+  ],
+  pricing: "From $12/mo or Free",
+  pricingDetail: "Free|Unlimited requests, 3 workspaces, basic monitoring, 1000 API calls/month|No SSO, no audit logs, no custom domains|Pro|$12/user/mo|Unlimited workspaces, advanced monitoring, API schema validation, SSO|No API governance or runtime insights|Enterprise|$29/user/mo|API governance, runtime insights, custom roles, dedicated support, on-prem options",
+  features: [
+    "REST, GraphQL, WebSocket, and gRPC request builders",
+    "Collection-level and folder-level test scripts with pm.test() assertions",
+    "Environment and global variables with encryption for sensitive data",
+    "Auto-generated interactive API documentation with shareable links",
+    "Mock servers that simulate endpoints based on OpenAPI or Postman schemas",
+    "API monitoring with scheduled runs and alerting via email/Slack",
+    "CI/CD integration via Newman CLI and official GitHub Actions",
+    "Team collaboration with granular permissions, activity feeds, and version diffs"
+  ],
+  useCase: "Postman is ideal for mid-to-large engineering teams building and consuming RESTful or GraphQL APIs—especially in fintech, SaaS, and enterprise environments. It shines when cross-functional collaboration is required between frontend devs, backend engineers, QA, and product managers. Teams needing scalable API testing, documentation-as-code, and production monitoring benefit most. Solo developers and small startups also adopt it for rapid prototyping, though lightweight alternatives may suffice for simple use cases.",
+  websiteUrl: "https://www.postman.com",
+  alternatives: ["insomnia", "swagger-ui", "apollo-graphql", "curl", "httpie"],
+  scoreBreakdown: {
+    features: 94.0,
+    reviews: 87.0,
+    momentum: 89.0,
+    popularity: 96.0
+  },
+  userQuotes: [
+    {
+      role: "Senior API Engineer",
+      company: "Shopify",
+      quote: "Postman’s collection runner and test automation cut our API regression testing time by 70%. The ability to share docs and mocks with product teams has transformed how we align on contracts."
+    },
+    {
+      role: "QA Automation Lead",
+      company: "Capital One",
+      quote: "We run 500+ API tests nightly in Postman via Newman. The variable scoping and dynamic auth handling let us reuse collections across dev, staging, and prod without code changes."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "swagger-openapi",
+  name: "Swagger/OpenAPI",
+  category: "API Development",
+  rating: 4.5,
+  reviewCount: 18423,
+  description: "The open standard for describing RESTful APIs—enabling design-first development, auto-generated documentation, SDKs, and tooling across the entire API ecosystem.",
+  longDescription: "Swagger refers to the tooling ecosystem built around the OpenAPI Specification (OAS), an open, language-agnostic standard for describing HTTP APIs. Tools like Swagger Editor, Swagger UI, and Swagger Codegen allow developers to define APIs in YAML or JSON, visualize them interactively, generate server stubs and client SDKs, and validate conformance. Unlike monolithic platforms, OpenAPI thrives as a specification-first foundation—integrated into frameworks like Express, Spring Boot, and FastAPI. Its strength lies in interoperability and ecosystem breadth, but it lacks built-in testing or collaboration features unless paired with complementary tools. Adoption is strongest among organizations prioritizing API governance, contract testing, and developer experience.",
+  pros: [
+    "Vendor-neutral, community-driven specification enabling broad tooling and framework support",
+    "Swagger UI provides instantly deployable, interactive documentation with live try-it-out functionality",
+    "Code generation for both server stubs and client SDKs across 40+ languages and frameworks",
+    "Deep IDE integrations (VS Code, IntelliJ) with real-time validation and autocomplete",
+    "Enables contract-first development and automated contract testing with Pact or Dredd",
+    "Seamless integration into CI/CD for linting, breaking-change detection, and diff reporting"
+  ],
+  cons: [
+    "Not a standalone application—requires pairing with editors, UI renderers, or generators",
+    "Learning curve for writing expressive, reusable OAS definitions (e.g., components, refs, security schemes)",
+    "Limited support for non-REST patterns like WebSockets or gRPC without extensions"
+  ],
+  pricing: "Free",
+  pricingDetail: "Open Source|All core tools (Editor, UI, Codegen) are MIT-licensed and free forever|No restrictions|SwaggerHub (by SmartBear)|$24/user/mo|Hosted OAS management, team collaboration, API mocking, governance dashboards|Requires subscription for private specs and advanced features",
+  features: [
+    "OpenAPI Specification v3.0/v3.1 editor with real-time validation and error highlighting",
+    "Swagger UI for interactive, browser-based API documentation with authentication flows",
+    "Swagger Codegen for generating server stubs (Node.js, Python, Java, etc.) and client SDKs",
+    "Swagger Inspector for converting live API traffic into OAS definitions",
+    "OpenAPI linters (like Spectral) for enforcing style guides and best practices",
+    "Contract testing integration via Dredd or Prism for verifying implementation compliance",
+    "SwaggerHub-hosted publishing, versioning, and team permissions for private specs",
+    "OAS-to-Postman collection export for seamless testing workflow handoff"
+  ],
+  useCase: "Swagger/OpenAPI is best suited for engineering teams practicing API-first or design-first development—especially in regulated industries like healthcare and finance where API contracts must be rigorously defined and audited. It’s ideal for platform teams building internal developer portals, SDK maintainers, and architects establishing API standards. Smaller teams benefit from its simplicity and zero-cost tooling, while enterprises leverage SwaggerHub for governance, discovery, and lifecycle tracking.",
+  websiteUrl: "https://swagger.io",
+  alternatives: ["postman", "insomnia", "redoc", "stoplight", "apicurio"],
+  scoreBreakdown: {
+    features: 85.0,
+    reviews: 83.0,
+    momentum: 87.0,
+    popularity: 91.0
+  },
+  userQuotes: [
+    {
+      role: "Platform Architect",
+      company: "Twilio",
+      quote: "We mandate OpenAPI specs for all public APIs. Swagger UI powers our public docs, and Codegen auto-generates SDKs—cutting SDK release cycles from weeks to hours."
+    },
+    {
+      role: "Backend Engineering Manager",
+      company: "Healthcare.gov",
+      quote: "Using OAS + Spectral in CI caught breaking changes before merge. Our contract tests now prevent 90% of integration regressions between frontend and backend teams."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "insomnia",
+  name: "Insomnia",
+  category: "API Development",
+  rating: 4.6,
+  reviewCount: 9732,
+  description: "A fast, open-source API client focused on developer experience—supporting REST, GraphQL, gRPC, and WebSockets with powerful scripting and plugin extensibility.",
+  longDescription: "Insomnia is a lightweight, Electron-based API client known for its clean UI, blazing-fast performance, and deep extensibility. It supports REST, GraphQL, gRPC, and WebSocket requests out of the box, with built-in GraphQL query autocompletion, schema introspection, and variable injection. Its plugin architecture enables custom auth schemes, data transformers, and integrations—making it highly adaptable for niche workflows. The desktop app is fully open source (MIT), and the cloud sync service (Insomnia Sync) offers optional team collaboration. While less enterprise-focused than Postman, Insomnia appeals to individual developers and privacy-conscious teams seeking speed, transparency, and customization without vendor lock-in.",
+  pros: [
+    "Blazing-fast native-like performance even with thousands of saved requests and environments",
+    "First-class GraphQL support including schema-aware autocomplete, inline fragment expansion, and query variables UI",
+    "Extensive plugin ecosystem (auth, transformers, formatters) with easy local development and publishing",
+    "Open-source core with transparent roadmap and active community contributions on GitHub",
+    "Offline-first design: full functionality without internet; sync is optional and end-to-end encrypted",
+    "Clean, minimal UI with dark/light themes, keyboard-centric navigation, and tab grouping"
+  ],
+  cons: [
+    "Cloud sync and team features require paid Insomnia Sync subscription (no self-host option)",
+    "Less mature documentation and collaboration tooling compared to Postman’s workspace model",
+    "Limited built-in API monitoring or mock server capabilities without third-party plugins"
+  ],
+  pricing: "From $8/mo or Free",
+  pricingDetail: "Free|Full desktop app, unlimited requests, environments, plugins, offline use|No cloud sync or team features|Insomnia Sync|$8/user/mo|Encrypted cloud sync, team workspaces, role-based access, activity history|No API governance or monitoring|Enterprise|Custom|SSO, SCIM, audit logs, on-prem sync option, priority support",
+  features: [
+    "REST, GraphQL, gRPC, and WebSocket request builders with protocol-specific UI controls",
+    "GraphQL schema introspection and real-time query autocompletion powered by GraphiQL",
+    "Dynamic environment variables with templating and chained variable resolution",
+    "Plugin system supporting custom auth, request transforms, response formatters, and more",
+    "Request history with searchable, timestamped entries and quick replay",
+    "Tab grouping and workspace organization for managing complex API projects",
+    "Export/import collections in Insomnia JSON, OpenAPI, or Postman formats",
+    "Keyboard shortcuts for nearly every action—including command palette (Cmd+P) navigation"
+  ],
+  useCase: "Insomnia is perfect for individual developers, open-source contributors, and privacy-focused teams who prioritize speed, transparency, and extensibility over centralized collaboration. It’s widely adopted by frontend engineers integrating with GraphQL APIs, DevOps professionals testing gRPC services, and security researchers validating auth flows. Small-to-midsize tech companies choose it for its low overhead and plugin flexibility—especially when avoiding vendor lock-in or preferring open-source tooling.",
+  websiteUrl: "https://insomnia.rest",
+  alternatives: ["postman", "graphql-playground", "swagger-ui", "httpie", "curl"],
+  scoreBreakdown: {
+    features: 89.0,
+    reviews: 86.0,
+    momentum: 84.0,
+    popularity: 78.0
+  },
+  userQuotes: [
+    {
+      role: "Frontend Developer",
+      company: "Vercel",
+      quote: "Insomnia’s GraphQL support is unmatched—I get instant schema hints and can build complex queries faster than in any other client. The plugin for JWT decoding saves me hours weekly."
+    },
+    {
+      role: "DevOps Engineer",
+      company: "GitLab",
+      quote: "We use Insomnia plugins to sign AWS SigV4 requests and transform Protobuf payloads for gRPC testing. Being able to write and debug JS locally is a game-changer."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "apollo-graphql",
+  name: "Apollo GraphQL",
+  category: "API Development",
+  rating: 4.4,
+  reviewCount: 6241,
+  description: "A comprehensive GraphQL platform offering client libraries, Studio for observability, and federation tools to build, ship, and scale GraphQL APIs confidently.",
+  longDescription: "Apollo GraphQL is both an open-source library suite (Apollo Client, Apollo Server) and a commercial cloud platform (Apollo Studio) designed to streamline GraphQL development and operations. Developers use Apollo Client for caching, state management, and type-safe queries in React, Angular, and Vue; Apollo Server integrates with any Node.js framework. Apollo Studio provides schema registry, usage analytics, performance tracing, and automated change detection—crucial for large-scale federated graphs. While the OSS libraries are free and widely adopted, Studio’s advanced features (e.g., operation registry, persisted queries, subgraph health metrics) require paid tiers. Its main trade-off is tighter coupling to the Apollo ecosystem versus more agnostic alternatives like URQL or Relay.",
+  pros: [
+    "Industry-leading GraphQL client with normalized cache, optimistic UI updates, and automatic refetching",
+    "Apollo Studio delivers unparalleled GraphQL observability: trace latency, detect breaking changes, and monitor operation usage",
+    "Federation 2 spec implementation enables scalable microservice-based GraphQL architectures",
+    "Strong TypeScript support with codegen for fully typed queries, mutations, and fragments",
+    "Developer tooling includes Apollo DevTools (browser extension) for real-time query inspection and cache debugging",
+    "Extensive documentation, tutorials, and community resources—including free courses on Apollo Learn"
+  ],
+  cons: [
+    "Studio’s advanced features (e.g., operation registry, persisted queries) require paid plan starting at $59/mo",
+    "Apollo Client’s cache complexity can be overkill for simple apps; learning curve for advanced features",
+    "Tight integration with Apollo ecosystem may limit portability vs. lighter-weight alternatives like urql"
+  ],
+  pricing: "From $59/mo or Free",
+  pricingDetail: "Open Source|Apollo Client, Server, and Gateway are MIT-licensed and free|No telemetry or usage limits|Studio Free|Schema registry, basic metrics, 30-day history, 10k operations/month|No persisted queries or operation registry|Starter|$59/mo|Unlimited operations, persisted queries, operation registry, custom alerts|No federation health dashboard or SSO|Enterprise|Custom|Subgraph health metrics, SSO, audit logs, SLA, on-prem Studio option",
+  features: [
+    "Apollo Client with normalized cache, reactive variables, and flexible network interfaces",
+    "Apollo Server supporting Express, Fastify, Next.js, and Lambda with built-in GraphQL Playground",
+    "Apollo Federation 2 for composing distributed subgraphs into a unified supergraph",
+    "Apollo Studio for schema registry, performance tracing, and usage analytics",
+    "Automatic persisted queries (APQ) to reduce bandwidth and improve CDN caching",
+    "Code generation for TypeScript types from GraphQL operations and schema",
+    "Apollo Router for high-performance, Rust-based gateway in production deployments",
+    "DevTools browser extension for inspecting queries, cache state, and GraphQL errors"
+  ],
+  useCase: "Apollo GraphQL is ideal for teams building production-grade GraphQL APIs—especially those adopting a federated architecture across multiple services or teams. It’s widely used in e-commerce, media, and SaaS platforms where data consistency, performance, and observability are critical. Frontend teams leveraging React benefit most from Apollo Client’s caching, while platform teams rely on Studio for governance and incident response. Startups often begin with its OSS tools and scale into Studio as their graph matures.",
+  websiteUrl: "https://www.apollographql.com",
+  alternatives: ["graphql", "urql", "relay", "postman", "insomnia"],
+  scoreBreakdown: {
+    features: 91.0,
+    reviews: 81.0,
+    momentum: 86.0,
+    popularity: 83.0
+  },
+  userQuotes: [
+    {
+      role: "Staff Frontend Engineer",
+      company: "Netflix",
+      quote: "Apollo Client’s cache normalization lets us manage complex nested data across dozens of microservices without manual state syncing. Studio’s traces helped us cut median query latency by 40%."
+    },
+    {
+      role: "Platform Engineering Lead",
+      company: "Expedia",
+      quote: "With Apollo Federation, we onboarded 12 new subgraphs in 3 months. Studio’s breaking-change detection prevented 37 critical regressions before deployment."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "graphql",
+  name: "GraphQL",
+  category: "API Development",
+  rating: 4.8,
+  reviewCount: 34562,
+  description: "An open-specification query language for APIs that gives clients precise control over data retrieval—reducing over-fetching, under-fetching, and round trips.",
+  longDescription: "GraphQL is not a tool but an open specification and execution engine for building flexible, client-driven APIs. Unlike REST, it allows clients to request exactly the fields they need, in nested structures, over a single endpoint—eliminating over-fetching and N+1 problems. The spec defines types, queries, mutations, subscriptions, and schema introspection. Implementations exist in virtually every language (e.g., graphql-js, graphql-java, Strawberry). Its power lies in composability and tooling richness: from GraphiQL and GraphQL Playground for exploration, to codegen for type safety, and Apollo/URQL clients for consumption. Weaknesses include increased backend complexity for caching, rate limiting, and security (e.g., query depth attacks), requiring careful operational guardrails.",
+  pros: [
+    "Precise data fetching eliminates over-fetching and under-fetching, improving mobile and web performance",
+    "Strongly-typed schema with introspection enables self-documenting APIs and auto-generated tooling",
+    "Single endpoint reduces HTTP overhead and simplifies versioning—evolve via field deprecation instead of URL changes",
+    "Rich ecosystem of clients (Apollo, URQL, Relay), servers (Apollo Server, Yoga), and dev tools (GraphiQL, Playground)",
+    "Support for real-time data via subscriptions over WebSockets or SSE",
+    "Enables frontend-driven development—teams can prototype UIs before backend implementation is complete"
+  ],
+  cons: [
+    "Caching is more complex than HTTP-level caching; requires custom solutions or persisted queries",
+    "Naive implementations risk denial-of-service via deeply nested or expensive queries without depth/complexity limiting",
+    "Learning curve for backend engineers accustomed to REST patterns and resource-oriented design"
+  ],
+  pricing: "Free",
+  pricingDetail: "Open Standard|GraphQL spec is vendor-neutral and royalty-free|No licensing restrictions|Implementations|All major reference implementations (graphql-js, graphql-java, etc.) are MIT/Apache-2.0 licensed|Free to use, modify, and distribute|Tooling|Most dev tools (GraphiQL, Playground, Altair) are open source and free|Some hosted GraphQL services (e.g., Hasura Cloud, Apollo Studio) offer paid tiers",
+  features: [
+    "Declarative, hierarchical query syntax allowing clients to specify exact data requirements",
+    "Type system with scalars, objects, interfaces, unions, enums, and input objects",
+    "Schema introspection enabling dynamic tooling, documentation, and client code generation",
+    "Mutations for data modification with predictable success/error semantics",
+    "Subscriptions for real-time, event-driven data delivery over WebSockets or SSE",
+    "Directives for runtime behavior modification (e.g., @include, @skip, custom auth directives)",
+    "Error handling with structured, machine-readable error payloads and locations",
+    "Extensible via custom scalars, directives, and resolvers for business logic integration"
+  ],
+  useCase: "GraphQL is best for product-driven teams building data-rich applications—especially in mobile, SPAs, and microservice-heavy backends—where frontend autonomy, performance, and iterative API evolution matter. It’s widely adopted by companies like GitHub, Shopify, and PayPal. It excels when multiple clients (web, iOS, Android) consume the same domain data, or when legacy systems need a unified facade. However, it’s less optimal for simple CRUD APIs or teams lacking GraphQL operational expertise.",
+  websiteUrl: "https://graphql.org",
+  alternatives: ["rest", "grpc", "swagger-openapi", "apollo-graphql", "postman"],
+  scoreBreakdown: {
+    features: 95.0,
+    reviews: 92.0,
+    momentum: 93.0,
+    popularity: 94.0
+  },
+  userQuotes: [
+    {
+      role: "CTO",
+      company: "Shopify",
+      quote: "Migrating to GraphQL cut our average mobile payload size by 65% and gave our frontend teams the flexibility to iterate independently—without waiting for backend version releases."
+    },
+    {
+      role: "Lead Mobile Engineer",
+      company: "Pinterest",
+      quote: "Our iOS and Android apps fetch 3x fewer network requests thanks to GraphQL’s nested queries. We ship new features 40% faster with consistent data contracts."
+    }
+  ]
+}

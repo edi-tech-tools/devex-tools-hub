@@ -1,0 +1,281 @@
+{
+  id: "github",
+  name: "GitHub",
+  category: "Version Control",
+  rating: 4.7,
+  reviewCount: 42890,
+  description: "The world’s leading platform for collaborative software development, offering Git hosting, CI/CD, project management, and a massive open-source ecosystem.",
+  longDescription: "GitHub is the de facto standard for Git-based version control and collaborative development, serving over 100 million developers. It combines repository hosting with powerful features like pull requests, code reviews, GitHub Actions for automation, Issues, Projects, and GitHub Packages. Its strength lies in deep community integration, unparalleled discoverability for open-source projects, and enterprise-grade security controls. While its free tier is generous, advanced DevOps features require paid plans. Some developers find its interface increasingly complex and its native Git GUI limited—relying instead on CLI or third-party clients. GitHub excels in public collaboration but can feel heavyweight for small private teams needing minimal overhead.",
+  pros: [
+    "Unmatched open-source visibility and community engagement through stars, forks, and trending repositories",
+    "GitHub Actions provides deeply integrated, scalable CI/CD with thousands of prebuilt workflows and marketplace integrations",
+    "Robust enterprise features including SAML/SCIM, audit logs, secret scanning, and code security alerts",
+    "Seamless integration with VS Code, Copilot, and major IDEs via official extensions",
+    "Extensive documentation, learning resources (GitHub Skills), and active community support forums",
+    "Reliable uptime, global CDN for fast cloning/fetching, and enterprise-grade infrastructure"
+  ],
+  cons: [
+    "Advanced security and compliance features (e.g., code scanning retention, dependency review) locked behind Team/Enterprise tiers",
+    "Pull request reviews lack granular file-level permissions and inline comment threading can become unwieldy in large diffs",
+    "Mobile app is limited to notifications and basic issue management—no code editing or commit operations"
+  ],
+  pricing: "Free | From $4/mo (Team) | Custom (Enterprise)",
+  pricingDetail: "Free: Unlimited public/private repos, 2,000 Actions minutes/mo, basic security features | Team ($4/user/mo): Advanced security, custom roles, SSO, 3,000 Actions minutes/mo | Enterprise (custom): Audit log API, fine-grained permissions, GHES self-hosting option, priority support",
+  features: [
+    "Git repository hosting with branching, merging, and tagging support",
+    "Pull request workflow with inline code review, suggested changes, and status checks",
+    "GitHub Actions for automated builds, tests, deployments, and scheduled workflows",
+    "Issues and Projects for issue tracking, kanban boards, and roadmap planning",
+    "GitHub Packages registry supporting npm, Maven, Docker, NuGet, and RubyGems",
+    "Code scanning powered by CodeQL for automated security vulnerability detection",
+    "GitHub Copilot integration for AI-assisted coding directly in PRs and editors",
+    "GitHub CLI (gh) for full command-line control of repositories, issues, and PRs"
+  ],
+  useCase: "Ideal for open-source maintainers, startups adopting modern DevOps, and enterprises scaling distributed engineering teams. Excels in public collaboration, CI/CD-heavy environments, and organizations prioritizing developer experience and ecosystem reach. Best suited for teams of 3+ that value automation, security tooling, and seamless GitHub-native integrations over lightweight simplicity.",
+  websiteUrl: "https://github.com",
+  alternatives: ["gitlab", "bitbucket", "gitkraken", "sourcetree"],
+  scoreBreakdown: {
+    features: 94.0,
+    reviews: 86.0,
+    momentum: 95.0,
+    popularity: 98.0
+  },
+  userQuotes: [
+    {
+      role: "Senior Frontend Engineer",
+      company: "TechNova Labs",
+      quote: "GitHub Actions cut our deployment time by 70% and made CI/CD accessible to our entire team—not just DevOps. The ecosystem and documentation are unmatched for onboarding new hires."
+    },
+    {
+      role: "Open-Source Maintainer",
+      company: "React-Community",
+      quote: "Stars, forks, and GitHub Discussions transformed how our library grows. We get contributions from 40+ countries—and the social graph around issues is invaluable for triaging and prioritization."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "gitlab",
+  name: "GitLab",
+  category: "Version Control",
+  rating: 4.6,
+  reviewCount: 31250,
+  description: "A unified DevOps platform delivering end-to-end CI/CD, issue tracking, container registry, and security scanning—all in a single application.",
+  longDescription: "GitLab stands out as a comprehensive, all-in-one DevOps platform where version control is just the entry point. Unlike GitHub’s ecosystem approach, GitLab integrates source code management, CI/CD pipelines, Kubernetes cluster management, container registry, dependency scanning, DAST, and even value stream analytics natively. Its single-application architecture reduces tool sprawl and enables tighter traceability from commit to production. GitLab offers robust self-hosting (CE/EE) and cloud options, appealing strongly to regulated industries and privacy-conscious teams. Downsides include steeper learning curves, occasional performance lag on large monorepos, and less mature mobile support. Its open-core model means key security and compliance features require paid tiers.",
+  pros: [
+    "True end-to-end DevOps in one platform—no plugin dependencies for CI/CD, security, or monitoring",
+    "Best-in-class self-hosted option with GitLab CE (free) and EE (paid), ideal for air-gapped or compliance-driven environments",
+    "Built-in value stream analytics to measure cycle time, lead time, and deployment frequency",
+    "Powerful CI/CD pipeline editor with auto-complete, visual pipeline graphs, and reusable components (includes)",
+    "Comprehensive security scanning: SAST, DAST, dependency, container, and license compliance—integrated into MRs",
+    "Fine-grained permissions model with group/project/subgroup roles and protected environments"
+  ],
+  cons: [
+    "UI can feel dense and overwhelming for new users; onboarding requires dedicated training",
+    "Self-hosted instances demand significant infrastructure resources and ongoing maintenance overhead",
+    "Mobile app lacks critical functionality—no merge request creation, pipeline triggering, or code editing"
+  ],
+  pricing: "Free | From $19/mo (Premium) | Custom (Ultimate)",
+  pricingDetail: "Free: Unlimited public/private repos, CI/CD minutes, basic SAST/DAST | Premium ($19/user/mo): Advanced security, portfolio management, roadmap, Jira sync | Ultimate (custom): Compliance frameworks (SOC2, HIPAA), audit events API, incident management, resource groups",
+  features: [
+    "Git repository management with advanced branching strategies and protected branches",
+    "Auto DevOps with zero-configuration CI/CD pipelines for common frameworks (Rails, Node, etc.)",
+    "Integrated container registry with vulnerability scanning and image cleanup policies",
+    "Issue boards with multiple swimlanes, epics, and milestone tracking across projects",
+    "GitLab CI/CD with pipeline-as-code (.gitlab-ci.yml), manual jobs, and environment-specific variables",
+    "Built-in metrics dashboards and Prometheus integration for observability correlation",
+    "Merge Request approvals with required approvers, code owners, and push rules enforcement",
+    "GitLab Pages for static site hosting directly from repositories with HTTPS and custom domains"
+  ],
+  useCase: "Perfect for mid-to-large engineering teams seeking consolidation—especially those in finance, healthcare, or government requiring self-hosting, audit trails, and regulatory compliance. Thrives in environments where traceability from idea to production matters more than community visibility. Also favored by DevOps-first orgs avoiding vendor lock-in across tools.",
+  websiteUrl: "https://about.gitlab.com",
+  alternatives: ["github", "bitbucket", "gitkraken", "sourcetree"],
+  scoreBreakdown: {
+    features: 92.0,
+    reviews: 84.0,
+    momentum: 88.0,
+    popularity: 87.0
+  },
+  userQuotes: [
+    {
+      role: "DevOps Lead",
+      company: "FinSecure Inc.",
+      quote: "We migrated from GitHub + Jenkins + SonarQube to GitLab Ultimate—and reduced our toolchain from 7 to 1. Audit logs, RBAC, and built-in SAST cut our compliance prep time by 60%."
+    },
+    {
+      role: "Engineering Manager",
+      company: "HealthStack Systems",
+      quote: "Self-hosting GitLab CE gave us full data sovereignty without sacrificing CI/CD power. Our security team loves the native vulnerability reports tied directly to merge requests."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "bitbucket",
+  name: "Bitbucket",
+  category: "Version Control",
+  rating: 4.3,
+  reviewCount: 18420,
+  description: "Atlassian’s Git repository manager tightly integrated with Jira and Confluence—ideal for teams already using the Atlassian ecosystem.",
+  longDescription: "Bitbucket is a Git-based code hosting platform optimized for seamless integration with Atlassian’s suite—especially Jira Software and Confluence. It delivers solid core version control features: pull requests with inline commenting, branch permissions, and built-in CI/CD via Bitbucket Pipelines. Its primary differentiator is bi-directional linking between commits, branches, pull requests, and Jira issues—enabling automatic status updates and traceability. While it lacks GitHub’s scale or GitLab’s breadth, Bitbucket shines in enterprise environments where Jira is the source of truth for work items. Limitations include weaker open-source community presence, fewer third-party integrations, and declining investment since Atlassian shifted focus toward cloud migration and AI-powered DevOps tools.",
+  pros: [
+    "Deep, native two-way sync with Jira: commits auto-link to issues, PRs update statuses, and sprint reports reflect code progress",
+    "Bitbucket Pipelines offers YAML-based CI/CD with Docker support, parallel steps, and deployment environments (test/staging/prod)",
+    "Built-in IP allowlisting, enforced 2FA, and SAML/SCIM for enterprise identity management",
+    "Clean, intuitive UI focused on developer workflow—not overloaded with non-Git features",
+    "Free private repos for up to 5 users with unlimited collaborators—great for small teams",
+    "Smart Mirroring enables high-availability read replicas across regions for global teams"
+  ],
+  cons: [
+    "Limited CI/CD customization compared to GitHub Actions or GitLab CI—fewer triggers, no marketplace, restricted caching options",
+    "No native code scanning or security features beyond basic branch protection—requires third-party add-ons",
+    "Declining feature velocity: Atlassian has deprioritized Bitbucket innovation in favor of Jira and Atlas"
+  ],
+  pricing: "Free | From $3/mo (Standard) | $6/mo (Premium)",
+  pricingDetail: "Free: Up to 5 users, unlimited private repos, 50 build minutes/mo | Standard ($3/user/mo): 1,000 build minutes/mo, IP allowlisting, deployment permissions | Premium ($6/user/mo): Required reviewers, merge checks, advanced security (IP restrictions, audit logs)",
+  features: [
+    "Git repository hosting with fork support and branch permissions (including regex-based naming)",
+    "Pull requests with inline diff comments, task lists, and approval requirements",
+    "Bitbucket Pipelines for CI/CD using Docker containers and YAML configuration",
+    "Jira Smart Commits for automatic issue transitions via commit messages (e.g., 'fix PROJ-123')",
+    "Code Insights API for integrating static analysis tools (SonarQube, ESLint) into PRs",
+    "Mirroring support for bidirectional sync with external Git providers (GitHub, GitLab)",
+    "Deployment environments with environment-specific variables and manual approval gates",
+    "Project-level permissions and workspace-level admin controls for centralized governance"
+  ],
+  useCase: "Best for small-to-midsize teams already invested in Atlassian tools—particularly those using Jira for agile planning and Confluence for documentation. Ideal for internal enterprise applications where traceability to business requirements matters more than open-source contribution. Not recommended for public-facing OSS projects or teams requiring advanced security automation.",
+  websiteUrl: "https://bitbucket.org",
+  alternatives: ["github", "gitlab", "gitkraken", "sourcetree"],
+  scoreBreakdown: {
+    features: 78.0,
+    reviews: 80.0,
+    momentum: 72.0,
+    popularity: 75.0
+  },
+  userQuotes: [
+    {
+      role: "Agile Coach",
+      company: "CloudFirst Solutions",
+      quote: "Linking every PR to a Jira ticket automatically changed how we report velocity. Stakeholders see real-time progress—not just 'in dev' but 'code reviewed, tested, deployed to staging'."
+    },
+    {
+      role: "Backend Developer",
+      company: "EduTech Group",
+      quote: "We’re a 12-person team using Jira + Bitbucket. The frictionless handoff between backlog items and code saves hours weekly. Pipelines are simple but reliable for our Node.js microservices."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "gitkraken",
+  name: "GitKraken",
+  category: "Version Control",
+  rating: 4.5,
+  reviewCount: 9750,
+  description: "A beautifully designed, cross-platform Git client that simplifies complex workflows with visual graphs, drag-and-drop actions, and intuitive UI.",
+  longDescription: "GitKraken is a premium desktop Git GUI that transforms Git’s CLI complexity into an intuitive, visual experience. Its standout feature is the dynamic, interactive graph view showing branches, commits, merges, and rebases in real time—with drag-and-drop rebase, cherry-pick, and undo capabilities. It supports GitHub, GitLab, Bitbucket, and Azure Repos natively, plus local repos and self-hosted Git servers. Built-in terminal, submodule management, and conflict resolver make it a full-featured alternative to CLI for many developers. However, it’s closed-source, subscription-only, and lacks deeper DevOps integrations (e.g., CI/CD orchestration). Power users may still rely on CLI for scripting or advanced plumbing commands.",
+  pros: [
+    "Industry-leading visual commit graph with real-time updates, color-coded branches, and intuitive drag-to-rebase",
+    "Cross-platform consistency (Windows/macOS/Linux) with identical feature set and keyboard shortcuts",
+    "Built-in terminal, file history viewer, and three-way merge conflict resolver with syntax highlighting",
+    "Seamless authentication and repo syncing across GitHub, GitLab, Bitbucket, and self-hosted Git servers",
+    "Customizable themes, tabbed workflows, and extensive keyboard shortcut support (including Vim mode)",
+    "GitLens integration for rich code authorship and blame information directly in the UI"
+  ],
+  cons: [
+    "Subscription-only model ($7.50/mo or $72/yr)—no perpetual license or free tier beyond 30-day trial",
+    "No built-in CI/CD, issue tracking, or code review features—purely a Git client, not a platform",
+    "Performance degrades noticeably with repos >50k commits or large binary files (LFS not fully optimized)"
+  ],
+  pricing: "From $7.50/mo or $72/yr",
+  pricingDetail: "Core ($7.50/mo or $72/yr): All desktop features, unlimited repos, GitHub/GitLab/Bitbucket integration | Pro (add-on): Priority support, early access, and team admin dashboard (requires Core)",
+  features: [
+    "Interactive, zoomable Git graph with branch timelines, merge indicators, and commit filtering",
+    "Drag-and-drop rebase, squash, reset, and cherry-pick operations with visual confirmation",
+    "Built-in terminal with Git-aware autocomplete and command history",
+    "Submodule management with nested repo visualization and recursive fetch/pull",
+    "File history view showing every change to a file across branches and commits",
+    "Three-way merge conflict resolver with side-by-side diffs and inline resolution",
+    "GitFlow and GitHub Flow workflow templates with one-click branch creation and PR initiation",
+    "Dark/light themes, customizable fonts, and support for high-DPI and Retina displays"
+  ],
+  useCase: "Ideal for frontend developers, designers who code, students, and junior engineers who want to understand Git visually before mastering CLI. Also preferred by teams standardizing on a consistent GUI across platforms—especially those using multiple Git hosts. Less suitable for DevOps engineers needing CI/CD or CLI automation at scale.",
+  websiteUrl: "https://www.gitkraken.com",
+  alternatives: ["sourcetree", "github", "gitlab", "bitbucket"],
+  scoreBreakdown: {
+    features: 85.0,
+    reviews: 83.0,
+    momentum: 79.0,
+    popularity: 76.0
+  },
+  userQuotes: [
+    {
+      role: "Frontend Developer",
+      company: "PixelForge Studios",
+      quote: "I stopped dreading git rebase after switching to GitKraken. The visual graph shows exactly what I’m changing—and dragging commits feels like magic. My team adopted it in one day.",
+      company: "PixelForge Studios"
+    },
+    {
+      role: "Computer Science Instructor",
+      company: "Metro State University",
+      quote: "Teaching Git to undergrads used to take 3 weeks. With GitKraken’s UI and real-time graph, they grasp branching and merging in 90 minutes—and retain it."
+    }
+  ]
+}
+---TOKEN---
+{
+  id: "sourcetree",
+  name: "SourceTree",
+  category: "Version Control",
+  rating: 4.2,
+  reviewCount: 14280,
+  description: "A free, powerful Git and Mercurial desktop client for macOS and Windows—designed for developers who want GUI control without subscription fees.",
+  longDescription: "SourceTree is a mature, free Git and Mercurial client developed by Atlassian, offering deep CLI parity with a polished GUI. It features a clean commit graph, interactive rebase editor, built-in difftool/mergetool (with support for Beyond Compare, P4Merge, etc.), and SSH key management. Its strength lies in reliability, offline capability, and zero cost—making it a go-to for developers who prefer desktop tools but resist subscriptions. However, it lacks modern integrations (no native GitHub/GitLab CI status badges), has seen infrequent updates since Atlassian’s strategic shift, and offers no cloud sync or team management layer. While perfectly capable for daily Git tasks, it doesn’t compete with GitKraken’s polish or GitHub Desktop’s simplicity.",
+  pros: [
+    "Completely free—no trials, no paywalls, no feature gating—ideal for students, freelancers, and budget-conscious teams",
+    "Supports both Git and Mercurial, making it rare among modern GUI clients",
+    "Highly configurable difftool and mergetool integration with industry-standard tools (Kaleidoscope, VS Code, etc.)",
+    "Offline-first design: works flawlessly without internet connectivity or account sign-in",
+    "Interactive rebase editor with visual commit selection, squash/reorder, and edit capabilities",
+    "SSH key management and embedded Git LFS support for handling large assets"
+  ],
+  cons: [
+    "UI feels dated compared to GitKraken or GitHub Desktop—limited theming and inconsistent macOS/Windows UX",
+    "No native integrations with CI/CD status, PR reviews, or issue trackers—purely a local client",
+    "Infrequent updates since 2022; roadmap is unclear and community support has diminished"
+  ],
+  pricing: "Free",
+  pricingDetail: "100% free for individuals and teams. No tiers, no limitations on repos, users, or features. Includes all functionality: Git LFS, submodules, SSH, and advanced diff/merge tools.",
+  features: [
+    "Dual VCS support for Git and Mercurial with identical UI workflows",
+    "Interactive commit graph with branch visualization and commit filtering",
+    "Built-in file comparison and three-way merge resolution with external tool support",
+    "SSH key management and passphrase caching with native OS keychain integration",
+    "Submodule browser and recursive clone/pull operations",
+    "Git Flow assistant for standardized branching (feature/release/hotfix)",
+    "Stash management with named stashes and apply/pop across branches",
+    "Custom actions framework to run shell scripts or CLI commands from context menus"
+  ],
+  useCase: "Best for developers who prioritize freedom, privacy, and offline reliability—especially those working with legacy Mercurial repos or sensitive internal codebases. Also favored by CLI-savvy developers who want a GUI safety net for risky operations (like interactive rebase) without paying monthly. Not suited for teams needing centralized governance or cloud DevOps integrations.",
+  websiteUrl: "https://www.sourcetreeapp.com",
+  alternatives: ["gitkraken", "github", "gitlab", "bitbucket"],
+  scoreBreakdown: {
+    features: 80.0,
+    reviews: 79.0,
+    momentum: 68.0,
+    popularity: 82.0
+  },
+  userQuotes: [
+    {
+      role: "DevOps Engineer",
+      company: "LegacySys Inc.",
+      quote: "We still maintain Mercurial repos for legacy systems—SourceTree is the only modern GUI that handles both Git and Hg equally well. Free and stable for 10+ years.",
+      company: "LegacySys Inc."
+    },
+    {
+      role: "Freelance Web Developer",
+      company: "IndieStack",
+      quote: "No credit card needed, no telemetry, no forced login—just Git, my SSH keys, and a clean UI. I use it daily across 12 client repos and wouldn’t trade it for a subscription tool."
+    }
+  ]
+}
