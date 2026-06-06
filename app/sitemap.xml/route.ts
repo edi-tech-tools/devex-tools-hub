@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 const BLOG_SLUGS = [
+  "top-10-ci-cd-tools-2026",
   "top-10-crm-software-2026",
   "saas-pricing-strategies",
   "ai-tools-productivity-2026",
