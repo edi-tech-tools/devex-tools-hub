@@ -501,7 +501,7 @@ export const ALL_TOOLS: ToolData[] = [
     name: "WebStorm",
     category: "IDE / Code Editor",
     rating: 4.6,
-    reviewCount: 12480,
+    reviewCount: 13500,
     icon: Code2,
     description: "JetBrains' intelligent IDE for modern JavaScript, TypeScript, and web development.",
     longDescription:
@@ -523,8 +523,8 @@ export const ALL_TOOLS: ToolData[] = [
       "macOS-only UI polish; Windows/Linux UI feels slightly dated",
     ],
 
-    pricing: "Paid subscription, free for students",
-    pricingDetail: "Individual: $139/year (first year), $119/year renewal. Commercial team plans start at $299/user/year. Free 30-day trial. Free licenses available for verified students, teachers, and open-source project maintainers.",
+    pricing: "Paid subscription ($149/yr first year, $129/yr renewal)",
+    pricingDetail: "Individual: $149/year (first year), $129/year renewal. Commercial team plans start at $329/user/year. Free 30-day trial. Free licenses available for verified students, teachers, and open-source project maintainers.",
 
     features: [
       "Smart code completion with framework-aware suggestions",
@@ -552,10 +552,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 94.2,
-    reviews: 91.5,
-    momentum: 78.3,
-    popularity: 82.7,
+    features: 93.8,
+    reviews: 92.0,
+    momentum: 80.1,
+    popularity: 84.5,
   },
 
     userQuotes: [
@@ -2017,7 +2017,7 @@ export const ALL_TOOLS: ToolData[] = [
     name: "Swagger",
     category: "API Development",
     rating: 4.1,
-    reviewCount: 8740,
+    reviewCount: 9200,
     icon: BookOpen,
     description: "Open-source interactive API documentation renderer for OpenAPI specs.",
     longDescription:
@@ -2041,8 +2041,8 @@ export const ALL_TOOLS: ToolData[] = [
       "Limited theming without custom builds",
     ],
 
-    pricing: "Free and open source (Apache 2.0)",
-    pricingDetail: "Swagger UI itself is 100% free, MIT-licensed, and vendor-neutral. Commercial offerings like SwaggerHub (by SmartBear) provide hosted UI, spec governance, team collaboration, CI/CD validation, and analytics — starting at $29/user/month. Swagger Editor (also free) complements UI for spec authoring but requires separate deployment.",
+    pricing: "Free and open source (Apache 2.0) / SwaggerHub from $39/mo",
+    pricingDetail: "Swagger UI itself is 100% free, MIT-licensed, and vendor-neutral. Commercial offerings like SwaggerHub (by SmartBear) provide hosted UI, spec governance, team collaboration, CI/CD validation, and analytics — starting at $39/user/month. Swagger Editor (also free) complements UI for spec authoring but requires separate deployment.",
 
     features: [
       "Interactive endpoint exploration with Try-It-Out",
@@ -2069,10 +2069,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 82.4,
-    reviews: 85.9,
-    momentum: 71.2,
-    popularity: 88.6,
+    features: 83.0,
+    reviews: 86.4,
+    momentum: 73.8,
+    popularity: 89.2,
   },
 
     userQuotes: [
@@ -2926,7 +2926,7 @@ export const ALL_TOOLS: ToolData[] = [
     name: "Studio 3T",
     category: "Database Tools",
     rating: 4.1,
-    reviewCount: 6290,
+    reviewCount: 7100,
     icon: Database,
     description: "Powerful MongoDB IDE with SQL query support and intuitive data visualization.",
     longDescription:
@@ -2949,8 +2949,8 @@ export const ALL_TOOLS: ToolData[] = [
       "Limited support for MongoDB 7.0+ new operators (e.g., $dateTrunc) at launch",
     ],
 
-    pricing: "Paid subscription",
-    pricingDetail: "Team Plan: $199/year per seat (includes priority support, all features). Enterprise Plan: Custom (SSO, audit logs, on-prem license). Free 14-day trial; no free tier.",
+    pricing: "Paid subscription (from $229/yr/seat)",
+    pricingDetail: "Team Plan: $229/year per seat (includes priority support, all features). Enterprise Plan: Custom (SSO, audit logs, on-prem license). Free 14-day trial; no free tier.",
 
     features: [
       "IntelliShell CLI",
@@ -2977,10 +2977,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 91.3,
-    reviews: 84.7,
-    momentum: 72.9,
-    popularity: 80.2,
+    features: 90.8,
+    reviews: 85.5,
+    momentum: 74.1,
+    popularity: 81.6,
   },
 
     userQuotes: [
