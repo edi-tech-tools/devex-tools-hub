@@ -62,8 +62,10 @@ export default function AboutPage() {
               comparisons quickly go out of date.
             </p>
             <p>
-              We catalog and compare B2B SaaS tools across 15+ categories,
-              including CRM, Marketing, DevOps, Security, HR, Finance, and more.
+              We catalog and compare developer-focused tools across 8+ categories,
+              including CI/CD, API Development, IDE/Code Editors, Container
+              Orchestration, Database Tools, Monitoring, Version Control,
+              and Test Automation.
               Each tool page includes verified pricing tiers, feature lists, pros
               and cons synthesized from user reviews, and practical use case
               recommendations.
