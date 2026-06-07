@@ -256,7 +256,6 @@ export default function FAQPage() {
 
   return (
     <>
-      {/* FAQ Schema structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
@@ -264,7 +263,6 @@ export default function FAQPage() {
 
       <div className="relative pt-32 pb-20 px-6">
         <div className="max-w-[800px] mx-auto">
-          {/* Header */}
           <div className="text-center mb-12">
             <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
               FAQ
@@ -278,7 +276,6 @@ export default function FAQPage() {
             </p>
           </div>
 
-          {/* FAQ Items */}
           <div className="space-y-3">
             {FAQ_ITEMS.map((item, index) => (
               <div
@@ -312,7 +309,6 @@ export default function FAQPage() {
             ))}
           </div>
 
-          {/* Bottom CTA */}
           <div className="mt-12 text-center">
             <p className="text-[#8BA3BE] text-sm">
               Still have questions?{" "}

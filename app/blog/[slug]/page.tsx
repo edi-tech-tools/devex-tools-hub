@@ -34,7 +34,6 @@ function renderContent(content: string) {
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Heading (## or ###)
     if (trimmed.startsWith("## ")) {
       elements.push(
         <h2 key={i} className="text-xl md:text-2xl font-bold text-[#F0F4F8] mt-10 mb-4 tracking-tight">
@@ -54,7 +53,6 @@ function renderContent(content: string) {
       continue;
     }
 
-    // Table
     if (trimmed.startsWith("|")) {
       const tableRows: string[] = [];
       while (i < lines.length && lines[i].trim().startsWith("|")) {
@@ -65,20 +63,17 @@ function renderContent(content: string) {
       continue;
     }
 
-    // Horizontal rule (--- separator)
     if (trimmed === "---") {
       elements.push(<hr key={i} className="border-[#1E3A5F] my-8" />);
       i++;
       continue;
     }
 
-    // Empty line (paragraph separator)
     if (trimmed === "") {
       i++;
       continue;
     }
 
-    // Regular paragraph
     elements.push(
       <p key={i} className="text-[#8BA3BE] leading-relaxed mb-4 text-base">
         {formatInline(trimmed)}
@@ -91,7 +86,6 @@ function renderContent(content: string) {
 }
 
 function renderTable(rows: string[], key: string) {
-  // Parse markdown table
   const parsed = rows.map((row) =>
     row
       .replace(/^\||\|$/g, "")
@@ -99,7 +93,6 @@ function renderTable(rows: string[], key: string) {
       .map((cell) => cell.trim())
   );
 
-  // Skip the separator row (|---|)
   const headerRow = parsed[0];
   const dataRows = parsed.slice(2);
 
@@ -135,7 +128,6 @@ function renderTable(rows: string[], key: string) {
 }
 
 function formatInline(text: string): React.ReactNode {
-  // Bold: **text**
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return parts.map((part, idx) => {
     if (part.startsWith("**") && part.endsWith("**")) {
@@ -149,7 +141,6 @@ function formatInline(text: string): React.ReactNode {
   });
 }
 
-// Find related posts
 function getRelatedPosts(currentSlug: string, category: string) {
   return BLOG_POSTS.filter(
     (p) => p.slug !== currentSlug && p.category === category
@@ -186,7 +177,6 @@ export default async function BlogPostPage({
 
   return (
     <div className="relative pt-32 pb-20">
-      {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
@@ -196,7 +186,6 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
       <div className="max-w-[1200px] mx-auto px-6">
-        {/* Back Link */}
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 text-sm text-[#8BA3BE] hover:text-[#3B82F6] transition-colors mb-8"
@@ -206,9 +195,7 @@ export default async function BlogPostPage({
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
-          {/* Main Content */}
           <article>
-            {/* Header */}
             <header className="mb-10">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md">
@@ -240,7 +227,6 @@ export default async function BlogPostPage({
                 {post.excerpt}
               </p>
 
-              {/* Tags */}
               {post.tags && post.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mt-6">
                   {post.tags.map((tag) => (
@@ -256,12 +242,10 @@ export default async function BlogPostPage({
               )}
             </header>
 
-            {/* Content */}
             <div className="prose-custom max-w-none">
               {contentElements}
             </div>
 
-            {/* Article Footer */}
             <div className="mt-12 pt-8 border-t border-[#1E3A5F]">
               <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6">
                 <div className="flex items-start gap-4">
@@ -279,7 +263,6 @@ export default async function BlogPostPage({
               </div>
             </div>
 
-            {/* Related Posts (mobile) */}
             {relatedPosts.length > 0 && (
               <div className="mt-12 lg:hidden">
                 <h3 className="text-lg font-bold text-[#F0F4F8] mb-4">Related Articles</h3>
@@ -307,10 +290,8 @@ export default async function BlogPostPage({
             )}
           </article>
 
-          {/* Sidebar (desktop) */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-6">
-              {/* Table of Contents */}
               <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5">
                 <h3 className="text-sm font-bold text-[#F0F4F8] mb-3 uppercase tracking-wider">
                   In This Article
@@ -332,7 +313,6 @@ export default async function BlogPostPage({
                 </nav>
               </div>
 
-              {/* Related Posts */}
               {relatedPosts.length > 0 && (
                 <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-5">
                   <h3 className="text-sm font-bold text-[#F0F4F8] mb-3 uppercase tracking-wider">

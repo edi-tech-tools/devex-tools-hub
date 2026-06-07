@@ -100,7 +100,6 @@ export default function FeaturedTools() {
   return (
     <section id="featured" className="relative py-20 px-6">
       <div className="max-w-[1200px] mx-auto">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +124,6 @@ export default function FeaturedTools() {
           </a>
         </motion.div>
 
-        {/* Tool Cards Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -141,7 +139,6 @@ export default function FeaturedTools() {
                 variants={cardVariants}
                 className="group bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 card-hover cursor-pointer"
               >
-                {/* Top Row: Icon + Rating */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 rounded-lg bg-[#162440] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6 text-[#3B82F6]" />
@@ -153,22 +150,18 @@ export default function FeaturedTools() {
                   </div>
                 </div>
 
-                {/* Name */}
                 <h3 className="text-lg font-bold text-[#F0F4F8] mb-1 group-hover:text-[#3B82F6] transition-colors">
                   {tool.name}
                 </h3>
 
-                {/* Category Badge */}
                 <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-2.5 py-1 rounded-md mb-3">
                   {tool.category}
                 </span>
 
-                {/* Description */}
                 <p className="text-sm text-[#8BA3BE] mb-6 leading-relaxed">
                   {tool.description}
                 </p>
 
-                {/* Bottom Row: Pricing + CTA */}
                 <div className="flex items-center justify-between pt-4 border-t border-[#1E3A5F]">
                   <span className="text-sm font-semibold text-[#F0F4F8]">{tool.pricing}</span>
                   <button className="px-4 py-1.5 text-xs font-medium text-[#8BA3BE] bg-transparent border border-[#1E3A5F] rounded-lg group-hover:bg-[#162440] group-hover:text-[#3B82F6] group-hover:border-[#2A5080] transition-all">
@@ -180,7 +173,6 @@ export default function FeaturedTools() {
           })}
         </motion.div>
 
-        {/* Mobile View All Button */}
         <div className="mt-8 sm:hidden flex justify-center">
           <button className="w-full px-6 py-3 text-sm font-medium text-[#8BA3BE] bg-[#0F1D32] border border-[#1E3A5F] rounded-lg hover:bg-[#162440] transition-colors">
             View All Categories

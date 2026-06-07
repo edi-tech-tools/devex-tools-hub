@@ -43,7 +43,6 @@ export default function ToolDetailPage() {
   const tool = TOOL_MAP.get(slug);
   const schemaInjected = useRef(false);
 
-  // Inject JSON-LD Schema for SoftwareApplication
   useEffect(() => {
     if (!tool || schemaInjected.current) return;
     schemaInjected.current = true;
@@ -101,12 +100,10 @@ export default function ToolDetailPage() {
 
   const Icon = tool.icon;
 
-  // Find related tools (same category, excluding current)
   const relatedTools = ALL_TOOLS.filter(
     (t) => t.category === tool.category && t.id !== tool.id
   ).slice(0, 4);
 
-  // Resolve alternative tool names
   const alternativeNames = (tool.alternatives || [])
     .map((altId) => {
       const alt = ALL_TOOLS.find((t) => t.id === altId);
@@ -124,7 +121,6 @@ export default function ToolDetailPage() {
   return (
     <div className="relative pt-28 pb-20 px-6">
       <div className="max-w-4xl mx-auto">
-        {/* Back Link */}
         <Link
           href="/"
           className="inline-flex items-center text-[#8BA3BE] hover:text-[#3B82F6] transition-colors mb-8 text-sm"
@@ -132,7 +128,6 @@ export default function ToolDetailPage() {
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Hub
         </Link>
 
-        {/* Header */}
         <header className="mb-10">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-14 h-14 rounded-xl bg-[#162440] flex items-center justify-center">
@@ -161,7 +156,6 @@ export default function ToolDetailPage() {
           </p>
         </header>
 
-        {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-4">
             <DollarSign className="w-5 h-5 text-[#22D3EE] mb-2" />
@@ -197,7 +191,6 @@ export default function ToolDetailPage() {
           </div>
         </div>
 
-        {/* SW Score Section */}
         <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 mb-10">
           <div className="flex items-center justify-between mb-5">
             <h2 className="font-bold text-[#F0F4F8] flex items-center text-base">
@@ -219,7 +212,6 @@ export default function ToolDetailPage() {
           </div>
         </div>
 
-        {/* Pros & Cons */}
         <div className="grid md:grid-cols-2 gap-6 mb-10">
           <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6">
             <h3 className="font-bold text-green-400 mb-4 flex items-center text-base">
@@ -255,7 +247,6 @@ export default function ToolDetailPage() {
           </div>
         </div>
 
-        {/* Features */}
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6 flex items-center gap-2">
             <TrendingUp className="w-6 h-6 text-[#3B82F6]" />
@@ -274,7 +265,6 @@ export default function ToolDetailPage() {
           </div>
         </div>
 
-        {/* Use Case */}
         <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 mb-10">
           <h3 className="font-bold text-[#F0F4F8] mb-3 flex items-center text-base">
             <Users className="w-5 h-5 mr-2 text-[#3B82F6]" /> Best For
@@ -284,7 +274,6 @@ export default function ToolDetailPage() {
           </p>
         </div>
 
-        {/* User Quotes */}
         {tool.userQuotes && tool.userQuotes.length > 0 && (
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6 flex items-center gap-2">
@@ -316,7 +305,6 @@ export default function ToolDetailPage() {
           </div>
         )}
 
-        {/* Alternatives Considered */}
         {alternativeNames.length > 0 && (
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6 flex items-center gap-2">
@@ -336,7 +324,6 @@ export default function ToolDetailPage() {
           </div>
         )}
 
-        {/* Related Tools */}
         {relatedTools.length > 0 && (
           <div className="mb-10">
             <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6 flex items-center gap-2">
@@ -377,7 +364,6 @@ export default function ToolDetailPage() {
           </div>
         )}
 
-        {/* Pricing & CTA */}
         <div className="bg-gradient-to-r from-[#162440] to-[#0F1D32] border border-[#1E3A5F] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-2xl font-bold text-[#F0F4F8] mb-2">
@@ -396,12 +382,10 @@ export default function ToolDetailPage() {
           </a>
         </div>
 
-        {/* Ad Placeholder */}
         <div className="mt-10 p-8 border border-dashed border-[#1E3A5F] rounded-lg text-center text-[#4A6380] italic bg-[#0A1628]/50">
           [AdSense In-Article Ad]
         </div>
 
-        {/* Affiliate Disclaimer */}
         <div className="mt-6 text-center">
           <p className="text-xs text-[#4A6380]">
             When you purchase through links on our site, we may earn an affiliate commission.{' '}

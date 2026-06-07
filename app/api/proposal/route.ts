@@ -15,6 +15,6 @@ export async function GET() {
       },
     });
   } catch {
-    return new NextResponse('文件未找到', { status: 404 });
+    return new NextResponse('File not found', { status: 404 });
   }
 }

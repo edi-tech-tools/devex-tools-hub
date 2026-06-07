@@ -12,8 +12,6 @@ import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 // ============================================================
-// 模板E：SaaS产品式首页 — DevEx Tools Hub 适配版
-// 主色：青绿 #0D9488
 // ============================================================
 
 const ACCENT_COLOR = "#0D9488";
@@ -85,7 +83,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 统计 */}
       <section className="px-6 py-12 border-y border-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-3 gap-8">
@@ -99,7 +96,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 精选 */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
@@ -134,7 +130,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 功能 */}
       <section className="px-6 py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">Why DevEx Tools Hub?</h2>
@@ -153,7 +148,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 证言 */}
       <section className="px-6 py-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">What Developers Say</h2>
@@ -172,7 +166,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 博客 */}
       {recentPosts.length > 0 && (
         <section className="px-6 py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -214,7 +207,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 轻量Footer */}
       <footer className="border-t border-gray-100 px-6 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">

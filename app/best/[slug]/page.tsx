@@ -168,7 +168,6 @@ export default function BestCategoryPage({
   return (
     <div className="relative pt-28 pb-20 px-6">
       <div className="max-w-[1200px] mx-auto">
-        {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-[#4A6380] mb-8">
           <Link href="/" className="hover:text-[#3B82F6] transition-colors">
             Home
@@ -184,7 +183,6 @@ export default function BestCategoryPage({
           <span className="text-[#8BA3BE]">Best {category} 2026</span>
         </nav>
 
-        {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6]/20 to-[#22D3EE]/20 flex items-center justify-center">
@@ -202,7 +200,6 @@ export default function BestCategoryPage({
             </div>
           </div>
 
-          {/* Top pick badge */}
           {topTool && (
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#162440] border border-[#F59E0B]/30 rounded-full text-sm text-[#F59E0B]">
               <Star className="w-4 h-4 fill-[#F59E0B]" />
@@ -218,7 +215,6 @@ export default function BestCategoryPage({
           )}
         </header>
 
-        {/* Comparison Table */}
         <section className="mb-14">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6 flex items-center gap-2">
             <CheckCircle className="w-6 h-6 text-[#3B82F6]" />
@@ -305,7 +301,6 @@ export default function BestCategoryPage({
           </div>
         </section>
 
-        {/* Top Picks detailed cards */}
         <section className="mb-14">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">
             Detailed Reviews
@@ -360,7 +355,6 @@ export default function BestCategoryPage({
           </div>
         </section>
 
-        {/* Buying Guide */}
         <section className="mb-14">
           <div className="bg-[#0F1D32] border border-[#1E3A5F] rounded-2xl p-8">
             <h2 className="text-2xl font-bold text-[#F0F4F8] mb-4 flex items-center gap-2">

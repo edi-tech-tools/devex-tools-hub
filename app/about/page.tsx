@@ -35,7 +35,6 @@ export default function AboutPage() {
   return (
     <div className="relative pt-32 pb-20 px-6">
       <div className="max-w-[800px] mx-auto">
-        {/* Hero */}
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
             About
@@ -52,7 +51,6 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* What We Do */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">What We Do</h2>
           <div className="space-y-4 text-[#8BA3BE] leading-relaxed">
@@ -80,7 +78,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* How We Work */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-8 text-center">
             How We Evaluate Tools
@@ -104,7 +101,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Data Sources */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-[#F0F4F8] mb-6">Data Sources</h2>
           <div className="space-y-4 text-[#8BA3BE] leading-relaxed">
