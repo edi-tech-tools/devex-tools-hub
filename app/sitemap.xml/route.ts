@@ -4,6 +4,7 @@ const BLOG_SLUGS = [
   "top-10-ci-cd-tools-2026",
     "docker-vs-podman-vs-orbstack-2026-developer-experience",
     "playwright-vs-cypress-vs-puppeteer-2026",
+    "k8s-vs-docker-compose-vs-nomad-2026",
 ] as const;
 
 const TOOL_SLUGS = [
