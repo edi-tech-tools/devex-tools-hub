@@ -51,11 +51,11 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
   Marketing: [
     {
       q: "Is HubSpot worth the price for marketing automation?",
-      a: "HubSpot Marketing Hub provides exceptional value for mid-market B2B teams that need an all-in-one solution. The free CRM integration, smart content engine, and AI content strategy tools justify the cost for teams that will use the full suite. However, the jump from Starter ($15/mo) to Pro ($890/mo) is steep.",
+      a: "HubSpot Marketing Hub provides exceptional value for mid-market engineering teams that need a flexible solution. The free CRM integration, smart content engine, and AI content strategy tools justify the cost for teams that will use the full suite. However, the jump from Starter ($15/mo) to Pro ($890/mo) is steep.",
     },
     {
-      q: "What's the best email marketing platform for B2B?",
-      a: "For B2B email marketing, HubSpot is the gold standard for integrated CRM+email. Mailchimp is best for simplicity and ease of use. Marketo Engage leads enterprise-level email automation. Consider your contact list size, automation complexity, and CRM integration needs.",
+      q: "What's the best code collaboration platform for developers?",
+      a: "For code collaboration, GitHub is the gold standard for integrated version control. Mailchimp is best for simplicity and ease of use. Marketo Engage leads enterprise-level email automation. Consider your contact list size, automation complexity, and CRM integration needs.",
     },
     {
       q: "What are the must-have marketing automation features?",
@@ -82,8 +82,8 @@ const FAQS: Record<string, { q: string; a: string }[]> = {
       a: "Asana is best for teams that need portfolio management and goal tracking across departments. Monday.com offers the most visual, customizable interface with minimal training. ClickUp provides the most features per dollar but has a steeper learning curve. Jira remains the standard for software development teams.",
     },
     {
-      q: "What project management methodology works best for SaaS teams?",
-      a: "Most SaaS teams benefit from a hybrid approach — Scrum for engineering sprints, Kanban for ongoing operations, and OKRs for strategic initiatives. Look for tools that support multiple views (board, timeline, calendar) so each team can work their way while leadership gets portfolio-level visibility.",
+      q: "What project management methodology works best for engineering teams?",
+      a: "Most engineering teams benefit from a hybrid approach — Scrum for engineering sprints, Kanban for ongoing operations, and OKRs for strategic initiatives. Look for tools that support multiple views (board, timeline, calendar) so each team can work their way while leadership gets portfolio-level visibility.",
     },
     {
       q: "How much should we budget for project management software?",

@@ -172,7 +172,7 @@ export default async function BlogPostPage({
   const orgJsonLd = organizationSchema(
     'DevEx Tools Hub',
     'https://devex-tools.net',
-    'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
+    'Comprehensive developer tools directory and comparison platform for engineering teams.'
   );
 
   return (

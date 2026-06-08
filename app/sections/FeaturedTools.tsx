@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Star, ArrowRight, BarChart3, ShieldCheck, MessageSquare, Users, CreditCard, Briefcase } from 'lucide-react';
+import { Star, ArrowRight, Code, GitBranch, Server, Wrench, Database, Shield } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 interface Tool {
@@ -17,62 +17,62 @@ interface Tool {
 const FEATURED_TOOLS: Tool[] = [
   {
     id: 'tool-1',
-    name: 'DataMetrics Pro',
-    category: 'Analytics',
+    name: 'VSCode Pro',
+    category: 'IDE & Code Editors',
     rating: 4.9,
-    reviews: 128,
-    description: 'Advanced enterprise analytics platform with real-time predictive modeling.',
-    icon: BarChart3,
+    reviews: 3452,
+    description: 'Lightweight yet powerful code editor with rich extension ecosystem and built-in Git.',
+    icon: Code,
     pricing: 'From $99/mo',
   },
   {
     id: 'tool-2',
-    name: 'SecureGuard CRM',
-    category: 'CRM & Sales',
+    name: 'GitFlow CI',
+    category: 'Version Control',
     rating: 4.8,
-    reviews: 342,
-    description: 'End-to-end encrypted customer relationship management for finance teams.',
-    icon: ShieldCheck,
-    pricing: 'Contact Sales',
+    reviews: 2156,
+    description: 'Enterprise Git platform with integrated CI/CD, code review, and project management.',
+    icon: GitBranch,
+    pricing: 'Free tier',
   },
   {
     id: 'tool-3',
-    name: 'TeamSync Hub',
-    category: 'Collaboration',
+    name: 'PipeRunner',
+    category: 'CI/CD & DevOps',
     rating: 4.7,
-    reviews: 89,
-    description: 'Unified communication and project management suite for remote teams.',
-    icon: MessageSquare,
+    reviews: 1823,
+    description: 'Cloud-native CI/CD pipeline orchestrator with parallel builds and K8s deployment.',
+    icon: Server,
     pricing: 'Freemium',
   },
   {
     id: 'tool-4',
-    name: 'HR TalentFlow',
-    category: 'Human Resources',
+    name: 'API Forge',
+    category: 'API & Testing',
     rating: 4.6,
-    reviews: 215,
-    description: 'Automated recruitment, onboarding, and payroll management system.',
-    icon: Users,
+    reviews: 2891,
+    description: 'Comprehensive API development platform for designing, testing, and documenting APIs.',
+    icon: Wrench,
     pricing: 'From $49/mo',
   },
   {
     id: 'tool-5',
-    name: 'PayStream API',
-    category: 'Finance',
+    name: 'DB Studio',
+    category: 'Database & Storage',
     rating: 4.9,
-    reviews: 512,
-    description: 'Global B2B payment gateway API with built-in fraud prevention.',
-    icon: CreditCard,
+    reviews: 1435,
+    description: 'Universal database client with visual query builder supporting SQL and NoSQL.',
+    icon: Database,
     pricing: 'Pay-as-you-go',
   },
   {
     id: 'tool-6',
-    name: 'BizOps Flow',
-    category: 'Operations',
+    name: 'StackWatch',
+    category: 'Monitoring & Logging',
     rating: 4.5,
-    reviews: 76,
-    description: 'No-code workflow automation specifically designed for operational efficiency.',
-    icon: Briefcase,
+    reviews: 987,
+    description: 'Full-stack observability with distributed tracing, metrics, logs, and alerting.',
+    icon: Shield,
     pricing: 'From $199/mo',
   },
 ];
@@ -109,7 +109,7 @@ export default function FeaturedTools() {
         >
           <div>
             <h2 className="text-2xl md:text-[2rem] font-bold text-[#F0F4F8] tracking-tight">
-              Featured SaaS Solutions
+              Featured Dev Tools
             </h2>
             <p className="text-[#8BA3BE] mt-1 text-base">
               Hand-picked tools highly rated by enterprise users.

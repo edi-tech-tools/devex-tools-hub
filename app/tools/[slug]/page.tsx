@@ -66,7 +66,7 @@ export default function ToolDetailPage() {
     const org = organizationSchema(
       'DevEx Tools Hub',
       'https://devex-tools.net',
-      'Comprehensive B2B SaaS directory and tool hub for modern enterprises.'
+      'Comprehensive developer tools directory and comparison platform for engineering teams.'
     );
     const s2 = document.createElement('script');
     s2.type = 'application/ld+json';

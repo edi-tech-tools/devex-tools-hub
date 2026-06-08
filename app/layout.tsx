@@ -14,7 +14,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "DevEx Tools Hub — Developer Experience Tools & Reviews",
   description:
-    "Compare developer tools with verified reviews, pricing breakdowns, and expert comparisons. Find the perfect dev tools, frameworks, APIs, and SaaS for your engineering team.",
+    "Compare developer tools with verified reviews, pricing breakdowns, and expert comparisons. Find the perfect dev tools, frameworks, APIs, and platforms for your engineering team.",
   keywords: [
     "developer tools",
     "DevEx",

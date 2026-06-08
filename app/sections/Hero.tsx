@@ -1,17 +1,17 @@
 "use client";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, BarChart3, ShieldCheck, MessageSquare, Users, CreditCard, Briefcase, Zap, Globe } from 'lucide-react';
+import { Search, GitBranch, Code, Cloud, Server, Wrench, Database, Activity, Shield } from 'lucide-react';
 
 const CATEGORIES = [
-  { label: 'CRM', icon: ShieldCheck },
-  { label: 'Analytics', icon: BarChart3 },
-  { label: 'HR', icon: Users },
-  { label: 'Finance', icon: CreditCard },
-  { label: 'Operations', icon: Briefcase },
-  { label: 'Collaboration', icon: MessageSquare },
-  { label: 'Marketing', icon: Zap },
-  { label: 'IT Management', icon: Globe },
+  { label: 'IDE & Code Editors', icon: Code },
+  { label: 'Version Control', icon: GitBranch },
+  { label: 'CI/CD & DevOps', icon: Server },
+  { label: 'API & Testing', icon: Wrench },
+  { label: 'Database & Storage', icon: Database },
+  { label: 'Cloud & Infrastructure', icon: Cloud },
+  { label: 'Monitoring & Logging', icon: Activity },
+  { label: 'Security Tools', icon: Shield },
 ];
 
 export default function Hero() {
@@ -32,7 +32,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#162440] border border-[#1E3A5F] mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-[#22D3EE] pulse-dot" />
-          <span className="text-sm font-medium text-[#22D3EE]">5000+ Business Tools Curated</span>
+          <span className="text-sm font-medium text-[#22D3EE]">500+ Developer Tools Curated</span>
         </motion.div>
 
         <motion.h1
@@ -43,7 +43,7 @@ export default function Hero() {
         >
           Find the Perfect Software to{' '}
           <span className="text-gradient" style={{ textShadow: '0 0 40px rgba(59,130,246,0.3)' }}>
-            Scale Your Business
+            Build Your Stack
           </span>
         </motion.h1>
 
@@ -53,7 +53,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-[#8BA3BE] max-w-2xl mb-10 leading-relaxed"
         >
-          Compare over 5,000+ B2B SaaS tools. Read verified reviews, analyze pricing, and integrate the right solutions.
+          Compare the best tools for coding, testing, deploying, and monitoring. Read verified reviews, analyze pricing, and find the perfect developer tools for your engineering team.
         </motion.p>
 
         <motion.form
@@ -75,7 +75,7 @@ export default function Hero() {
             <Search className="ml-5 w-5 h-5 text-[#4A6380] flex-shrink-0" />
             <input
               type="search"
-              placeholder="Search for CRM, Analytics, HR tools..."
+              placeholder="Search for IDE & Code Editors, Version Control, CI/CD & DevOps tools..."
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               onFocus={() => setIsFocused(true)}
