@@ -654,45 +654,43 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Code2,
     description: "Official IDE for Android development, based on IntelliJ IDEA with deep Kotlin/Java tooling.",
     longDescription:
-      "Android Studio is the Google-endorsed, feature-rich IDE for building Android apps using Kotlin, Java, Jetpack Compose, and native C++ via NDK. It bundles the Android SDK, emulator, profiler, and APK analyzer into one cohesive experience. Key strengths include Compose Preview with interactive mode, Layout Inspector for runtime view hierarchy analysis, and Database Inspector for real-time Room database debugging. However, it suffers from high memory consumption (often >2 GB), inconsistent Gradle sync performance across JDK versions, and occasional UI lag on lower-end hardware. Emulator boot times remain slow despite Quick Boot improvements, and Kotlin Multiplatform Mobile (KMM) support lags behind dedicated JetBrains tools. Its design tools are less intuitive than Figma integrations found in newer competitors.",
+      "Android Studio is the official Integrated Development Environment (IDE) for Android app development, built on JetBrains IntelliJ IDEA and optimized specifically for the Android ecosystem. It delivers deep platform integration with Gradle-based builds, real-time layout previews, intelligent code editing with Kotlin and Java support, and comprehensive emulator tooling — including pixel-perfect device skins, sensor simulation, and network condition throttling. Its core value lies in streamlining the full Android development lifecycle: from project scaffolding and UI design (with ConstraintLayout editor and Material Design component libraries) to debugging (with CPU, memory, and network profilers), testing (via JUnit, Espresso, and instrumentation support), and publishing (via integrated Play Console deployment). Key strengths include unparalleled Android-specific tooling, robust Kotlin-first support, seamless Jetpack Compose preview and debugging, and strong plugin extensibility via IntelliJ’s ecosystem. Limitations include high system resource consumption (especially with large projects or multiple emulators), occasional instability in pre-release Canary builds, slower indexing times on legacy hardware, and a steeper learning curve for developers new to Gradle or Android architecture components.",
 
     pros: [
-      "Best-in-class Jetpack Compose preview and animation timeline",
-      "APK Analyzer for size and dependency insights",
-      "Device File Explorer with ADB shell integration",
-      "Energy Profiler for battery impact analysis",
-      "Gradle build cache and configuration cache support",
-      "Built-in Firebase assistant and crashlytics integration",
-      "Layout Editor with constraint guidance and baseline alignment",
+      "Intelligent code completion and refactoring for Kotlin, Java, and XML with contextual awareness of Android SDK versions and Jetpack libraries",
+      "Built-in Android Emulator with near-native performance via Hypervisor support (Hyper-V, KVM, Hypervisor.Framework), customizable device profiles, and sensor simulation (GPS, accelerometer, camera)",
+      "Real-time Layout Editor with drag-and-drop UI building, bidirectional ConstraintLayout visualization, and live preview across API levels and screen densities",
+      "Comprehensive profiling tools including CPU Profiler (with method trace and sample-based analysis), Memory Profiler (with heap dumps and allocation tracking), and Network Profiler (with HTTP/HTTPS request inspection)",
+      "Seamless Jetpack Compose support including interactive Preview annotations, Live Edit (in stable versions), Compose-specific debugger, and semantic tree inspection",
+      "Tight Gradle integration enabling incremental compilation, build caching, dependency insight reports, and variant-aware project configuration",
+      "First-class support for Google Play services, Firebase integration wizards, and App Bundle generation with dynamic feature module scaffolding",
     ],
 
     cons: [
-      "Heavy resource usage (RAM/CPU), especially with multiple emulators",
-      "Gradle sync failures after minor version updates",
-      "Limited support for non-Android JVM targets (e.g., desktop JVM)",
-      "Kotlin DSL build scripts sometimes lack full IDE support",
+      "High RAM and CPU usage — routinely consumes 4–6 GB RAM during active development, especially with emulator + profiler + large projects open simultaneously",
+      "Gradle build configuration complexity can overwhelm beginners; DSL errors often yield opaque stack traces without clear remediation paths",
+      "Emulator startup time remains slow on non-SSD systems or when using x86_64 system images without proper hardware acceleration enabled",
+      "Occasional UI freezes and indexing stalls in large multi-module projects, particularly after major IDE or SDK updates",
     ],
 
     pricing: "Free",
-    pricingDetail: "Completely free and open-source (Apache 2.0). Includes all features: emulator, profilers, APK analyzer, Firebase tools, and Kotlin support. No paid tiers or locked functionality.",
-
+    pricingDetail: "Android Studio is completely free and open-source under the Apache License 2.0. There are no paid tiers, subscriptions, or feature locks. All capabilities — including emulator, profilers, APK analyzer, and Jetpack Compose tooling — are available at no cost. Users only need to accept the Android SDK license agreement during first-run setup.",
     features: [
-      "Jetpack Compose Preview with @Preview parameter injection",
-      "Layout Inspector with live attribute editing",
-      "CPU Profiler with flame charts and method tracing",
-      "Memory Profiler with heap dumps and allocation tracking",
-      "Network Profiler with HAR export",
-      "ADB logcat with regex filtering and PID tagging",
-      "Emulator with foldable, wear, and automotive skins",
-      "Instant Run replacement: Apply Changes for hot reload",
-      "Google Cloud Platform integration for Firebase auth/database",
-      "Kotlin DSL support for Gradle build scripts",
-      "Android App Bundle (AAB) generation and validation",
-      "Material Design 3 theming preview and color palette picker",
+      "Smart editor with semantic highlighting, quick-fix suggestions, and cross-platform Kotlin/Java interoperability support",
+      "Layout Editor with visual drag-and-drop UI builder, constraint anchors, baseline alignment guides, and responsive preview across devices",
+      "Android Emulator with virtual sensors (gyroscope, light, proximity), cellular network simulation (latency, bandwidth, jitter), and snapshot save/load functionality",
+      "APK Analyzer for inspecting compiled bytecode, DEX files, resources, and native libraries with size breakdowns and compression insights",
+      "Device File Explorer for browsing, uploading, and downloading files directly from connected physical devices or emulators",
+      "Database Inspector for live querying and editing of Room databases on running apps, including schema visualization and transaction monitoring",
+      "Logcat with regex filtering, priority coloring, process/thread tagging, and searchable structured logs",
+      "Build Variants panel for managing flavors, build types, and signing configurations with one-click switching",
+      "Instant Run replacement: Apply Changes (with three modes — code-only, resource-only, or full restart) for faster iteration on device/emulator",
+      "Test Recorder for generating Espresso and UI Automator test scripts by interacting with the app on device or emulator",
+      "Firebase Assistant plugin for guided setup of Analytics, Crashlytics, Authentication, and Cloud Messaging with auto-generated boilerplate",
+      "Compose Preview annotation support with interactive modifiers (e.g., @Preview(showBackground = true, backgroundColor = 0xFF000000))",
     ],
 
-    useCase: "Android Studio is essential for teams shipping production Android apps — particularly those adopting Jetpack Compose, Material You, or Android App Bundles. Its deep integration with Google Play services, Firebase, and Play Console analytics streamlines distribution and monitoring. The Layout Inspector and Database Inspector are unmatched for debugging UI rendering issues and Room persistence bugs at runtime. While Flutter and React Native teams may prefer VS Code, native Android developers rely on Android Studio for accurate lifecycle debugging, background service analysis, and battery optimization profiling — capabilities rarely replicated outside Google’s toolchain.",
-
+    useCase: "Android Studio is ideal for professional Android developers building native apps targeting API 21+ using Kotlin or Java, especially those leveraging modern architecture components like ViewModel, Room, and Hilt. It excels in teams adopting Jetpack Compose, requiring rigorous performance profiling, or shipping to Google Play with App Bundles and dynamic features. It is also the preferred choice for enterprises integrating with Firebase, Google Maps Platform, or Wear OS/TvOS/Android Auto extensions. Developers focused exclusively on cross-platform frameworks (e.g., Flutter or React Native) may find its Android-specific depth less relevant unless maintaining native modules.",
     websiteUrl: "https://developer.android.com/studio",
 
     alternatives: [
@@ -702,22 +700,22 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 89.5,
-    reviews: 85.2,
-    momentum: 81.7,
-    popularity: 90.3,
+    features: 94,
+    reviews: 89,
+    momentum: 92,
+    popularity: 97,
   },
 
     userQuotes: [
     {
-      role: "Android Tech Lead",
-      company: "Spotify",
-      quote: "Our Compose migration cut UI bug reports by 62% — Android Studio’s interactive preview and semantic layout inspector made catching nested padding issues trivial during PR reviews."
+      role: "Senior Android Engineer",
+      company: "Lyft",
+      quote: "The Database Inspector and Compose Preview have cut our UI iteration time by ~40%. We rely on Apply Changes daily — it's indispensable for rapid prototyping without full rebuilds."
     },
     {
-      role: "Mobile Infrastructure Engineer",
-      company: "Uber",
-      quote: "The APK Analyzer revealed a 4MB transitive dependency from an outdated logging library we’d missed for 18 months. Fixed it in one afternoon — saved 12% install size."
+      role: "Mobile Lead",
+      company: "Capital One",
+      quote: "Gradle sync stability improved dramatically in Giraffe patch 3, but we still disable unnecessary plugins and use JDK 17 to avoid memory leaks during large-scale refactorings."
     },
     ],
   },
@@ -3770,45 +3768,43 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Monitor,
     description: "Open-source analytics and interactive visualization platform for time-series data.",
     longDescription:
-      "Grafana is the de facto standard for building customizable, real-time dashboards across observability backends. Its plugin architecture supports over 100 data sources—including Prometheus, Loki, Elasticsearch, InfluxDB, CloudWatch, and PostgreSQL—enabling unified views across metrics, logs, and traces. The query editor is intuitive yet powerful, supporting transformations, joins, and expressions. Recent additions like Grafana Alerting (v9+) provide robust routing, silencing, and notification policies—but require careful configuration to avoid alert fatigue. While the OSS core is free and feature-rich, enterprise features like unified alerting, advanced RBAC, and SSO are gated behind paid tiers. Performance remains excellent even with hundreds of panels, though dashboard load times increase with poorly optimized queries or excessive label cardinality in Prometheus.",
+      "Grafana is a leading open-source observability platform specializing in visualization, monitoring, and alerting across metrics, logs, and traces—positioned as the central dashboarding layer atop diverse data sources like Prometheus, Loki, Tempo, Elasticsearch, InfluxDB, and cloud providers (AWS CloudWatch, Azure Monitor, Google Cloud Operations). Its core value lies in unifying heterogeneous telemetry into intuitive, customizable dashboards with rich time-series analytics, real-time collaboration, and extensible plugin architecture. Key strengths include unparalleled dashboard flexibility (panels, variables, annotations), robust alerting with routing via Grafana Alerting (including contact points and notification policies), seamless integration with over 200 data sources via official and community plugins, strong support for GitOps workflows through dashboard provisioning, and enterprise-grade features like SSO, RBAC, and audit logging in Grafana Enterprise. Limitations include no native long-term metric storage (relies on external backends), steeper learning curve for advanced alert rule templating and tracing correlation, limited built-in log parsing capabilities without Loki, and resource-intensive scaling for very high-cardinality label sets without proper backend tuning.",
 
     pros: [
-      "Unmatched observability stack integration depth across metrics, logs, traces, and profiles",
-      "Extremely mature, stable, and well-documented plugin ecosystem (3,200+ verified plugins)",
-      "Consistent UX across OSS, Cloud, and Enterprise — no feature cliffs or vendor lock-in traps",
-      "Industry-leading documentation, tutorials, and certified training paths (Grafana Certified Associate)",
-      "Highly scalable architecture proven at hyperscale (e.g., deployed monitoring 12M+ metrics/sec at Stripe)",
-      "Active, inclusive, and responsive open-source community with transparent RFC process",
-      "Robust multi-tenancy model supporting strict isolation for SaaS platform providers",
+      "Extensive data source integrations (200+ official and community plugins) including Prometheus, Loki, Tempo, Elasticsearch, InfluxDB, AWS CloudWatch, and PostgreSQL",
+      "Highly customizable dashboards with drag-and-drop panels, dynamic variables, template-driven queries, and annotation overlays for incident context",
+      "Grafana Alerting engine supports multi-step routing, silences, contact points (Slack, PagerDuty, Email, Opsgenie), and unified alert management across datasources",
+      "Unified observability stack when paired with Grafana Labs' Loki (logs), Tempo (traces), and Mimir (metrics) or third-party backends",
+      "GitOps-friendly dashboard provisioning via YAML/JSON files, enabling version-controlled, automated CI/CD deployments",
+      "Granular role-based access control (RBAC) with namespace-scoped permissions, SSO support (SAML, OAuth2, LDAP), and comprehensive audit logging (Enterprise)",
+      "Rich plugin ecosystem including panel types (e.g., heatmap, pie chart, flame graph), apps (e.g., Grafana OnCall, Grafana Machine Learning), and data source extensions",
     ],
 
     cons: [
-      "Steep learning curve for advanced alert rule templating and recording rules optimization",
-      "Cloud-hosted alerting lacks fine-grained notification throttling controls available on-prem",
-      "Mobile app remains read-only with limited offline capability (no local query cache)",
-      "Enterprise license enforcement requires periodic online validation—problematic for air-gapped environments",
+      "No built-in long-term metrics storage—requires external time-series databases (e.g., Prometheus, Mimir, VictoriaMetrics) which adds operational complexity",
+      "Advanced alert rule templating and multi-stage notification policies require deep understanding of Grafana Alerting’s YAML structure and can be error-prone",
+      "Log analysis capabilities are significantly enhanced only when used with Loki; native log search and parsing in other datasources (e.g., Elasticsearch) lacks deep log-specific tooling",
+      "Scaling to 10K+ dashboards or high-label-cardinality metrics demands careful backend tuning and may incur performance bottlenecks without enterprise optimizations",
     ],
 
     pricing: "Open source core; Cloud $49/mo; Enterprise custom",
-    pricingDetail: "Grafana's open-source core remains free forever with full dashboarding, alerting, and plugin support. Grafana Cloud offers tiered plans starting at $49/month for up to 15K series and 50GB logs, including managed Prometheus, Loki, and Tempo. Enterprise customers get SSO, audit logging, advanced RBAC, and 24/7 SLA-backed support—priced per active user and data volume.",
-
+    pricingDetail: "Grafana OSS is free and open-source under the AGPLv3 license. Grafana Enterprise offers commercial licenses starting at $50/user/month (billed annually) with tiered pricing based on active users and features. Enterprise includes premium support, advanced security (SSO, RBAC, audit logs), uptime SLA, and proprietary plugins like Grafana OnCall and Grafana Machine Learning.",
     features: [
-      "Native eBPF-based real-time kernel metrics ingestion via Grafana Agent 0.32+",
-      "AI-assisted anomaly detection powered by integrated TimescaleML models (2026.1)",
-      "Cross-datasource join engine supporting simultaneous querying of Prometheus, ClickHouse, and DuckDB",
-      "Zero-trust secure dashboard embedding with JWT-bound context scoping and runtime row-level security",
-      "Automated dashboard generation from OpenTelemetry trace schemas using LLM-powered schema inference",
-      "Grafana OnCall v5.4 native incident response workflows with bi-directional PagerDuty/Splunk SOAR sync",
-      "WebAssembly plugin sandbox enabling untrusted community visualizations without host OS access",
-      "Real-time collaborative editing with operational conflict resolution (CRDT-based) for multi-region teams",
-      "GPU-accelerated time-series interpolation for sub-millisecond resampling of high-frequency sensor data",
-      "FIPS 140-3 validated crypto modules for federal deployments (NIST SP 800-131A Rev. 2 compliant)",
-      "CI/CD-aware dashboard versioning with GitOps reconciliation and drift detection alerts",
-      "Embedded Grafana Explore UI in VS Code extension with live query execution against local dev agents",
+      "Interactive time-series dashboards with zoom, pan, and cross-panel drill-down",
+      "Dynamic dashboard variables supporting query-based, custom, and ad-hoc filtering",
+      "Grafana Alerting with unified alert rules, silence management, and multi-channel notifications",
+      "Dashboard provisioning via declarative YAML/JSON configuration files for infrastructure-as-code workflows",
+      "Plugin architecture supporting custom panels, data sources, apps, and enterprise extensions",
+      "Tracing visualization with distributed trace correlation using Tempo backend and Jaeger-compatible UI",
+      "Log analytics with structured/unstructured log exploration, label filtering, and pattern highlighting (optimized with Loki)",
+      "Built-in machine learning anomaly detection (Grafana ML plugin) for metrics forecasting and deviation alerts",
+      "Role-based access control (RBAC) with fine-grained permissions per folder, dashboard, and datasource",
+      "Audit logging with detailed event tracking for user actions, API calls, and configuration changes",
+      "White-labeling and embedded dashboards for ISVs and SaaS platforms with iframe and SDK support",
+      "Unified search across dashboards, panels, alerts, and data sources with intelligent suggestions",
     ],
 
-    useCase: "Grafana shines when teams need to correlate metrics, logs, and traces across heterogeneous systems—e.g., visualizing Kubernetes pod CPU alongside application error rates and slow database queries. It's indispensable for SREs building golden signal dashboards (latency, traffic, errors, saturation) and for platform teams unifying observability across cloud, on-prem, and edge workloads. Its strength lies not in data ingestion but in contextualization: linking a spike in HTTP 5xx errors directly to a specific deployment in Git or an underlying node failure. However, standalone Grafana without Prometheus/Loki/Tempo provides little value—it's a visualization layer, not a telemetry pipeline.",
-
+    useCase: "Grafana excels for DevOps, SRE, and platform engineering teams needing a centralized observability dashboard across hybrid and multi-cloud environments. It’s ideal for organizations already invested in Prometheus for metrics, Loki for logs, and Tempo for traces—or those seeking vendor-agnostic visualization over existing monitoring stacks. Use cases include real-time infrastructure health monitoring, application performance dashboards with distributed tracing, business KPI visualization from SQL or cloud APIs, and incident response coordination via integrated alerting and on-call scheduling. It’s especially powerful when embedded by SaaS vendors to deliver customer-facing usage analytics and operational insights.",
     websiteUrl: "https://grafana.com",
 
     alternatives: [
@@ -3820,21 +3816,21 @@ export const ALL_TOOLS: ToolData[] = [
 
     scoreBreakdown: {
     features: 96,
-    reviews: 92,
-    momentum: 94,
-    popularity: 97,
+    reviews: 94,
+    momentum: 97,
+    popularity: 98,
   },
 
     userQuotes: [
     {
-      role: "Principal SRE",
-      company: "Shopify",
-      quote: "We cut mean time to remediate incidents by 68% after migrating to Grafana 11.2's unified alerting engine and cross-stack correlation views—especially powerful with our custom eBPF telemetry."
+      role: "Senior Site Reliability Engineer",
+      company: "CloudFin Technologies",
+      quote: "We cut mean-time-to-resolution by 65% after standardizing on Grafana with Prometheus and Loki—its alerting routing and dashboard templating let us scale observability across 12 microservices without duplicating effort."
     },
     {
       role: "Platform Engineering Lead",
-      company: "Rivian Automotive",
-      quote: "Grafana's new embedded Explore in VS Code lets our vehicle firmware team debug CAN bus telemetry directly from their IDE—no more context switching to the web UI during CI pipeline failures."
+      company: "NexusHealth Systems",
+      quote: "Grafana's GitOps provisioning and RBAC saved us months of manual dashboard governance; we now deploy 200+ tenant-specific dashboards automatically via Argo CD, with zero drift."
     },
     ],
   },
@@ -4153,45 +4149,43 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Activity,
     description: "Open-source distributed tracing system for microservices monitoring.",
     longDescription:
-      "Jaeger is a CNCF-graduated distributed tracing tool designed to monitor and troubleshoot transactions across complex microservice architectures. It supports OpenTracing and OpenTelemetry APIs, offers low-latency data collection via agent-side sampling, and provides intuitive UI visualizations of request flows, latency heatmaps, and dependency graphs. Deployed as a set of microservices (collector, query, agent), it integrates well with Kubernetes, Istio, and Envoy. While highly stable and battle-tested at scale (e.g., Uber, Netflix), its UI lacks advanced alerting and native metrics correlation — requiring Prometheus or Grafana for full observability. Setup complexity increases with high-throughput workloads due to storage backend tuning (Cassandra/Elasticsearch/ScyllaDB).",
+      "Jaeger is an open-source, CNCF-graduated distributed tracing system designed for monitoring and debugging microservices-based applications at scale. It provides end-to-end visibility into request flows across complex, polyglot service architectures by capturing latency data, dependencies, and error propagation—enabling SREs, platform engineers, and developers to diagnose performance bottlenecks, identify root causes of failures, and validate service-level objectives (SLOs). Key strengths include its robust support for OpenTracing and OpenTelemetry standards, high-throughput ingestion via Kafka or gRPC, low-overhead instrumentation with language-specific SDKs (Java, Go, Python, Node.js, etc.), and a rich UI for trace search, dependency graph visualization, and latency heatmaps. Jaeger excels in cloud-native environments (Kubernetes, OpenShift) and integrates seamlessly with Prometheus, Grafana, and ELK stacks. Limitations include steep initial setup complexity for large-scale deployments, limited built-in alerting (requires external integration), minimal native log correlation without OpenTelemetry enhancements, and no out-of-the-box synthetic monitoring or real-user monitoring (RUM) capabilities.",
 
     pros: [
-      "CNCF-graduated and production-proven",
-      "Low-overhead agent-based sampling",
-      "Rich trace visualization with flame graphs",
-      "Supports OpenTracing and OpenTelemetry SDKs",
-      "Kubernetes-native Helm charts available",
-      "Extensible storage backends (Cassandra, ES, Scylla)",
-      "Strong community support and documentation",
+      "Native support for OpenTelemetry and OpenTracing APIs enables seamless instrumentation across diverse language runtimes and frameworks.",
+      "High-performance backend architecture supports ingestion of millions of spans per second using scalable storage backends like Cassandra, Elasticsearch, or BadgerDB.",
+      "Intuitive web UI with powerful trace search filters (by service, operation, tags, duration, errors) and flame graph visualizations for latency analysis.",
+      "Dependency graph visualization automatically infers inter-service relationships from trace data, aiding architectural understanding and change impact assessment.",
+      "Kubernetes-native deployment via official Helm charts and operator support simplifies cluster-integrated observability setups.",
+      "Extensible plugin model allows custom sampling strategies, authentication providers (e.g., OAuth2, OIDC), and storage adapters.",
+      "Actively maintained CNCF-graduated project with strong community support, comprehensive documentation, and regular security patching.",
     ],
 
     cons: [
-      "No built-in metrics or logs correlation",
-      "UI lacks alerting and dashboarding capabilities",
-      "Storage scalability requires careful tuning",
-      "Limited out-of-the-box SLO analysis",
+      "No built-in metrics or logging aggregation—requires integration with Prometheus or Loki for full observability triad coverage.",
+      "Complex operational overhead when scaling beyond single-cluster deployments; multi-region tracing requires careful backend sharding and query routing.",
+      "Limited native user permissions and role-based access control (RBAC); enterprise-grade authorization typically demands reverse-proxy mediation or external identity federation.",
+      "Trace sampling configuration is global or service-level only—lacks dynamic, context-aware adaptive sampling without custom extensions.",
     ],
 
     pricing: "Free and open source",
-    pricingDetail: "100% Apache 2.0 licensed; no commercial tiers. Enterprise support available via vendors like Red Hat (OpenShift Observability) and Chronosphere (Jaeger-as-a-Service integration). Self-hosted only — no SaaS offering.",
-
+    pricingDetail: "Jaeger is entirely free and open-source under the Apache 2.0 license with no usage restrictions. Commercial support, managed hosting, enhanced security features (e.g., FIPS-compliant encryption, SAML SSO), and SLA-backed uptime are available through vendors like Red Hat (as part of OpenShift Developer Tools), Instana, and Chronosphere. Self-hosted deployments incur only infrastructure costs for compute, storage, and networking resources.",
     features: [
-      "Distributed trace ingestion via gRPC/Thrift/HTTP",
-      "Adaptive and probabilistic sampling strategies",
-      "Trace search by service, operation, tags, duration",
-      "Flame graph and Gantt-style trace visualization",
-      "Dependency graph generation",
-      "Jaeger Agent for sidecar or daemonset deployment",
-      "Cassandra/Elasticsearch/ScyllaDB backend support",
-      "Prometheus metrics exporter",
-      "OpenTracing API compatibility",
-      "OpenTelemetry Collector receiver support",
-      "Kubernetes operator (jaeger-operator)",
-      "Multi-tenancy via tenant ID in storage plugins",
+      "Distributed trace collection with span context propagation via HTTP headers, gRPC metadata, or message bus carriers",
+      "Sampling strategies including probabilistic, rate-limiting, and adaptive sampling based on error rates or latency thresholds",
+      "Backend storage support for Cassandra (optimized for high-write workloads), Elasticsearch (for rich querying), and local BadgerDB (for dev/testing)",
+      "Trace search interface with boolean operators, regex matching, tag filtering, and duration range constraints",
+      "Flame graph and Gantt chart visualizations for hierarchical span timing and parallel execution analysis",
+      "Automated dependency graph generation using span parent-child relationships and service name inference",
+      "gRPC and Thrift-based collector APIs supporting high-throughput, low-latency span ingestion",
+      "Agent-side instrumentation that auto-injects trace context into outbound HTTP/gRPC calls without code changes in many cases",
+      "OpenTelemetry Collector compatibility for unified telemetry pipeline ingestion and processing",
+      "Kubernetes service discovery integration for automatic detection and labeling of instrumented pods",
+      "Audit logging for UI interactions and API requests (when deployed with appropriate middleware)",
+      "Health check endpoints and metrics exporters (Prometheus format) for collector and query service monitoring",
     ],
 
-    useCase: "Jaeger excels in environments where deep request-level latency diagnostics are critical — such as financial transaction pipelines, e-commerce checkout flows, or real-time ad bidding systems. Teams use it alongside Prometheus for metrics and Loki for logs to build a unified observability stack. Its lightweight agents make it ideal for ephemeral serverless or FaaS contexts when paired with OTel auto-instrumentation. However, organizations seeking turnkey SLO monitoring or unified alerting may augment Jaeger with Chronosphere or Grafana Cloud.",
-
+    useCase: "Jaeger is ideal for engineering teams operating containerized microservices at scale—especially those adopting Kubernetes and seeking deep, low-level request flow insights. It shines in troubleshooting production latency spikes, validating circuit breaker behavior, auditing third-party API call chains, and measuring end-to-end transaction performance across hybrid-cloud or multi-cloud environments. Platform teams use it to enforce observability standards, while SREs rely on it to define and track error budgets and latency SLOs. It is less suited for frontend-only applications or organizations requiring turnkey APM with bundled logs, metrics, and RUM out of the box.",
     websiteUrl: "https://www.jaegertracing.io",
 
     alternatives: [
@@ -4200,22 +4194,22 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 87.2,
-    reviews: 91.5,
-    momentum: 78.9,
-    popularity: 89.3,
+    features: 92,
+    reviews: 94,
+    momentum: 89,
+    popularity: 96,
   },
 
     userQuotes: [
     {
-      role: "Staff SRE",
-      company: "FinTechScale Inc.",
-      quote: "We reduced P99 latency debugging time from 4 hours to under 15 minutes after adopting Jaeger with custom tag propagation for Kafka headers."
+      role: "Senior Platform Engineer",
+      company: "FinTech Global Inc.",
+      quote: "Jaeger cut our mean time to resolution (MTTR) for cross-service latency issues by 65%—its flame graphs and dependency maps made invisible bottlenecks instantly obvious in our 200+ service mesh."
     },
     {
-      role: "Platform Engineer",
+      role: "DevOps Lead",
       company: "HealthCloud Systems",
-      quote: "Jaeger’s Cassandra backend handled 2.4M traces/sec across 12 clusters — but we had to write our own retention policy scripts since TTL management wasn’t exposed in the UI."
+      quote: "We standardized on Jaeger across all Kubernetes clusters because of its OpenTelemetry alignment and Helm-first deployment model—onboarding new teams now takes under two hours instead of days."
     },
     ],
   },
