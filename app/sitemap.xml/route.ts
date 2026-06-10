@@ -6,6 +6,7 @@ const BLOG_SLUGS = [
     "playwright-vs-cypress-vs-puppeteer-2026",
     "k8s-vs-docker-compose-vs-nomad-2026",
     "grafana-vs-datadog-vs-new-relic-vs-sentry-2026",
+    "best-devops-tools-2026-comparison",
 ] as const;
 
 const TOOL_SLUGS = [
