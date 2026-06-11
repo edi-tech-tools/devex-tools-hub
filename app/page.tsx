@@ -15,7 +15,7 @@ import {
   Cpu,
   ChevronRight,
   GitBranch,
-  Robot,
+  Bot,
 } from "lucide-react";
 import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -43,7 +43,7 @@ export default function HomePage() {
   );
 
   const features = [
-    { icon: Robot, title: "Robotics-Grade Testing", desc: "Tools vetted by our Stuttgart robotics team — real CI/CD, real hardware-in-the-loop." },
+    { icon: Bot, title: "Robotics-Grade Testing", desc: "Tools vetted by our Stuttgart robotics team — real CI/CD, real hardware-in-the-loop." },
     { icon: GitBranch, title: "DevOps-First Reviews", desc: "Infrastructure-as-code, pipeline optimization, and reproducibility at scale." },
     { icon: Users, title: "6-Person Engineering Team", desc: "Isle Works is a tight-knit crew of 6. Every review reflects hands-on experience." },
     { icon: Shield, title: "No Sponsored Rankings", desc: "Zero paid placements. Just honest evaluations from practicing engineers." },
@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 group">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#06b6d4] to-[#a78bfa] flex items-center justify-center">
-                <Robot className="w-4 h-4 text-white" />
+                <Bot className="w-4 h-4 text-white" />
               </div>
               <span className="text-sm font-bold text-white tracking-tight">
                 Isle<span className="text-[#06b6d4]">Works</span>
@@ -368,7 +368,7 @@ export default function HomePage() {
         <footer className="relative z-10 border-t border-white/[0.04] px-6 py-8">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Robot className="w-5 h-5 text-[#06b6d4]" />
+              <Bot className="w-5 h-5 text-[#06b6d4]" />
               <span className="text-sm font-semibold text-white">Isle Works</span>
               <span className="text-[10px] text-[#64748b]">DevEx</span>
             </div>

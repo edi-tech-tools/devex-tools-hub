@@ -7,11 +7,11 @@
   "/page": "app/page.js",
   "/tools/[slug]/page": "app/tools/[slug]/page.js",
   "/blog/page": "app/blog/page.js",
-  "/disclosure/page": "app/disclosure/page.js",
   "/about/page": "app/about/page.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/disclosure/page": "app/disclosure/page.js",
   "/category/[slug]/page": "app/category/[slug]/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/best/[slug]/page": "app/best/[slug]/page.js",
   "/privacy/page": "app/privacy/page.js",
-  "/terms/page": "app/terms/page.js",
-  "/best/[slug]/page": "app/best/[slug]/page.js"
+  "/terms/page": "app/terms/page.js"
 }
