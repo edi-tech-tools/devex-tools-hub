@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { ALL_TOOLS } from "@/data/tools";
 import { Star, ArrowRight, Sparkles, ChevronRight, Search } from "lucide-react";
@@ -11,13 +13,54 @@ function slugify(category: string) {
 
 export const metadata: Metadata = {
   title: "Best Developer Tools 2026 — Expert Comparisons",
-  description:
-    "Discover the best developer tools and platforms in 2026. Compare top-rated platforms with verified reviews, pricing, and expert analysis.",
+  description: "Discover the best developer tools and platforms in 2026. Compare top-rated platforms with verified reviews, pricing, and expert analysis.",
   openGraph: {
     title: "Best Developer Tools 2026 — Expert Comparisons",
     description: `Compare ${ALL_TOOLS.length} top-rated solutions with verified reviews and detailed comparisons.`,
   },
 };
+
+function CategoryCard({ cat }: { cat: string }) {
+  const count = ALL_TOOLS.filter((t) => t.category === cat).length;
+  return (
+    <Link
+      href={`/best/${slugify(cat)}`}
+      className="group flex items-center justify-between p-4 rounded-xl border border-[#1E293B] bg-[#0F172A] hover:border-[#334155] hover:bg-[#1A2332] transition-all"
+    >
+      <div>
+        <div className="text-sm font-medium text-[#E2E8F0] group-hover:text-[#60A5FA] transition-colors">{cat}</div>
+        <div className="text-xs text-[#64748B] mt-0.5">{count} tools</div>
+      </div>
+      <ChevronRight className="w-4 h-4 text-[#475569] group-hover:text-[#60A5FA] transition-colors" />
+    </Link>
+  );
+}
+
+function ToolCard({ tool }: { tool: any }) {
+  return (
+    <Link
+      href={`/tools/${tool.slug || tool.id || ""}`}
+      className="block p-5 rounded-xl border border-[#1E293B] bg-[#0F172A] hover:border-[#334155] transition-all"
+    >
+      <div className="flex items-start gap-3">
+        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#0F172A] flex items-center justify-center text-lg flex-shrink-0">
+          {tool.icon || "\u{1F527}"}
+        </div>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-sm font-semibold text-[#E2E8F0] truncate">{tool.name}</h3>
+          <p className="text-xs text-[#64748B] mt-1 line-clamp-2">{tool.description}</p>
+          <div className="flex items-center gap-3 mt-2">
+            <div className="flex items-center gap-1">
+              <Star className="w-3 h-3 text-[#F59E0B] fill-[#F59E0B]" />
+              <span className="text-xs text-[#94A3B8]">{tool.rating}</span>
+            </div>
+            <span className="text-xs text-[#475569]">{tool.reviews || tool.reviewCount || 0} reviews</span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
 export default function BestToolsPage() {
   const topTools = [...ALL_TOOLS].sort((a, b) => b.rating - a.rating).slice(0, 6);
@@ -54,22 +97,7 @@ export default function BestToolsPage() {
         <div className="max-w-[1000px] mx-auto">
           <h2 className="text-lg font-semibold text-[#F1F5F9] mb-6">Browse by Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {ALL_CATEGORIES.map((cat) => {
-              const count = ALL_TOOLS.filter((t) => t.category === cat).length;
-              return (
-                <Link
-                  key={cat}
-                  href={`/best/${slugify(cat)}`}
-                  className="group flex items-center justify-between p-4 rounded-xl border border-[#1E293B] bg-[#0F172A] hover:border-[#334155] hover:bg-[#1A2332] transition-all"
-                >
-                  <div>
-                    <div className="text-sm font-medium text-[#E2E8F0] group-hover:text-[#60A5FA] transition-colors">{cat}</div>
-                    <div className="text-xs text-[#64748B] mt-0.5">{count} tools</div>
-                  </div>
-                  <ChevronRight className="w-4 h-4 text-[#475569] group-hover:text-[#60A5FA] transition-colors" />
-                </Link>
-              );
-            })}
+            {ALL_CATEGORIES.map((cat) => <CategoryCard key={cat} cat={cat} />)}
           </div>
         </div>
       </section>
@@ -86,30 +114,7 @@ export default function BestToolsPage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {topTools.map((tool) => (
-              <Link
-                key={tool.id || tool.slug || tool.name}
-                href={`/tools/${tool.slug || tool.id || ""}`}
-                className="block p-5 rounded-xl border border-[#1E293B] bg-[#0F172A] hover:border-[#334155] transition-all"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#0F172A] flex items-center justify-center text-lg flex-shrink-0">
-                    {tool.icon || "&#x1F527;"}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="text-sm font-semibold text-[#E2E8F0] truncate">{tool.name}</h3>
-                    <p className="text-xs text-[#64748B] mt-1 line-clamp-2">{tool.description}</p>
-                    <div className="flex items-center gap-3 mt-2">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-3 h-3 text-[#F59E0B] fill-[#F59E0B]" />
-                        <span className="text-xs text-[#94A3B8]">{tool.rating}</span>
-                      </div>
-                      <span className="text-xs text-[#475569]">{tool.reviews || tool.reviewCount || 0} reviews</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
+            {topTools.map((tool) => <ToolCard key={tool.id || tool.slug || tool.name} tool={tool} />)}
           </div>
         </div>
       </section>
