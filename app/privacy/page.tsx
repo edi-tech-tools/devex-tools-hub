@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — DevEx Tools Hub",
+  title: "Privacy Policy — Isle Works DevEx",
   description:
-    "Learn how DevEx Tools Hub collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
+    "Learn how Isle Works collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };
 
 export default function PrivacyPage() {
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Introduction</h2>
             <p>
-              DevEx Tools Hub ("we," "our," or "us") is committed to protecting your privacy.
+              Isle Works DevEx ("we," "our," or "us") is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
               information when you visit our website devex-tools.net (the "Site"). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.

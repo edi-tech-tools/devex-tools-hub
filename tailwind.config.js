@@ -7,19 +7,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        deep: {
-          DEFAULT: '#0A1628',
-          100: '#0F1D32',
-          200: '#162440',
-          300: '#1E3A5F',
-          400: '#2A5080',
-          500: '#3B82F6',
+        isle: {
+          DEFAULT: '#1e293b',
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
         },
-        muted: {
-          DEFAULT: '#4A6380',
-          light: '#8BA3BE',
+        accent: {
+          cyan: '#06b6d4',
+          purple: '#a78bfa',
+          pink: '#f472b6',
         },
-        surface: '#F0F4F8',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],

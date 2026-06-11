@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} — DevEx Tools Hub`,
+    title: `${post.title} — Isle Works DevEx`,
     description: post.excerpt,
   };
 }
@@ -166,13 +166,13 @@ export default async function BlogPostPage({
     post.title,
     post.author,
     post.date,
-    'DevEx Tools Hub',
+    'Isle Works DevEx',
     post.excerpt
   );
   const orgJsonLd = organizationSchema(
-    'DevEx Tools Hub',
+    'Isle Works DevEx',
     'https://devex-tools.net',
-    'Comprehensive developer tools directory and comparison platform for engineering teams.'
+    'Developer tool reviews and comparisons curated by the Isle Works engineering team in Stuttgart.'
   );
 
   return (
@@ -256,7 +256,7 @@ export default async function BlogPostPage({
                     <p className="font-bold text-[#F0F4F8]">{post.author}</p>
                     <p className="text-sm text-[#8BA3BE]">{post.authorRole}</p>
                     <p className="text-xs text-[#4A6380] mt-2">
-                      Devex-tools-hub independently researches and verifies all product data. Ratings sourced from G2, Capterra, and other trusted review platforms.
+                      Isle Works independently researches and verifies all product data. Ratings sourced from G2, Capterra, and other trusted review platforms.
                     </p>
                   </div>
                 </div>

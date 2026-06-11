@@ -2,34 +2,35 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "DevEx Tools — Developer Experience Tools & Reviews",
+  title: "DevEx Tools — Curated by Isle Works",
   description:
-    "Compare developer tools with verified reviews, pricing breakdowns, and expert comparisons. Find the perfect dev tools for your engineering team.",
+    "Developer tool reviews and comparisons, curated by the Isle Works engineering team in Stuttgart. Robotics, DevOps, and developer experience expertise.",
   keywords: [
     "developer tools",
     "DevEx",
     "dev tools",
-    "API tools",
+    "Isle Works",
     "developer experience",
     "software reviews",
     "engineering tools",
     "DevOps tools",
+    "Stuttgart",
   ],
   metadataBase: new URL("https://devex-tools.net"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "DevEx Tools",
-    title: "DevEx Tools — Developer Experience Tools & Reviews",
+    siteName: "DevEx Tools — Isle Works",
+    title: "DevEx Tools — Curated by Isle Works",
     description:
-      "Compare developer tools with verified reviews, pricing breakdowns, and expert comparisons.",
+      "Developer tool reviews and comparisons, curated by the Isle Works engineering team.",
     url: "https://devex-tools.net",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevEx Tools — Developer Experience Tools & Reviews",
+    title: "DevEx Tools — Curated by Isle Works",
     description:
-      "Compare developer tools with verified reviews, pricing breakdowns, and expert comparisons.",
+      "Developer tool reviews and comparisons, curated by the Isle Works engineering team.",
   },
 };
 

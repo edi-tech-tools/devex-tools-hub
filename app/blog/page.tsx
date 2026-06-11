@@ -4,9 +4,9 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog — DevEx Tools Hub",
+  title: "Blog — Isle Works DevEx",
   description:
-    "Expert insights, comparisons, and strategies for choosing and using developer tools. Stay informed with the latest in DevOps, frameworks, APIs, and engineering workflows.",
+    "Expert insights, comparisons, and strategies for choosing and using developer tools, curated by the Isle Works engineering team in Stuttgart.",
 };
 
 const CATEGORIES = Array.from(new Set(BLOG_POSTS.map((post) => post.category)));

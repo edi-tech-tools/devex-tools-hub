@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --bg-deepest: #09090b;
-    --bg-primary: #0c0c0f;
-    --bg-secondary: #111114;
-    --bg-elevated: #18181b;
+    --bg-deepest: #020617;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-elevated: #334155;
     --border-subtle: rgba(255,255,255,0.06);
     --border-active: rgba(255,255,255,0.12);
-    --text-primary: #fafafa;
-    --text-secondary: #a1a1aa;
-    --text-muted: #52525b;
-    --accent-cyan: #00bcd4;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-cyan: #06b6d4;
     --accent-purple: #a78bfa;
     --accent-pink: #f472b6;
-    --accent-glow: rgba(0, 188, 212, 0.15);
+    --accent-glow: rgba(6, 182, 212, 0.15);
     --radius: 0.75rem;
   }
 
@@ -39,14 +39,14 @@
 }
 
 @layer components {
-  .card-liquid {
-    @apply relative overflow-hidden rounded-2xl border;
-    background-color: rgba(255,255,255,0.035);
+  .card-isle {
+    @apply relative overflow-hidden rounded-2xl border border-white/5;
+    background-color: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     box-shadow:
-      inset 0 1px 0 0 rgba(255,255,255,0.08),
-      inset 0 0 0 1px rgba(255,255,255,0.04),
+      inset 0 1px 0 0 rgba(255,255,255,0.06),
+      inset 0 0 0 1px rgba(255,255,255,0.03),
       0 1px 3px rgba(0,0,0,0.12),
       0 8px 32px -8px rgba(0,0,0,0.28);
     transition: backdrop-filter 400ms cubic-bezier(0.22,1,0.36,1),
@@ -54,25 +54,25 @@
                 box-shadow 300ms ease;
   }
 
-  .card-liquid::before {
+  .card-isle::before {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.06) 0%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.04) 0%, transparent 100%);
     border-radius: inherit;
   }
 
-  .card-liquid:hover {
+  .card-isle:hover {
     backdrop-filter: blur(20px) saturate(200%) brightness(1.08);
     -webkit-backdrop-filter: blur(20px) saturate(200%) brightness(1.08);
-    border-color: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.1);
     box-shadow:
-      inset 0 1px 0 0 rgba(255,255,255,0.1),
-      inset 0 0 0 1px rgba(255,255,255,0.06),
+      inset 0 1px 0 0 rgba(255,255,255,0.08),
+      inset 0 0 0 1px rgba(255,255,255,0.05),
       0 1px 3px rgba(0,0,0,0.12),
       0 8px 32px -8px rgba(0,0,0,0.28),
-      0 0 40px -8px rgba(0, 188, 212, 0.12);
+      0 0 40px -8px rgba(6, 182, 212, 0.1);
   }
 
   .text-gradient {
@@ -90,7 +90,7 @@
   }
 
   .glow-cyan {
-    box-shadow: 0 0 30px rgba(0, 188, 212, 0.15);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
   }
 
   .glow-purple {
