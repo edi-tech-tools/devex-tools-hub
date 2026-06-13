@@ -25,6 +25,7 @@ dist-ssr
 
 # Next.js
 .next/
+.next_old/
 next-env.d.ts
 patch.diff
 newtools.js
