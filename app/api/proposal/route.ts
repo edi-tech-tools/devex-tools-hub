@@ -11,7 +11,7 @@ export async function GET() {
     return new NextResponse(content, {
       headers: {
         'Content-Type': 'text/markdown; charset=utf-8',
-        'Content-Disposition': 'attachment; filename="Hermes_AI项目方案书_v1.0.md"',
+        'Content-Disposition': 'attachment; filename="hermes-ai-proposal-v1.0.md"',
       },
     });
   } catch {
