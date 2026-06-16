@@ -8,7 +8,12 @@ const BLOG_SLUGS = [
     "grafana-vs-datadog-vs-new-relic-vs-sentry-2026",
     "best-devops-tools-2026-comparison",
     "github-actions-vs-gitlab-ci-vs-jenkins-2026",
+    "ai-assisted-code-review-tools-2026-comparison",
     "code-quality-tools-2026-comparison",
+    "the-rise-of-developer-experience-engineering-2026",
+    "top-10-ai-assisted-coding-tools-2026",
+    "infrastructure-as-code-tools-2026-terraform-pulumi-cdk",
+    "migrating-webpack-to-vite-developer-diary",
 ] as const;
 
 const TOOL_SLUGS = [
