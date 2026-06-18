@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "DevEx Tools — Curated by Isle Works",
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased">
+        <CookieBanner />
         {children}
       </body>
     </html>
