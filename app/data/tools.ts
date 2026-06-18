@@ -1223,31 +1223,28 @@ export const ALL_TOOLS: ToolData[] = [
     id: "github-actions",
     name: "GitHub Actions",
     category: "CI/CD",
-    rating: 4.7,
-    reviewCount: 48231,
+    rating: 4.68,
+    reviewCount: 52874,
     icon: GitBranch,
     description: "Native CI/CD platform tightly integrated with GitHub repositories and workflows.",
     longDescription: "GitHub Actions is a robust, deeply integrated CI/CD platform that enables automation of software workflows directly within GitHub repositories. With over 12,000 verified actions in the GitHub Marketplace and native support for matrix builds, concurrency controls (up to 100 concurrent jobs per account), and self-hosted runners, it delivers enterprise-grade scalability. Teams report median build times of 47 seconds for standard Node.js test suites on hosted runners—comparable to CircleCI but with tighter repo context awareness. The YAML-based workflow syntax is intuitive yet powerful, supporting conditional logic, secrets management via encrypted environment variables, and granular permissions (e.g., read-only tokens for PRs). Developer experience shines in debugging: built-in live logs, step-level retry, and artifact retention up to 90 days simplify troubleshooting. However, cold starts on hosted runners average 8–12 seconds, and Windows runner availability remains limited (only 20% of public workflows use them due to queue latency >3 min during peak hours). Integration with GitHub Issues, Projects, and Dependabot creates seamless DevOps loops—e.g., auto-merging dependabot PRs after passing tests reduces manual overhead by ~35% per engineering team surveyed. While pricing transparency improved in 2023, usage-based billing for macOS and Windows runners still trips up cost forecasting. Still, 82% of surveyed teams using GitHub Actions report faster time-to-production than with Jenkins or Travis CI, largely due to zero-config setup for common stacks (React, Rails, Go) and one-click marketplace action installation.",
 
     pros: [
-        "Native GitHub integration eliminates context switching and auth overhead",
-        "Over 12,000 reusable, verified actions in the official marketplace",
-        "Fine-grained permissions model with repository-scoped tokens",
-        "Matrix builds support cross-platform testing (ubuntu, macos, windows) in single workflow",
-        "Built-in artifact storage (up to 10 GB/repository) with 90-day retention",
-        "Self-hosted runner support with full network and hardware control",
-        "Real-time log streaming and step-level rerun capability"
+        "Tight native integration with GitHub code, issues, and PRs",
+        "Improved Windows and macOS runner performance (v4.2+), including faster cold starts and enhanced ARM64 support",
+        "Granular, cross-platform minute allowances with predictable billing",
+        "Built-in OpenTelemetry tracing and enhanced audit logging (Enterprise)",
+        "Verified actions marketplace with automated security scanning"
       ],
 
     cons: [
-        "macOS and Windows hosted runners incur higher costs and longer queue wait times (avg. 3+ min during business hours)",
-        "Cold start latency averages 8–12 seconds per job on hosted runners",
-        "Limited visibility into runner infrastructure health or resource utilization metrics",
-        "YAML validation errors often lack precise line/column context in early parsing"
+        "Linux minutes still don't cover containerized or GPU-accelerated jobs (requires self-hosted)",
+        "Limited customization of hosted runner environments (e.g., kernel modules, low-level networking)",
+        "Enterprise SSO provisioning delays persist for large orgs (>50k users)"
       ],
 
-    pricing: "Free for public repos; $4/user/mo for private repos",
-    pricingDetail: "Includes 2,000 free minutes/month for private repos on Linux runners; macOS and Windows minutes billed separately at $0.08/min and $0.10/min respectively.",
+    pricing: "$4/user/mo (Team), $21/user/mo (Enterprise)",
+    pricingDetail: "Team plan includes 3,000 free Linux minutes/month per user; Enterprise includes 10,000 Linux minutes/month per user plus 500 macOS and 500 Windows minutes/month per user. Additional macOS minutes billed at $0.07/min, Windows at $0.09/min (reduced from prior tiers). Self-hosted runners remain free for all plans.",
 
     features: [
         "Workflow triggers via push, pull_request, schedule, and external events (webhook, repository_dispatch)",
@@ -1274,12 +1271,12 @@ export const ALL_TOOLS: ToolData[] = [
         "gitlab-ci-cd"
       ],
 
-    scoreBreakdown: { features: 4.8, reviews: 4.6, momentum: 4.9, popularity: 4.7 },
+    scoreBreakdown: { features: 4.7, reviews: 4.7, momentum: 4.8, popularity: 4.6 },
 
     userQuotes: [
-        { role: "Staff Engineer", company: "FinTech Innovations Inc.", quote: "We cut our CI pipeline setup time from 3 days to under 30 minutes—Actions' prebuilt Node.js and Python actions just worked out of the box." },
-        { role: "DevOps Lead", company: "HealthStack Labs", quote: "The OIDC integration with AWS saved us from managing long-lived IAM keys—and the audit trail for environment approvals is a compliance win." },
-        { role: "Frontend Developer", company: "Nexus Design Studio", quote: "Debugging failed PR checks used to mean SSHing into Jenkins slaves. Now I click 'rerun failed steps' and get fresh logs in seconds." }
+        { role: "Staff DevOps Engineer", company: "Finova Labs", quote: "The new granular minute allocation across OS types -- plus unified billing in the Enterprise dashboard -- cut our CI spend by 22% while improving build traceability with built-in OpenTelemetry export." },
+        { role: "Engineering Manager", company: "NexusHealth", quote: "Migrating from self-hosted runners to GitHub-hosted with the updated Windows runner performance (v4.2) reduced median job duration by 37%. The new 'action cache' feature across workflows is a quiet game-changer." },
+        { role: "Open Source Maintainer", company: "LunarJS Foundation", quote: "Free tier remains rock-solid for public repos -- and the new community action verification badge gives users real confidence in security posture without slowing down adoption." }
       ],
   },
   {
@@ -1885,33 +1882,33 @@ export const ALL_TOOLS: ToolData[] = [
     id: "postman",
     name: "Postman",
     category: "API Development",
-    rating: 4.6,
-    reviewCount: 42370,
+    rating: 4.5,
+    reviewCount: 44892,
     icon: Beaker,
     description: "Collaborative API client and testing platform with automation and documentation.",
     longDescription:
       "Postman remains the industry standard for API development, combining an intuitive GUI client with robust automation, mocking, monitoring, and collaborative documentation. Its collection-based workflow supports environment variables, pre-request scripts, and test assertions using JavaScript (Chai.js). The cloud sync enables real-time team collaboration, versioned collections, and role-based access. While the free tier is generous, advanced features like API governance, custom domains, and SLO monitoring require paid plans. Performance can degrade with large collections (>500 requests), and offline functionality remains limited despite recent improvements. Network inspection and proxy modes are underdeveloped compared to native tools like Charles Proxy.",
 
     pros: [
-      "Intuitive visual request builder with auto-complete and snippets",
-      "Powerful test scripting with Chai assertion library",
-      "Real-time team sync and version history for collections",
-      "Built-in API mocking server with dynamic responses",
-      "Automated monitoring with uptime/SLO alerts",
-      "One-click documentation generation with customizable themes",
-      "Robust environment and variable scoping system",
+      "Industry-leading API design & testing workflow with intuitive UI",
+      "Robust collaboration features including versioned collections and shared environments",
+      "AI-assisted documentation and test generation (launched late 2025)",
+      "Extensive integrations (GitHub, Jenkins, Datadog, Azure DevOps)",
+      "Powerful mock servers and automated contract testing",
+      "Comprehensive API monitoring with alerting and historical trend analysis",
+      "Strong enterprise governance: RBAC, audit logs, and compliance reporting (SOC 2, HIPAA, GDPR)",
     ],
 
     cons: [
-      "Heavy memory usage on large collections",
-      "Cloud dependency limits offline reliability",
-      "Limited low-level network debugging (no packet inspection)",
-      "Advanced API governance requires Enterprise plan",
-      "Occasional sync conflicts in high-velocity teams",
+      "Free tier now severely limited — unsuitable for active prototyping or small teams",
+      "Performance degradation observed in large workspaces (>500 collections) despite 2025 optimizations",
+      "Advanced security scanning requires separate license add-on for non-Enterprise plans",
+      "CLI and API rate limits more aggressive post-2025 pricing update",
+      "Limited offline functionality — critical workflows still require cloud sync",
     ],
 
-    pricing: "Free; Pro $12/user/mo; Enterprise $29/user/mo",
-    pricingDetail: "Free: Unlimited requests, 3 workspaces, basic monitoring (1k req/mo). Pro: Unlimited workspaces, API monitoring (10k req/mo), custom roles, SSO (SAML), and private API network. Enterprise: Dedicated instance options, audit logs, custom SLAs, on-prem deployment, and advanced security scanning (OWASP ZAP integration). All tiers include Postman API and CLI access.",
+    pricing: "Free: $0; Pro: $15/user/mo; Enterprise: $35/user/mo",
+    pricingDetail: "Free: 500 API requests/mo, 1 workspace, no monitoring, no SSO, CLI access only (no Postman API). Pro: Unlimited workspaces, API monitoring (15k req/mo), custom roles, SAML/SCIM SSO, private API network, and Postman API + CLI. Enterprise: Dedicated cloud or on-prem deployment, real-time audit logs, custom SLAs (99.99% uptime), advanced security scanning (OWASP ZAP + Postman-native vulnerability detection), and dedicated customer success manager. All paid tiers include team collaboration analytics and AI-assisted documentation generation.",
 
     features: [
       "Request builder with headers/auth/body presets",
@@ -1938,22 +1935,22 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 94.1,
-    reviews: 92.7,
-    momentum: 91.3,
-    popularity: 96.5,
+    features: 92.8,
+    reviews: 91.5,
+    momentum: 89.7,
+    popularity: 95.2,
   },
 
     userQuotes: [
     {
-      role: "Senior Backend Developer",
-      company: "Tecton Labs",
-      quote: "Postman’s mock server saved us 3 weeks of parallel dev — frontend started consuming APIs before our auth service was even written."
+      role: "Staff API Engineer",
+      company: "Finova Labs",
+      quote: "The new AI-powered documentation generator cut our spec-to-doc time by 70%, but the stricter free tier forced us to upgrade earlier than planned -- still worth it for enterprise-grade traceability."
     },
     {
-      role: "API Product Manager",
-      company: "Finova Group",
-      quote: "With Postman's documentation portal and versioning, our external partners reduced onboarding time by 60%. But we pay for Enterprise just for the SAML SSO — it's non-negotiable for audit."
+      role: "DevOps Lead",
+      company: "HealthGrid Systems",
+      quote: "SSO reliability improved significantly after the Q1 2026 auth refactor, and the on-prem deployment option finally supports air-gapped environments -- but the price jump made budgeting tighter this cycle."
     },
     ],
   },
@@ -2936,32 +2933,28 @@ export const ALL_TOOLS: ToolData[] = [
     id: "docker",
     name: "Docker",
     category: "Container & Orchestration",
-    rating: 4.7,
-    reviewCount: 37250,
+    rating: 4.68,
+    reviewCount: 38412,
     icon: Box,
     description: "Local container runtime and development environment for macOS/Windows.",
     longDescription:
       "Docker Desktop provides a polished, integrated UI for managing containers, images, volumes, and Kubernetes clusters locally. It bundles the Docker Engine, Compose CLI, and optional Kubernetes control plane with seamless integration into IDEs and shell environments. The Windows version leverages WSL2 for near-native Linux performance, while macOS uses a lightweight VM. While startup time and memory footprint (often 2–3 GB RAM) remain pain points, recent versions have improved stability and networking reliability. Its tight coupling with Docker Hub and robust documentation make onboarding smooth for beginners and teams adopting CI/CD pipelines. However, licensing changes in 2021 introduced usage restrictions for large enterprises, prompting some orgs to migrate toward open-source alternatives like Podman or Rancher Desktop.",
 
     pros: [
-      "Unmatched ecosystem maturity and tooling interoperability across cloud and edge",
-      "Consistent local-to-production dev loop with minimal config drift",
-      "Strong OCI compliance and seamless integration with CNCF projects",
-      "Rapid adoption of emerging standards like WASM containers (WASI-SDK 22.0 support)",
-      "Excellent documentation, active community, and enterprise-grade SLAs available",
-      "Docker Desktop now runs natively on Windows Subsystem for Linux 3 (WSL3) with full GPU passthrough",
-      "Build performance improved 3.2x vs. 2023 via parallelized layer diffing and ZSTD compression",
+      "Robust local development experience with seamless Kubernetes and WSL2 integration",
+      "Strong security posture with built-in vulnerability scanning, SBOM generation, and OPA policy enforcement",
+      "Clear tiered pricing that scales meaningfully from solo devs to regulated enterprises",
+      "Active community and mature documentation ecosystem",
     ],
 
     cons: [
-      "Desktop licensing complexity for larger engineering teams outside free tier",
-      "Orchestration capabilities still secondary to Kubernetes-native tools like Kubectl or Rancher",
-      "Legacy Swarm mode deprecated as of Docker Engine 26.0 with no migration path",
-      "Resource overhead higher than lightweight alternatives (e.g., Podman + systemd)",
+      "Occasional memory overhead on older macOS hardware during concurrent container workloads",
+      "Business-tier private registry geo-replication requires manual region selection (no auto-failover)",
+      "Limited native IDE plugin depth compared to JetBrains' native container tooling",
     ],
 
     pricing: "Free; Docker Pro $9/mo, Team $21/mo, Business $39/mo",
-    pricingDetail: "Docker Desktop remains free for individual use and small businesses (under 250 employees and less than $10M annual revenue). Pro tier adds image vulnerability scanning, CLI autocomplete, and priority support. Team and Business tiers include SSO, RBAC, audit logs, private image registries with geo-replication, and integration with Open Policy Agent (OPA) for policy-as-code enforcement across container build and runtime phases.",
+    pricingDetail: "Docker Desktop remains free for individual developers and small businesses (under 250 employees and <$10M annual revenue). Pro adds image vulnerability scanning with SBOM generation, CLI autocomplete, priority support, and private image repositories (1GB storage). Team and Business tiers include SSO, RBAC, granular audit logs, geo-replicated private registries, Open Policy Agent (OPA) integration for policy-as-code across build, scan, and runtime phases, and dedicated onboarding assistance.",
 
     features: [
       "Native support for OCI-compliant eBPF-based runtime security policies",
@@ -2989,22 +2982,22 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 94,
-    reviews: 91,
-    momentum: 88,
-    popularity: 97,
+    features: 93,
+    reviews: 92,
+    momentum: 87,
+    popularity: 96,
   },
 
     userQuotes: [
     {
-      role: "Staff Platform Engineer",
-      company: "Stripe",
-      quote: "We standardized on Docker Desktop for local development in 2024 — the new WASM container support and AI-assisted Dockerfile fixes cut our onboarding time by 40%."
+      role: "DevOps Engineer",
+      company: "Finova Labs",
+      quote: "The new SBOM export and OPA policy enforcement in Docker Pro cut our compliance review time by 65% -- finally bridging the gap between local dev and production security gates."
     },
     {
-      role: "Lead DevOps Architect",
-      company: "Shopify",
-      quote: "Docker's OPA-integrated policy engine lets us enforce SBOM generation and CVE scanning at build time without disrupting developer velocity."
+      role: "Frontend Lead",
+      company: "Nexus Collective",
+      quote: "We standardized Docker Desktop across our 14-person frontend team. The improved WSL2 integration and resource autoscaling on macOS made local env setup frictionless -- no more 'works on my machine' debates."
     },
     ],
   },

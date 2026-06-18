@@ -15,6 +15,7 @@ const BLOG_SLUGS = [
     "infrastructure-as-code-tools-2026-terraform-pulumi-cdk",
     "migrating-webpack-to-vite-developer-diary",
     "best-api-testing-tools-2026-postman-vs-insomnia-vs-hoppscotch",
+    "api-versioning-strategies-2026",
 ] as const;
 
 const TOOL_SLUGS = [
