@@ -16,6 +16,8 @@ const BLOG_SLUGS = [
     "migrating-webpack-to-vite-developer-diary",
     "best-api-testing-tools-2026-postman-vs-insomnia-vs-hoppscotch",
     "api-versioning-strategies-2026",
+    "container-orchestration-showdown-2026-kubernetes-docker-compose-nomad",
+    "microservices-vs-monolith-2026",
 ] as const;
 
 const TOOL_SLUGS = [
