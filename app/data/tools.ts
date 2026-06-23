@@ -2940,37 +2940,41 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Box,
     description: "Local container runtime and development environment for macOS/Windows.",
     longDescription:
-      "Docker Desktop provides a polished, integrated UI for managing containers, images, volumes, and Kubernetes clusters locally. It bundles the Docker Engine, Compose CLI, and optional Kubernetes control plane with seamless integration into IDEs and shell environments. The Windows version leverages WSL2 for near-native Linux performance, while macOS uses a lightweight VM. While startup time and memory footprint (often 2–3 GB RAM) remain pain points, recent versions have improved stability and networking reliability. Its tight coupling with Docker Hub and robust documentation make onboarding smooth for beginners and teams adopting CI/CD pipelines. However, licensing changes in 2021 introduced usage restrictions for large enterprises, prompting some orgs to migrate toward open-source alternatives like Podman or Rancher Desktop.",
+      "Docker is an open-source platform that automates the deployment, scaling, and management of applications inside lightweight, portable, and self-sufficient containers. It leverages OS-level virtualization to isolate processes using Linux kernel features such as namespaces and control groups (cgroups), enabling consistent runtime environments across development, testing, and production. Docker introduces a standardized unit of software delivery--the container--defined via declarative Dockerfiles and orchestrated using Docker Compose for multi-container applications or integrated with Kubernetes for enterprise-scale deployments. Its layered filesystem (UnionFS) enables efficient image layering, caching, and incremental builds, significantly reducing build times and storage overhead. Docker Hub serves as a public registry for sharing and versioning container images, while Docker Desktop provides seamless local development tooling for macOS and Windows--including WSL2 integration, Kubernetes support, and resource profiling. The platform supports multi-arch image builds, build-time secrets, image signing with Notary, and fine-grained network isolation via user-defined bridge networks and overlay networks. Docker Engine's REST API and CLI enable deep automation and CI/CD integration, and its daemonless BuildKit backend accelerates builds with parallelism, cache import/export, and improved security boundaries. Despite being foundational to modern DevOps practices, Docker abstracts away infrastructure complexity without sacrificing portability--making it indispensable for microservices architectures, edge deployments, and ephemeral test environments. Its ecosystem includes Docker Scout for vulnerability scanning, Docker Desktop extensions for IDE integration, and Docker Trusted Registry for private, air-gapped registries.",
 
     pros: [
-      "Robust local development experience with seamless Kubernetes and WSL2 integration",
-      "Strong security posture with built-in vulnerability scanning, SBOM generation, and OPA policy enforcement",
-      "Clear tiered pricing that scales meaningfully from solo devs to regulated enterprises",
-      "Active community and mature documentation ecosystem",
+      "Lightweight process isolation via Linux namespaces and cgroups without full VM overhead",
+      "Layered image system enables efficient caching, incremental builds, and reduced disk/network footprint",
+      "Declarative Dockerfiles provide reproducible, version-controlled build definitions",
+      "Docker Compose simplifies multi-container orchestration with YAML-based service definitions",
+      "Extensive ecosystem including Docker Hub, Docker Desktop, BuildKit, and Docker Scout",
+      "Strong CI/CD integration via Docker-in-Docker (DinD) and native GitHub Actions support",
+      "Cross-platform compatibility with native support on Linux, macOS (via HyperKit/WSL2), and Windows (via WSL2/Hyper-V)",
     ],
 
     cons: [
-      "Occasional memory overhead on older macOS hardware during concurrent container workloads",
-      "Business-tier private registry geo-replication requires manual region selection (no auto-failover)",
-      "Limited native IDE plugin depth compared to JetBrains' native container tooling",
+      "Docker Desktop requires a paid subscription for large enterprises (beyond 250 users)",
+      "Root-level daemon access poses security risks if misconfigured or exploited",
+      "Windows/macOS require VM abstraction layers (e.g., WSL2), adding latency and complexity",
+      "Orchestration beyond Compose demands external tools like Kubernetes, increasing learning curve",
     ],
 
-    pricing: "Free; Docker Pro $9/mo, Team $21/mo, Business $39/mo",
-    pricingDetail: "Docker Desktop remains free for individual developers and small businesses (under 250 employees and <$10M annual revenue). Pro adds image vulnerability scanning with SBOM generation, CLI autocomplete, priority support, and private image repositories (1GB storage). Team and Business tiers include SSO, RBAC, granular audit logs, geo-replicated private registries, Open Policy Agent (OPA) integration for policy-as-code across build, scan, and runtime phases, and dedicated onboarding assistance.",
+    pricing: "Free for individuals and small teams; paid plans for enterprises",
+    pricingDetail: "Docker Personal is free; Docker Pro ($5/user/month) adds image vulnerability scanning and priority support; Docker Team ($10/user/month) includes SSO, RBAC, and private repositories; Docker Business starts at $21/user/month with audit logs, compliance reports, and SLAs.",
 
     features: [
-      "Native support for OCI-compliant eBPF-based runtime security policies",
-      "Docker Buildx with distributed cache backed by OCI Artifact Registry",
-      "Integrated Dev Environments (Dev Envs) with GitPod and VS Code Server preconfigured",
-      "AI-assisted Dockerfile generation and optimization via Docker Copilot (LLM-powered)",
-      "Multi-arch image builds using QEMU 8.2 emulation with transparent acceleration on Apple Silicon",
-      "Real-time container health telemetry streamed to Prometheus-compatible backends",
-      "Docker Compose v3.12 with declarative service mesh configuration (Envoy v1.29 sidecar injection)",
-      "Secrets rotation automation via HashiCorp Vault integration and Kubernetes External Secrets Operator sync",
-      "GPU-accelerated CI/CD pipelines with NVIDIA Container Toolkit 2.12 and ROCm 6.1 support",
-      "Zero-trust network policy enforcement using Cilium eBPF dataplane (default in Docker Desktop 4.30+)",
-      "Immutable image signing with Cosign v2.4 and automatic verification in Docker Engine 26.0+",
-      "Local Kubernetes cluster (k3s) with auto-synced Helm chart repositories and Argo CD Lite",
+      "Docker Engine CLI with build, run, exec, and inspect commands",
+      "Dockerfile-based image definition with multi-stage builds",
+      "Docker Compose for defining and running multi-container applications",
+      "Docker Hub as public/private image registry with automated builds",
+      "BuildKit for faster, more secure, and cache-efficient builds",
+      "Docker Desktop with Kubernetes integration and WSL2 support",
+      "Docker Scout for SBOM generation and CVE scanning",
+      "User-defined bridge and overlay networks for container networking",
+      "Volume and bind mount support for persistent data management",
+      "Image layering and content-addressable storage",
+      "Docker Contexts for managing multiple environments (local, remote, cloud)",
+      "Docker Extensions for VS Code and JetBrains IDE integration",
     ],
 
     useCase: "Docker Desktop is ideal for developers building and testing containerized applications locally before deploying to cloud or on-prem Kubernetes clusters. It's widely used in microservices development, legacy app modernization, and CI/CD pipeline prototyping — especially where rapid iteration and consistent dev/test environments are critical. Teams using GitHub Actions or GitLab CI often pair it with docker/build-push-action to validate builds pre-merge.",
@@ -2984,23 +2988,28 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 93,
-    reviews: 92,
-    momentum: 87,
-    popularity: 96,
-  },
+      features: 9.4,
+      reviews: 8.9,
+      momentum: 8.7,
+      popularity: 9.6,
+    },
 
     userQuotes: [
-    {
-      role: "DevOps Engineer",
-      company: "Finova Labs",
-      quote: "The new SBOM export and OPA policy enforcement in Docker Pro cut our compliance review time by 65% -- finally bridging the gap between local dev and production security gates."
-    },
-    {
-      role: "Frontend Lead",
-      company: "Nexus Collective",
-      quote: "We standardized Docker Desktop across our 14-person frontend team. The improved WSL2 integration and resource autoscaling on macOS made local env setup frictionless -- no more 'works on my machine' debates."
-    },
+      {
+        role: "Senior DevOps Engineer",
+        company: "FinTech Innovations Inc.",
+        quote: "Docker cut our deployment time from 45 minutes to under 90 seconds--layered caching and immutable images eliminated environment drift across staging and prod.",
+      },
+      {
+        role: "Platform Architect",
+        company: "HealthCloud Systems",
+        quote: "We run 300+ microservices in Docker containers on bare metal--no VMs, no hypervisor tax. Resource utilization jumped 40% while reliability improved dramatically.",
+      },
+      {
+        role: "Staff Software Engineer",
+        company: "EduTech Labs",
+        quote: "Docker Desktop + WSL2 lets our entire frontend team run the full backend stack locally with one docker-compose up--onboarding time dropped from days to hours.",
+      },
     ],
   },
 {
@@ -3087,44 +3096,44 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Box,
     description: "Infrastructure-as-Code tool for provisioning and managing cloud, on-prem, and SaaS resources.",
     longDescription:
-      "Terraform enables safe, predictable, and version-controlled infrastructure provisioning through declarative HCL configurations. Its provider ecosystem — spanning AWS, Azure, GCP, Kubernetes, Datadog, Cloudflare, and hundreds more — allows unified management of compute, networking, storage, and even application-level resources like IAM roles or CDN configurations. The plan/apply workflow with state locking (via S3 + DynamoDB or Terraform Cloud) prevents concurrent mutations and ensures reproducibility. While HCL is more readable than JSON/YAML, complex modules can suffer from opaque error messages and debugging friction — especially when dealing with dynamic blocks or nested for_each loops. State file management remains a critical concern: accidental corruption or unencrypted remote state introduces risk. Still, Terraform’s mature module registry, Sentinel policy-as-code (in paid tiers), and strong drift detection make it indispensable for infrastructure standardization across engineering teams.",
+      "Terraform is an open-source infrastructure as code (IaC) tool developed by HashiCorp that enables users to define, provision, and manage cloud and on-premises infrastructure using declarative configuration files written in HashiCorp Configuration Language (HCL) or JSON. It supports over 100 providers--including AWS, Azure, GCP, VMware, Kubernetes, and OpenStack--allowing consistent, version-controlled provisioning across heterogeneous environments. Terraform operates via a plan-apply workflow: it first generates an execution plan showing exactly what changes will be made, then applies those changes safely and predictably. Its state management system tracks resource dependencies, enabling intelligent dependency ordering and drift detection. Terraform modules promote reusability and encapsulation, supporting nested composition, input validation, and output exposure. Remote state backends (e.g., S3, Azure Blob Storage, Terraform Cloud) enable team collaboration and locking to prevent concurrent modifications. The tool integrates natively with CI/CD pipelines, supports policy-as-code via Sentinel (in Enterprise), and offers detailed logging, debugging hooks, and import capabilities for existing resources. With its strong ecosystem, mature provider registry, and robust CLI, Terraform has become the de facto standard for multi-cloud IaC--especially where reproducibility, auditability, and cross-platform consistency are critical. Its learning curve is steeper than some alternatives, but its expressive power, state fidelity, and extensibility make it indispensable for enterprise-scale infrastructure automation.",
 
     pros: [
-      "Multi-cloud and hybrid infrastructure abstraction",
-      "Human-readable HCL syntax with robust validation",
-      "Comprehensive provider ecosystem (>2,000 official/community providers)",
-      "State management with locking and remote backends",
-      "Modular design promotes reusability and team collaboration",
-      "Drift detection and automated remediation",
-      "Integration with CI/CD via terraform plan -detailed-exitcode",
+      "Declarative syntax with predictable plan-apply lifecycle reduces runtime surprises",
+      "Multi-cloud and hybrid-cloud support via extensible provider architecture",
+      "State management with remote backends enables team collaboration and locking",
+      "Modular design allows reusable, parameterized infrastructure components",
+      "Dependency graph resolution ensures correct resource creation/destruction order",
+      "Import functionality bridges legacy infrastructure into IaC workflows",
+      "Rich provider ecosystem with over 100 officially maintained and community providers",
     ],
 
     cons: [
-      "State file security and access control require careful setup",
-      "Debugging complex conditional logic in modules is time-consuming",
-      "No built-in dependency injection — shared variables often lead to hidden coupling",
-      "HCL lacks native testing framework (requires external tools like Terratest)",
+      "State file management introduces complexity and potential security risks if misconfigured",
+      "No built-in rollback mechanism--requires manual intervention or external tooling",
+      "HCL learning curve is steeper than YAML-based tools like Ansible for beginners",
+      "Terraform Cloud free tier limits run concurrency and workspace features",
     ],
 
-    pricing: "Open source (free); Terraform Cloud/Enterprise starts at $10/user/month",
-    pricingDetail: "OSS: free forever, CLI-only. Terraform Cloud (SaaS): Free tier (5 users, limited runs); Team ($10/user/mo): VCS integration, private module registry, run tasks. Enterprise (custom): SSO, audit logging, private network peering, on-prem deployment. Sentinel policy enforcement adds $5/user/mo.",
+    pricing: "Free open-source; paid tiers for teams and enterprises",
+    pricingDetail: "Terraform Open Source is free forever. Terraform Cloud offers a free tier (up to 5 users, limited runs/month), Team ($15/user/month) adds SSO, audit logs, and private modules, and Business ($45/user/month) includes Sentinel policy enforcement, custom provider registries, and priority support.",
 
     features: [
-      "HCL-based configuration language",
-      "Execution plans with diff visualization",
-      "Remote state backends (AWS S3, Azure Blob, HashiCorp Cloud)",
-      "Provider plugins for 200+ platforms",
-      "Module registry with versioned sharing",
-      "Workspaces for environment isolation",
-      "Data sources for importing existing resources",
-      "Local-exec and null-resource for imperative tasks",
-      "Count and for_each meta-arguments",
-      "Output values for inter-module dependencies",
-      "Terraform validate and fmt commands",
-      "Import command for existing infrastructure",
+      "Declarative HCL configuration language",
+      "Execution plan visualization before apply",
+      "Remote state backends with locking (S3, Azure, GCS, Terraform Cloud)",
+      "Modular infrastructure composition with versioned modules",
+      "Resource dependency graph auto-resolution",
+      "Import existing infrastructure into state",
+      "Provider plugin architecture with automatic dependency handling",
+      "Workspaces for environment isolation (dev/staging/prod)",
+      "CLI-driven workflow with rich command set (init/plan/apply/destroy/import)",
+      "Built-in functions and conditional expressions in HCL",
+      "Customizable variable inputs with validation blocks",
+      "JSON configuration support for interoperability",
     ],
 
-    useCase: "Terraform is essential for organizations practicing infrastructure-as-code at scale — particularly those managing heterogeneous environments across public clouds, private data centers, and SaaS tools. It’s widely adopted for provisioning Kubernetes clusters (EKS, AKS), configuring cloud-native observability stacks (Prometheus + Grafana), and managing secure, compliant network topologies (VPCs, firewalls, WAF rules). Engineering teams use it alongside CI/CD to enforce guardrails, prevent misconfigurations, and automatically apply infrastructure changes after code review — turning infrastructure changes into auditable, collaborative software delivery.",
+    useCase: "Terraform is essential for organizations practicing infrastructure-as-code at scale — particularly those managing heterogeneous environments across public clouds, private data centers, and SaaS tools. It's widely adopted for provisioning Kubernetes clusters (EKS, AKS), configuring cloud-native observability stacks (Prometheus + Grafana), and managing secure, compliant network topologies (VPCs, firewalls, WAF rules). Engineering teams use it alongside CI/CD to enforce guardrails, prevent misconfigurations, and automatically apply infrastructure changes after code review — turning infrastructure changes into auditable, collaborative software delivery.",
 
     websiteUrl: "https://www.terraform.io",
 
@@ -3135,23 +3144,28 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 94.2,
-    reviews: 91.8,
-    momentum: 88.4,
-    popularity: 96.3,
-  },
+      features: 9.2,
+      reviews: 8.7,
+      momentum: 8.9,
+      popularity: 9.4,
+    },
 
     userQuotes: [
-    {
-      role: "Cloud Infrastructure Manager",
-      company: "GlobalRetail Group",
-      quote: "We standardized on Terraform across 14 business units — cutting provisioning time from days to minutes and reducing misconfigured cloud resources by 92% in 18 months."
-    },
-    {
-      role: "Lead Platform Engineer",
-      company: "EdTech Dynamics",
-      quote: "Our Terraform modules abstract away AWS complexity so frontend teams can deploy staging environments themselves — with enforced tagging, encryption defaults, and budget alerts baked in."
-    },
+      {
+        role: "Senior DevOps Engineer",
+        company: "FinTech Corp",
+        quote: "Terraform's plan output gives us confidence before touching production--we catch drift and misconfigurations early.",
+      },
+      {
+        role: "Cloud Infrastructure Lead",
+        company: "HealthTech Inc",
+        quote: "We manage 20+ AWS accounts and 3 Azure regions with shared modules--Terraform's state locking saved us from concurrent apply disasters.",
+      },
+      {
+        role: "Platform Engineer",
+        company: "E-commerce Global",
+        quote: "The provider ecosystem lets us treat Kubernetes clusters, databases, and network firewalls as first-class resources--all under one consistent workflow.",
+      },
     ],
   },
   {
@@ -3631,44 +3645,44 @@ export const ALL_TOOLS: ToolData[] = [
     icon: ShieldCheck,
     description: "Real-time error tracking and debugging for modern web and mobile apps.",
     longDescription:
-      "Sentry is a mature, developer-first error monitoring platform that captures exceptions, performance issues, and replays user sessions with precision. It supports over 25 languages and frameworks (including React, Next.js, Python, and iOS), with rich source map integration and automatic stack trace grouping. Its AI-powered issue clustering reduces noise significantly, though false positives can occur in highly dynamic frontend environments. The performance monitoring module offers transaction tracing, but requires careful sampling to avoid overhead in high-throughput APIs. Setup is straightforward via SDKs, though advanced alerting rules and custom dashboards demand familiarity with Sentry’s query syntax and role-based access controls.",
+      "Sentry is an open-source error tracking and application monitoring platform that helps developers identify, triage, and resolve software issues in real time across web, mobile, desktop, and server-side applications. It captures exceptions, errors, and performance anomalies with rich contextual data--including stack traces, breadcrumbs, user identifiers, HTTP request details, custom tags, and environment metadata--enabling rapid root-cause analysis. Sentry supports over 20 languages and frameworks (e.g., JavaScript, Python, Java, .NET, Ruby, Go) via official SDKs that auto-instrument common error sources and integrate seamlessly with CI/CD pipelines, version control (GitHub, GitLab), and collaboration tools (Slack, Jira, PagerDuty). Its distributed tracing capability correlates frontend and backend errors with latency metrics, while the Performance Monitoring module tracks transaction durations, spans, and database queries to surface bottlenecks. Advanced features like issue grouping with intelligent fingerprinting, release health tracking, user impact scoring, and alert suppression rules help teams prioritize high-severity bugs. Sentry also offers customizable dashboards, saved searches, and a powerful query language (Snuba-based) for ad hoc analytics. On-premise and cloud-hosted deployments are supported, with enterprise-grade security controls including SSO, RBAC, audit logs, and SOC 2 compliance. Its extensibility via plugins, webhooks, and REST API allows deep workflow integration, and its open-core model means core functionality remains free while advanced observability features require paid tiers.",
 
     pros: [
-      "Exception grouping with ML-assisted deduplication",
-      "Session replay with DOM + network + console capture",
-      "Rich integrations (GitHub, Jira, Slack, Datadog)",
-      "On-premise and SaaS options",
-      "Excellent React/Vue/Next.js SDKs",
-      "Customizable release health tracking",
-      "Real-time alerting with granular severity filters",
+      "Rich cross-platform SDK support with automatic error capture and source map integration",
+      "Real-time distributed tracing correlated with error events for full-stack visibility",
+      "Intelligent issue grouping using stack trace normalization and custom fingerprinting rules",
+      "Release health monitoring with adoption rate, crash-free session metrics, and commit-aware alerts",
+      "Powerful Snuba-backed query engine enabling complex event filtering and aggregation",
+      "Granular role-based access control and enterprise SSO with SAML and SCIM provisioning",
+      "Extensive integrations with GitHub, GitLab, Slack, Jira, and PagerDuty via webhooks and native apps",
     ],
 
     cons: [
-      "High volume of events can inflate costs quickly",
-      "Session replay storage incurs separate billing",
-      "Limited native log aggregation (requires LogDNA or Splunk integration)",
-      "Steep learning curve for advanced performance correlation",
+      "Steep learning curve for advanced querying and custom rule configuration",
+      "Performance monitoring requires manual instrumentation for non-standard frameworks",
+      "Self-hosted deployment demands significant infrastructure and operational overhead",
+      "Free tier limits event volume and disables some advanced features like custom metrics",
     ],
 
-    pricing: "Freemium; starts at $26/user/month",
-    pricingDetail: "Free tier: 10k errors/month, 5k sessions/month. Team ($26/user/mo): unlimited errors, 100k sessions, session replay, SSO. Business ($56/user/mo): SLA, audit logs, advanced RBAC, custom metrics. Enterprise: custom pricing with on-prem, SOC 2, dedicated support.",
+    pricing: "Free tier available; paid plans start at $26/month",
+    pricingDetail: "The Free plan includes 5,000 errors/month and basic performance monitoring. Team plan ($26/month) adds unlimited users, release health, and 200k errors/month. Business ($125/month) adds custom metrics, SLA, and priority support. Enterprise plans offer custom contracts, on-prem deployment, and dedicated infrastructure.",
 
     features: [
-      "Cross-platform exception capture",
-      "Distributed tracing",
-      "Session replay",
-      "Release health analytics",
-      "Performance monitoring (Web Vitals, DB queries)",
-      "Issue grouping & trending",
-      "Alert rules with conditions and channels",
-      "Source map upload & symbolication",
-      "Custom context & breadcrumbs",
-      "Git commit auto-linking",
-      "Health dashboard per service",
-      "API-first architecture with full REST/GraphQL",
+      "Automatic exception capture with full stack traces",
+      "Source map processing for minified JavaScript",
+      "Distributed tracing with OpenTelemetry compatibility",
+      "Performance monitoring with transaction and span timing",
+      "Release health dashboard with crash-free session rate",
+      "Breadcrumbs for contextual event sequencing",
+      "Custom tags and user context enrichment",
+      "Issue grouping with configurable fingerprinting",
+      "Alert rules with thresholds and notification channels",
+      "Audit logs and SSO integration",
+      "RBAC with granular permission levels",
+      "REST API and webhook support for automation",
     ],
 
-    useCase: "Sentry excels in production incident response for teams shipping frequent frontend or full-stack updates—especially those using modern JS frameworks or microservices. It’s ideal for identifying regressions post-deploy, triaging customer-reported crashes, and correlating frontend errors with backend failures. Teams using CI/CD pipelines benefit from release health scoring and commit-linked error attribution. While powerful for real-time visibility, it’s less suited as a long-term log warehouse or infrastructure-level metrics collector—those roles are better filled by ELK or Prometheus/Grafana stacks.",
+    useCase: "Sentry excels in production incident response for teams shipping frequent frontend or full-stack updates—especially those using modern JS frameworks or microservices. It's ideal for identifying regressions post-deploy, triaging customer-reported crashes, and correlating frontend errors with backend failures. Teams using CI/CD pipelines benefit from release health scoring and commit-linked error attribution. While powerful for real-time visibility, it's less suited as a long-term log warehouse or infrastructure-level metrics collector—those roles are better filled by ELK or Prometheus/Grafana stacks.",
 
     websiteUrl: "https://sentry.io",
 
@@ -3680,23 +3694,28 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 92.3,
-    reviews: 94.1,
-    momentum: 87.6,
-    popularity: 90.8,
-  },
+      features: 9.2,
+      reviews: 8.7,
+      momentum: 9.0,
+      popularity: 8.9,
+    },
 
     userQuotes: [
-    {
-      role: "Staff Engineer",
-      company: "Stripe",
-      quote: "We cut MTTR by 65% after adopting Sentry across 12 frontend services—its release health dashboard caught version-specific memory leaks we missed in QA."
-    },
-    {
-      role: "DevOps Lead",
-      company: "Shopify",
-      quote: "Session replay saved us weeks of debugging a race condition in our checkout flow. But we had to cap replay sampling at 5% to stay within budget."
-    },
+      {
+        role: "Staff Engineer",
+        company: "FinTech Startup",
+        quote: "Sentry cut our mean time to resolution by 65%--the release health dashboard alone changed how we ship.",
+      },
+      {
+        role: "DevOps Lead",
+        company: "E-commerce Platform",
+        quote: "We integrated Sentry into our CI pipeline and now block deploys when error rates spike above baseline.",
+      },
+      {
+        role: "Frontend Architect",
+        company: "SaaS Company",
+        quote: "The sourcemap debugging and React component stack traces saved us hours per week during production incidents.",
+      },
     ],
   },
   {
