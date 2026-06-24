@@ -2630,4 +2630,119 @@ Which terminal setup are you using in 2026? I would love to hear your experience
         "macOS",
     ],
   },
+  {
+    slug: "ai-assisted-development-how-coders-really-use-ai-2026",
+    title: "AI-Assisted Development: How Coders Really Use AI in 2026",
+    excerpt:
+      'AI coding assistants are no longer experimental by 2026 they are embedded into almost every stage of the development lifecycle. This practical diary follows a mid-size platform engineering team through a two-week sprint documenting where AI accelerates and where it gets in the way.',
+    content: `
+AI-Assisted Development: How Coders Really Use AI in 2026
+
+## The Setup: A Typical Two-Week Sprint
+
+I work on a platform engineering team of 12 at a fintech company. Not FAANG, not a startup, just a regular 500-person engineering org with a Kafka cluster, a React monorepo, and a PostgreSQL database that keeps growing. We adopted AI coding assistants across the team starting in early 2025, and by June 2026, we have enough data to separate hype from habit.
+
+This is a diary of our second sprint of June 2026 — a routine two-week cycle that included a new payment reconciliation API, a data migration script, and about 40 bug fixes across three services.
+
+## Day 1: Sprint Planning and Boilerplate
+
+Monday morning sprint planning. Our tech lead assigned the payment reconciliation API to Priya. Estimated: 5 story points. She opened her IDE and typed a one-line prompt into Cursor:
+
+> "Create a Go HTTP handler for payment reconciliation that accepts a CSV upload, validates it against our schema in schema.go, and inserts records into the payments_staging table."
+
+Cursor generated 127 lines of code in 4 seconds. It got the handler signature right, the schema import path right, and even included context-aware error types from our shared error package. Priya spent 12 minutes reviewing and tweaking — mostly adding input sanitization and renaming a function. She committed 30 minutes into the task.
+
+Without AI, this would have been a 3-hour task. The assistant saved approximately 2.5 hours on well-scoped, pattern-repetitive code generation.
+
+**Lesson:** AI excels at generating boilerplate for well-defined interfaces. The narrower the task scope, the better the output.
+
+## Day 2: The Migration Script That Went Sideways
+
+I was tasked with writing a data migration script to backfill account_balance_history records for 1.2 million users. I asked Claude in the terminal to write a Postgres migration using golang-migrate that backfills data in batches.
+
+It generated a migration that looked plausible. FOR UPDATE SKIP LOCKED. Rate-limited logging. I ran it on staging with a 10K-row subset — it worked. Then I ran it on production.
+
+The production run took 47 minutes, not the predicted 8. Lock contention spiked. I cancelled. The AI chose a batch query pattern that issued individual UPDATE statements in a loop instead of a single bulk UPDATE with a JOIN. The loop introduced 1.2 million separate UPDATE transactions.
+
+I rewrote it manually in 20 minutes: one bulk UPDATE with a FROM clause, 3.4 seconds total.
+
+**Lesson:** AI generates plausible code, not optimal code. At scale, AI-generated SQL patterns need manual performance review.
+
+## Days 3-5: Debugging and Code Review
+
+Our GitHub AI code review bot commented on every PR. Over three days it flagged:
+- A potential nil pointer dereference in the new payment handler (valid)
+- An integer overflow risk using int32 (valid — our reward points exceeded 2.1 billion)
+- Two instances of hardcoded credentials in test files (valid)
+- Three false positives about variable naming
+- One incorrect suggestion about a goroutine leak
+
+Net: 6 real issues caught, 4 false positives. Much better than the 1:10 signal-to-noise ratio from 2024.
+
+**Lesson:** AI code review in 2026 requires curation. Teams that fine-tuned on their incident history got value; teams using default models got spam.
+
+## Day 6: The Sokrates Trap
+
+One of our junior engineers spent an entire afternoon in conversation with an AI about the "best" architecture for a notification service. By 4 PM he had read 12 pages of AI-generated analysis but had written zero lines of code.
+
+Developers — especially juniors — are prone to over-consuming AI analysis instead of writing code and iterating. The AI is always willing to answer another question, but it is also a procrastination engine disguised as a tutor.
+
+**Lesson:** We introduced a team rule: no more than 15 minutes of AI chat before writing code. Get something wrong quickly, then ask AI to fix it.
+
+## Days 7-10: Test Generation — The Hidden Win
+
+AI is absurdly good at writing unit tests. Priya's payment handler went from 0% to 94% coverage in 45 minutes. Our team's test generation throughput: 3.2x faster than manual writing. Accuracy: approximately 90% passed on first run.
+
+**Lesson:** Test generation is the single highest-ROI use case for AI coding assistants in 2026.
+
+## Days 11-12: Refactoring with AI
+
+I prompted Cursor to split a 340-line God function into separate concerns. It extracted 6 well-named functions and wrote unit tests. Total time: 90 minutes for what would have been a 5-hour manual refactor.
+
+But it preserved a latent bug in the retry logic — an off-by-one error faithfully reproduced from the original.
+
+**Lesson:** AI refactoring preserves semantics, including bugs. Always diff old and new output.
+
+## Days 13-14: Documentation
+
+AI-generated API docs from OpenAPI specs (30 seconds vs. 2 hours), sprint summaries, and release notes. Documentation generation is a quiet superpower — it frees up 3-4 hours per sprint per engineer.
+
+## The Numbers
+
+Over our two-week sprint:
+- 62 story points completed (baseline: ~45) — 38% velocity increase
+- 8 hours per engineer saved on average
+- 127 AI suggestions accepted; 23 rejected or modified
+- 1 production incident caused by AI code (migration script)
+- 6 production bugs caught by AI review
+- 0% of team wants to go back
+
+## What We Learned
+
+1. Start with tests, not features. Best ROI, lowest risk.
+2. Fine-tune your code review bot on your incident history.
+3. Set a 15-minute AI conversation limit for juniors.
+4. Always diff before and after AI refactors.
+5. Documentation generation pays compounding interest.
+6. Review the AI's review comments for correctness.
+
+## Final Verdict
+
+AI coding assistants in 2026 are not replacing developers. They are amplifying them — unevenly, imperfectly, but measurably. The teams that gain the most are not the ones with the biggest AI budget; they are the ones with the strongest engineering practices underneath. AI amplifies good practices and bad ones equally.
+
+Our team is more productive. But we are also more careful. The question is not "Should we use AI?" — it is "How do we build the guardrails to make the AI's mistakes visible and fixable?" That is the engineering challenge of 2026. And honestly? It is a fun one.
+`,
+    author: "Matthew Chen",
+    authorRole: "Platform Engineering Lead",
+    date: "2026-06-25",
+    category: "AI & Development",
+    readTime: 10,
+    tags: [
+        "AI",
+        "Developer-Productivity",
+        "AI-Coding-Assistants",
+        "Platform-Engineering",
+        "Developer-Experience",
+    ],
+  },
 ];
