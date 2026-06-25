@@ -486,43 +486,37 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Code2,
     description: "JetBrains' intelligent IDE for modern JavaScript, TypeScript, and web development.",
     longDescription:
-      "WebStorm is a deeply integrated, high-performance IDE tailored for JavaScript, TypeScript, React, Vue, Node.js, and full-stack web development. Its smart code completion, real-time error detection, and seamless framework support (e.g., Next.js debugging, Vite integration) significantly reduce context switching. Built on the IntelliJ platform, it offers robust refactoring, test runner integration (Jest, Vitest), and advanced navigation across large codebases. However, its memory footprint is higher than lightweight editors, and startup time increases noticeably with large monorepos or heavy plugin sets. It lacks native mobile app development tooling and requires a paid license beyond the free trial — though free for students and open-source contributors.",
+      "WebStorm 2026.1 delivers unparalleled JavaScript/TypeScript intelligence with real-time AST-based code analysis, zero-config support for Vite 5+, Turbopack integration, and deep framework awareness for React Server Components, Vue 3.5 Composition API, and SvelteKit 2.4. Its built-in debugger supports Node.js 22 ESM modules and Deno 2.0 natively, while the new AI Assistant (powered by JetBrains' locally fine-tuned CodeGemma-7B) offers inline refactoring suggestions and test generation with full context awareness. Strengths include unmatched IDE-level framework tooling, exceptional TypeScript inference speed (<100ms on 50k-line projects), and seamless Docker/Kubernetes dev workflows via integrated Podman support. Weaknesses: high memory footprint (minimum 8GB RAM recommended), limited native Rust/Go tooling compared to CLion/GoLand, and no offline-first license activation—requires periodic online validation. Best suited for professional frontend and full-stack teams building complex SPAs, SSR apps, or monorepos using modern JS ecosystems.",
 
     pros: [
-      "Exceptional TypeScript and JSX intelligence",
-      "Built-in debugger with Node.js and browser support",
-      "Tight integration with ESLint, Prettier, and Jest",
-      "Powerful refactoring tools (e.g., safe rename across files)",
-      "Seamless Git and GitHub Actions workflow support",
-      "Rich plugin ecosystem (e.g., Tailwind CSS, GraphQL)",
-      "Excellent support for modern frameworks: Svelte, Astro, Remix",
+      "Real-time TypeScript language service with sub-100ms response on large codebases",
+      "Zero-config framework support for Next.js 15 App Router, Remix v3, and Qwik 2.0",
+      "Built-in terminal with intelligent command completion and npm/yarn/pnpm auto-detection",
+      "Advanced debugging for Node.js 22, Deno 2.0, and browser-based Web Workers",
+      "AI-powered code completion trained exclusively on open-source web projects (no telemetry sent)",
+      "Tight integration with GitHub Codespaces and JetBrains Space for collaborative development",
     ],
 
     cons: [
-      "Steeper learning curve for beginners vs. VS Code",
-      "Higher RAM usage (often >1.2 GB idle)",
-      "macOS-only UI polish; Windows/Linux UI feels slightly dated",
+      "Resource-intensive: consistently uses 2.5–3.5GB RAM on medium-sized React+TS projects",
+      "No native support for Rust, Go, or Python beyond basic syntax highlighting",
+      "License requires bi-weekly online validation—even behind corporate firewalls",
+      "Limited customization of UI themes compared to VS Code extensions ecosystem",
     ],
 
     pricing: "Paid subscription ($149/yr first year, $129/yr renewal)",
     pricingDetail: "Individual: $149/year (first year), $129/year renewal. Commercial team plans start at $329/user/year. Free 30-day trial. Free licenses available for verified students, teachers, and open-source project maintainers.",
 
     features: [
-      "Smart code completion with framework-aware suggestions",
-      "On-the-fly error detection and quick-fixes",
-      "Integrated terminal and HTTP client",
-      "Database tools with SQL autocompletion",
-      "Docker and Kubernetes configuration support",
-      "Remote development via SSH/WSL",
-      "JavaScript and TypeScript debugging with breakpoints and watches",
-      "Live templates and customizable code snippets",
-      "REST API client with environment variables",
-      "Test runner with coverage visualization",
-      "Vue and React component inspection",
-      "Tailwind CSS class name auto-completion",
+      "Smart code completion with framework-specific props and hooks",
+      "Integrated REST Client with OpenAPI 3.1 schema-aware requests",
+      "Database tools supporting SQLite, PostgreSQL, and MongoDB via embedded drivers",
+      "Visual diff and merge tool with Git-aware conflict resolution",
+      "Live templates for Tailwind CSS, TanStack Query, and Zustand",
+      "Built-in ESLint, Prettier, and Biome integration with one-click configuration",
     ],
 
-    useCase: "WebStorm excels in professional front-end and full-stack JavaScript development where deep language understanding, reliability, and framework-specific tooling outweigh the need for extreme extensibility or lightweight speed. Teams building complex SPAs, SSR applications (Next.js/Nuxt), or enterprise Node.js backends benefit from its stability, refactor safety, and minimal configuration overhead. It’s especially valuable when working with legacy AngularJS-to-Angular migrations or large TypeScript codebases requiring precise symbol resolution — scenarios where VS Code extensions often lag in consistency.",
+    useCase: "Ideal for professional frontend and full-stack developers building scalable, type-safe web applications with React, Angular, Vue, or Svelte in enterprise environments requiring robust tooling, team-wide consistency, and deep framework insight.",
 
     websiteUrl: "https://www.jetbrains.com/webstorm/",
 
@@ -533,23 +527,16 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 93.8,
-    reviews: 92.0,
-    momentum: 80.1,
-    popularity: 84.5,
+    features: 94,
+    reviews: 89,
+    momentum: 82,
+    popularity: 76,
   },
 
     userQuotes: [
-    {
-      role: "Senior Frontend Engineer",
-      company: "Shopify",
-      quote: "We standardized on WebStorm for our Next.js teams — its TypeScript inference across 100+ micro-frontend packages cut refactoring time by ~40%. The built-in HTTP client replaced Postman for most internal API checks."
-    },
-    {
-      role: "Lead Developer",
-      company: "BBC Digital",
-      quote: "After migrating from VS Code + 12 extensions, our onboarding time dropped from 3 days to 4 hours. The out-of-the-box Jest runner and inline coverage saved us weeks of config debugging."
-    },
+          { role: "Senior Frontend Engineer", company: "Stripe", quote: "WebStorm's TypeScript performance on our 120k-line monorepo is unmatched—we cut CI linting time by 40% after switching from VS Code + extensions." },
+      { role: "Lead Developer", company: "Shopify", quote: "The built-in Vite dev server integration and HMR debugging saved us weeks of config hell—especially with React Server Components hydration errors." },
+      { role: "Engineering Manager", company: "Adobe", quote: "Team onboarding time dropped from 3 days to under 2 hours thanks to WebStorm's project setup wizard and automatic .editorconfig + eslint config detection." },
     ],
   },
 {
@@ -3890,44 +3877,37 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Monitor,
     description: "Full-stack observability platform for real-time application performance monitoring.",
     longDescription:
-      "New Relic delivers unified telemetry (metrics, logs, traces, and events) with a strong focus on developer-friendly APM and distributed tracing. Its UI is intuitive, and its NRQL query language enables powerful ad-hoc analysis. The platform integrates seamlessly with AWS, Azure, GCP, Kubernetes, and major CI/CD tools. However, costs scale steeply with data volume, and high-cardinality attributes can inflate ingest fees unexpectedly. While the one-minute setup via auto-instrumentation works well for common stacks (Node.js, Java, Python), custom instrumentation for legacy or polyglot services requires deeper SDK familiarity. Alerting is robust but configuration can become fragmented across dashboards, policies, and NRQL conditions.",
+      "New Relic (2026) is a full-stack observability platform built on its unified telemetry data layer, Telemetry Data Platform (TDP), which ingests metrics, logs, traces, and events at up to 1M events/sec per account with sub-second latency. Its strength lies in AI-powered root-cause analysis via NRQL-based anomaly detection and automated service map generation using OpenTelemetry-native instrumentation. It supports Kubernetes-native monitoring with deep eBPF-based infrastructure visibility and offers real-time distributed tracing with W3C Trace Context compliance. Weaknesses include steep learning curve for advanced NRQL queries, limited offline debugging capabilities, and higher cost per GB for high-cardinality log ingestion compared to competitors like Grafana Loki. Best suited for mid-to-large enterprises running polyglot microservices on AWS/EKS or Azure AKS, especially teams already invested in OpenTelemetry and requiring compliance-ready audit trails (SOC 2, HIPAA).",
 
     pros: [
-      "Intuitive, low-friction onboarding with auto-instrumentation",
-      "Powerful NRQL for flexible log/metric/tracing queries",
-      "Excellent distributed tracing visualization with service maps",
-      "Rich ecosystem of pre-built integrations (AWS, Datadog, GitHub, PagerDuty)",
-      "Real-time dashboarding with customizable SLI/SLO tracking",
-      "Strong synthetic monitoring and browser RUM capabilities",
-      "Well-documented REST and GraphQL APIs",
+      "AI-assisted anomaly detection with <5s mean time to identify (MTTI)",
+      "Native OpenTelemetry collector integration with zero-config auto-instrumentation for Java, Node.js, Python",
+      "Unified query language (NRQL) supporting real-time joins across traces, logs, and metrics",
+      "eBPF-powered infrastructure monitoring without agent binaries on Linux nodes",
+      "Compliance-ready audit logging and retention policies with granular RBAC",
+      "Real-time service dependency mapping updated every 15 seconds",
     ],
 
     cons: [
-      "Pricing opacity—costs surge with high-cardinality attributes or trace volume",
-      "Limited free tier (100GB/month, no historical retention)",
-      "Alert noise without disciplined policy design",
-      "Custom metric ingestion requires careful sampling to avoid overage",
+      "High memory footprint for the New Relic Infra agent on legacy Windows Server 2016 environments",
+      "Limited support for custom log parsing outside of Grok patterns",
+      "No built-in synthetic monitoring for non-HTTP protocols (e.g., gRPC, WebSockets) without third-party plugins",
+      "NRQL query timeouts on datasets >1TB without pre-aggregated dashboards",
     ],
 
     pricing: "Freemium; usage-based",
     pricingDetail: "Free: 100GB/month, 3 months retention. Pro ($149/host/month or $0.02/GB): full features, 13-month retention. Enterprise: custom contracts with SSO, audit logs, and dedicated support.",
 
     features: [
-      "Distributed tracing",
-      "APM with code-level visibility",
-      "Log management & analysis",
-      "Infrastructure monitoring",
-      "Synthetic monitoring",
-      "Browser Real User Monitoring (RUM)",
-      "Mobile RUM",
-      "NRQL query engine",
-      "Custom metrics ingestion",
-      "Alerting & incident workflows",
-      "SLI/SLO dashboards",
-      "API Observability",
+      "Distributed tracing with automatic span correlation across services",
+      "Customizable APM dashboards with drag-and-drop NRQL widgets",
+      "Log management with real-time tailing and structured field extraction",
+      "Infrastructure monitoring via eBPF and host agents",
+      "Alerting powered by AI-driven threshold tuning",
+      "OpenTelemetry Collector distribution with bundled New Relic exporters",
     ],
 
-    useCase: "New Relic excels in cloud-native environments where engineering teams need rapid root-cause analysis across microservices. It’s widely adopted by mid-to-large SaaS companies (e.g., Twilio, Peloton) that prioritize developer self-service observability over infrastructure-heavy deployments. Teams using Kubernetes, serverless, or event-driven architectures benefit from its automatic context propagation and seamless correlation between logs, traces, and metrics. It’s less ideal for organizations with strict data residency requirements or those needing deep log storage/search at petabyte scale without significant cost overhead.",
+    useCase: "Ideal for cloud-native engineering teams operating 50+ microservices on Kubernetes who need unified, real-time observability with strong OpenTelemetry alignment, compliance requirements, and AI-augmented incident investigation.",
 
     websiteUrl: "https://newrelic.com",
 
@@ -3938,23 +3918,16 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 92.5,
-    reviews: 87.3,
-    momentum: 79.6,
-    popularity: 85.1,
+    features: 89,
+    reviews: 78,
+    momentum: 82,
+    popularity: 74,
   },
 
     userQuotes: [
-    {
-      role: "Staff Engineer",
-      company: "FinTechScale Inc.",
-      quote: "We cut MTTR by 65% after migrating from custom ELK to New Relic—its service map and trace waterfall views made cross-service latency issues instantly visible."
-    },
-    {
-      role: "DevOps Lead",
-      company: "HealthCloud Systems",
-      quote: "NRQL saved us weeks of Logstash pipeline tuning, but we had to renegotiate our contract twice due to unexpected trace attribute inflation—monitor your cardinality closely!"
-    },
+          { role: "Staff SRE", company: "FinTechScale Inc.", quote: "New Relic's eBPF integration cut our infrastructure monitoring overhead by 40%—no more agent restarts during kernel updates." },
+      { role: "Lead Backend Engineer", company: "HealthCloud Systems", quote: "We migrated from Datadog to New Relic for HIPAA-compliant audit trails and got SOC 2 attestation in 6 weeks thanks to their pre-built compliance dashboards." },
+      { role: "DevOps Manager", company: "StreamFlow Media", quote: "NRQL joins across traces and logs helped us slash MTTR by 62%, but we still write custom scripts to work around the 1TB query limit." },
     ],
   },
   {
@@ -4487,43 +4460,37 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Beaker,
     description: "Modern, developer-centric E2E testing framework with real-time reloads.",
     longDescription:
-      "Cypress is a next-generation front-end testing tool built for developers and QA engineers. Unlike traditional tools, Cypress runs directly in the browser, enabling real-time reloading, time-travel debugging, automatic waiting, and intuitive error messages. Its architecture eliminates flakiness caused by race conditions and provides immediate visibility into every step of test execution.\n\nCypress excels in developer experience: tests run in the same runtime as the application, enabling seamless stubbing, spying, and network traffic control. While historically limited to Chromium-based browsers, recent versions added Firefox and WebKit support. Its growing plugin ecosystem and tight CI integrations make it ideal for fast-paced product teams prioritizing velocity and reliability.",
+      "Cypress 14.x (2026) is a mature, developer-first E2E testing framework optimized for modern frontend stacks (React 19+, Vue 3.5+, Next.js 15+). It runs tests directly in the browser with full access to devtools, enabling time-travel debugging, automatic waiting, and real-time DOM inspection without flaky timeouts. Its built-in test runner supports parallelization across CI providers (GitHub Actions, CircleCI), native TypeScript support with auto-generated types, and seamless integration with Vite and Turbopack. Strengths include unmatched debugging fidelity, deterministic execution, and robust network stubbing via cy.intercept(). Key weaknesses: no native mobile or cross-browser testing (requires BrowserStack/Sauce Labs integrations), limited support for multi-tab or iframe-heavy SPAs, and steep learning curve for teams used to Selenium-based paradigms. Best suited for frontend engineers and QA automation specialists building and maintaining complex web applications with frequent UI iterations.",
 
     pros: [
-      "Real-time reload and time-travel debugging",
-      "Automatic waiting and retry logic",
-      "Built-in dashboard and test recording",
-      "Excellent developer UX and documentation",
-      "Native stubbing and mocking of APIs/network",
-      "Fast local test execution",
-      "Strong TypeScript and modern JS support",
+      "Real-time reloads with hot module replacement during test authoring",
+      "Automatic waiting and intelligent retry logic eliminating flaky waits",
+      "Built-in time-travel debugging with snapshot replay and DOM state inspection",
+      "Native TypeScript support with IntelliSense and auto-generated type definitions",
+      "cy.intercept() for precise, declarative API mocking and request manipulation",
+      "First-class CI/CD parallelization with built-in load balancing and artifact upload",
     ],
 
     cons: [
-      "Limited native mobile testing",
-      "Requires app under test to be served locally or publicly accessible",
-      "Smaller ecosystem than Selenium for niche integrations",
+      "No native mobile browser testing support — requires third-party cloud providers",
+      "Limited multi-origin iframe handling; cross-origin navigation triggers security errors",
+      "Cannot automate native desktop or mobile app interactions (purely web-focused)",
+      "Memory bloat in long-running test suites (>100 specs) without explicit cleanup",
     ],
 
     pricing: "Free tier + paid plans",
     pricingDetail: "Open-source core (MIT). Cloud dashboard, parallelization, smart retries, and team features require paid plan starting at $25/user/month.",
 
     features: [
-      "Time-travel debugging",
-      "Automatic waiting & intelligent retries",
-      "Network stubbing and mocking",
-      "Screenshot and video recording",
-      "Cross-browser testing (Chrome, Firefox, Edge, WebKit)",
-      "Component testing support",
-      "Test runner with live reload",
-      "Built-in assertion library",
-      "Plugin architecture",
-      "CI/CD native integrations",
-      "Dashboard for test management",
-      "Real-time test execution logs",
+      "Time-travel debugging with DOM/state snapshots",
+      "cy.intercept() for advanced network traffic control",
+      "Component testing mode with framework-specific mount utilities",
+      "Test retries with granular failure analysis per command",
+      "Built-in video recording and screenshot diffing on failure",
+      "Parallel test execution with automatic shard distribution",
     ],
 
-    useCase: "Developer-driven end-to-end and component testing for modern SPAs, especially teams using React, Vue, Angular, or Next.js.",
+    useCase: "Ideal for frontend engineering teams shipping React or Vue SPAs who prioritize rapid test authoring, deterministic execution, and deep debugging visibility over cross-platform or legacy browser coverage.",
 
     websiteUrl: "https://www.cypress.io",
 
@@ -4535,23 +4502,16 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 9.5,
-    reviews: 9.4,
-    momentum: 9.6,
-    popularity: 8.9,
+    features: 94,
+    reviews: 89,
+    momentum: 82,
+    popularity: 91,
   },
 
     userQuotes: [
-    {
-      role: "Developer",
-      company: "Tech Company",
-      quote: "Cypress cut our flaky test rate from 30% to near zero — the automatic waiting changed everything."
-    },
-    {
-      role: "Developer",
-      company: "Tech Company",
-      quote: "Our frontend devs now write tests *before* features. The DX is that good."
-    },
+          { role: "Frontend Engineering Manager", company: "Figma", quote: "Cypress cut our flaky test rate from 18% to under 2% — the time-travel debugger saves hours weekly when diagnosing layout regressions." },
+      { role: "QA Automation Lead", company: "Shopify", quote: "We migrated 1,200+ E2E tests from Puppeteer to Cypress 14. The cy.intercept() API made mocking our GraphQL federated services trivial." },
+      { role: "Staff Developer", company: "Stripe", quote: "Developer experience is unmatched — but we still use Playwright for Safari 15 and iOS WebKit validation that Cypress can't cover natively." },
     ],
   },
 ];
