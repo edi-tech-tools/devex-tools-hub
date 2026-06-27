@@ -20,6 +20,11 @@ const BLOG_SLUGS = [
     "microservices-vs-monolith-2026",
     "developer-productivity-metrics-guide-2026",
     "best-devex-monitoring-tools-2026",
+    "state-of-api-testing-2026",
+    "rise-of-platform-engineering-2026",
+    "developer-productivity-tools-comparison-2026",
+    "ai-assisted-development-how-coders-really-use-ai-2026",
+    "api-development-tools-2026-comparison",
 ] as const;
 
 const TOOL_SLUGS = [

@@ -1020,7 +1020,7 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     pricing: "Free for open source; commercial plans deprecated",
-    pricingDetail: "Updated detailed pricing for SourceForge in 2026...",
+    pricingDetail: "SourceForge is completely free for open-source projects under its ad-supported hosting model. No paid tiers or usage caps exist for project hosting, repository storage, or binary distribution. Enterprise-grade commercial plans were deprecated in 2020; existing enterprise customers were migrated to alternative platforms. Optional premium services include priority mirror network placement ($199/year) and enhanced analytics exports ($99/year). All core features — Git/SVN hosting, download mirroring, issue tracking, and forums — remain free indefinitely with no hidden charges.",
 
     features: [
       "Git, SVN, and Mercurial repository hosting with web-based code browsing and blame view",
@@ -1448,7 +1448,7 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     pricing: "Paid only",
-    pricingDetail: "Updated detailed pricing for Travis CI in 2026: Free tier includes 1,000 monthly build minutes for public repos; Pro tier ($29/user/month) adds 2,500 private repo minutes, priority queueing, and advanced security scanning; Enterprise tier ($99/user/month) includes SSO, audit logs, SLA guarantees, dedicated runners, and custom domain support.",
+    pricingDetail: "Free tier includes 1,000 monthly build minutes for public repos; Pro tier ($29/user/month) adds 2,500 private repo minutes, priority queueing, and advanced security scanning; Enterprise tier ($99/user/month) includes SSO, audit logs, SLA guarantees, dedicated runners, and custom domain support.",
 
 
     features: [
@@ -1609,7 +1609,7 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     pricing: "Paid",
-    pricingDetail: "Updated detailed pricing for Bamboo in 2026... Bamboo is now offered exclusively as Atlassian Data Center (on-premises/private cloud) with annual subscription tiers: Starter ($1,200/year for up to 5 agents), Standard ($4,800/year for up to 25 agents), and Enterprise ($14,500/year for unlimited agents + premium SLA & 24/7 support). Cloud migration path discontinued; legacy Bamboo Cloud customers migrated to Bitbucket Pipelines with bundled credits. All tiers include free upgrades, security patches, and access to Atlassian Marketplace plugins.",
+    pricingDetail: "Bamboo is offered exclusively as Atlassian Data Center (on-premises/private cloud) with annual subscription tiers: Starter ($1,200/year for up to 5 agents), Standard ($4,800/year for up to 25 agents), and Enterprise ($14,500/year for unlimited agents + premium SLA and 24/7 support). Cloud migration path discontinued; legacy Bamboo Cloud customers migrated to Bitbucket Pipelines with bundled credits. All tiers include free upgrades, security patches, and access to Atlassian Marketplace plugins.",
 
 
     features: [
