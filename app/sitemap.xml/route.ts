@@ -25,6 +25,7 @@ const BLOG_SLUGS = [
     "developer-productivity-tools-comparison-2026",
     "ai-assisted-development-how-coders-really-use-ai-2026",
     "api-development-tools-2026-comparison",
+    "state-of-developer-productivity-engineering-2026",
 ] as const;
 
 const TOOL_SLUGS = [
