@@ -45,12 +45,12 @@ export default function HomePage() {
   const features = [
     { icon: Bot, title: "Robotics-Grade Testing", desc: "Tools vetted by our Stuttgart robotics team — real CI/CD, real hardware-in-the-loop." },
     { icon: GitBranch, title: "DevOps-First Reviews", desc: "Infrastructure-as-code, pipeline optimization, and reproducibility at scale." },
-    { icon: Users, title: "6-Person Engineering Team", desc: "Isle Works is a tight-knit crew of 6. Every review reflects hands-on experience." },
+    { icon: Users, title: "6-Person Engineering Team", desc: "DevEx Tools Team is a tight-knit crew of 6. Every review reflects hands-on experience." },
     { icon: Shield, title: "No Sponsored Rankings", desc: "Zero paid placements. Just honest evaluations from practicing engineers." },
   ];
 
   const testimonials = [
-    { quote: "Isle Works actually knows what they're talking about. Their CI/CD breakdowns are the most practical I've seen.", name: "Alex M.", role: "Senior DevOps Engineer" },
+    { quote: "DevEx Tools Team actually knows what they're talking about. Their CI/CD breakdowns are the most practical I've seen.", name: "Alex M.", role: "Senior DevOps Engineer" },
     { quote: "Finally a dev tools site run by people who build for a living — not marketing teams.", name: "Priya K.", role: "Full-Stack Developer" },
     { quote: "The robotics angle makes their performance benchmarks uniquely thorough. Real-world data, not synthetic.", name: "James T.", role: "Engineering Manager" },
   ];
@@ -93,7 +93,7 @@ export default function HomePage() {
             <Reveal delay={0.1}>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-8 bg-[#1e293b]/80 border border-white/[0.06]">
                 <Cpu className="w-3.5 h-3.5 text-[#06b6d4]" />
-                <span className="text-[#94a3b8]">Built by Isle Works — Stuttgart, Germany</span>
+                <span className="text-[#94a3b8]">Built by DevEx Tools Team — Stuttgart, Germany</span>
               </div>
             </Reveal>
 
@@ -172,7 +172,7 @@ export default function HomePage() {
             <Reveal>
               <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold mb-3">Top-Rated Dev Tools</h2>
-                <p className="text-[#94a3b8]">Curated and ranked by the Isle Works engineering team</p>
+                <p className="text-[#94a3b8]">Curated and ranked by the DevEx Tools Team</p>
               </div>
             </Reveal>
 
@@ -226,7 +226,7 @@ export default function HomePage() {
         <section className="relative z-10 px-6 py-16 border-t border-white/[0.04]">
           <div className="max-w-6xl mx-auto">
             <Reveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Why Isle Works Reviews?</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Why DevEx Tools Team Reviews?</h2>
             </Reveal>
             <StaggerReveal stagger={0.08} delay={0.2}>
               <div className="grid md:grid-cols-4 gap-5">
@@ -342,7 +342,7 @@ export default function HomePage() {
               >
                 <h2 className="text-2xl md:text-3xl font-bold mb-3">Stay in the Loop</h2>
                 <p className="text-[#94a3b8] mb-8 max-w-md mx-auto">
-                  Get dev tool deep-dives and engineering insights from the Isle Works team, delivered monthly.
+                  Get dev tool deep-dives and engineering insights from the DevEx Tools Team, delivered monthly.
                 </p>
                 <div className="flex max-w-md mx-auto">
                   <input
@@ -369,7 +369,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Bot className="w-5 h-5 text-[#06b6d4]" />
-              <span className="text-sm font-semibold text-white">Isle Works</span>
+              <span className="text-sm font-semibold text-white">DevEx Tools Team</span>
               <span className="text-[10px] text-[#64748b]">DevEx</span>
             </div>
             <div className="flex items-center gap-4 text-xs text-[#64748b]">
@@ -378,7 +378,7 @@ export default function HomePage() {
               <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
               <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
             </div>
-            <p className="text-xs text-[#475569]">&copy; 2026 Isle Works — Stuttgart, Germany. All rights reserved.</p>
+            <p className="text-xs text-[#475569]">&copy; 2026 DevEx Tools Team — Stuttgart, Germany. All rights reserved.</p>
           </div>
         </footer>
       </div>

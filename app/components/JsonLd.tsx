@@ -8,9 +8,9 @@ interface JsonLdProps {
 }
 
 export default function JsonLd({
-  siteName = 'Isle Works DevEx',
+  siteName = 'DevEx Tools Team',
   siteUrl = 'https://devex-tools.net',
-  description = 'Developer tool reviews and comparisons curated by the Isle Works engineering team in Stuttgart.',
+  description = 'Developer tool reviews and comparisons curated by the DevEx Tools Team in Stuttgart.',
 }: JsonLdProps) {
   useEffect(() => {
     const script = document.createElement('script');

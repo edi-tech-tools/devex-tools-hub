@@ -3,14 +3,14 @@ import "./globals.css";
 import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
-  title: "DevEx Tools — Curated by Isle Works",
+  title: "DevEx Tools — Curated by DevEx Tools Team",
   description:
-    "Developer tool reviews and comparisons, curated by the Isle Works engineering team in Stuttgart. Robotics, DevOps, and developer experience expertise.",
+    "Developer tool reviews and comparisons, curated by the DevEx Tools Team in Stuttgart. Robotics, DevOps, and developer experience expertise.",
   keywords: [
     "developer tools",
     "DevEx",
     "dev tools",
-    "Isle Works",
+    "DevEx Tools Team",
     "developer experience",
     "software reviews",
     "engineering tools",
@@ -21,17 +21,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "DevEx Tools — Isle Works",
-    title: "DevEx Tools — Curated by Isle Works",
+    siteName: "DevEx Tools — DevEx Tools Team",
+    title: "DevEx Tools — Curated by DevEx Tools Team",
     description:
-      "Developer tool reviews and comparisons, curated by the Isle Works engineering team.",
+      "Developer tool reviews and comparisons, curated by the DevEx Tools Team.",
     url: "https://devex-tools.net",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevEx Tools — Curated by Isle Works",
+    title: "DevEx Tools — Curated by DevEx Tools Team",
     description:
-      "Developer tool reviews and comparisons, curated by the Isle Works engineering team.",
+      "Developer tool reviews and comparisons, curated by the DevEx Tools Team.",
   },
 };
 

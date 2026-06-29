@@ -64,9 +64,9 @@ export default function ToolDetailPage() {
     scripts.push(s1);
 
     const org = organizationSchema(
-      'Isle Works DevEx',
+      'DevEx Tools Team',
       'https://devex-tools.net',
-      'Developer tool reviews and comparisons curated by the Isle Works engineering team in Stuttgart.'
+      'Developer tool reviews and comparisons curated by the DevEx Tools Team in Stuttgart.'
     );
     const s2 = document.createElement('script');
     s2.type = 'application/ld+json';

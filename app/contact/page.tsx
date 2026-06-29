@@ -55,7 +55,7 @@ export default function ContactPage() {
               <span className="text-[#94a3b8]">Get in touch</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
-              Contact Isle Works
+              Contact DevEx Tools Team
             </h1>
             <p className="text-lg text-[#94a3b8] max-w-xl mx-auto">
               Have a question about a tool review, want to suggest a tool for evaluation,
@@ -164,15 +164,15 @@ export default function ContactPage() {
                   <p className="text-sm text-[#94a3b8]">
                     <strong className="text-white">General:</strong>
                     <br />
-                    <a href="mailto:hello@isleworks.dev" className="text-[#06b6d4] hover:underline">
-                      hello@isleworks.dev
+                    <a href="mailto:info@devex-tools.net" className="text-[#06b6d4] hover:underline">
+                      info@devex-tools.net
                     </a>
                   </p>
                   <p className="text-sm text-[#94a3b8]">
                     <strong className="text-white">Consulting:</strong>
                     <br />
-                    <a href="mailto:consulting@isleworks.dev" className="text-[#06b6d4] hover:underline">
-                      consulting@isleworks.dev
+                    <a href="mailto:info@devex-tools.net" className="text-[#06b6d4] hover:underline">
+                      info@devex-tools.net
                     </a>
                   </p>
                 </div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Cpu className="w-5 h-5 text-[#06b6d4]" />
-            <span className="text-sm font-semibold text-white">Isle Works</span>
+            <span className="text-sm font-semibold text-white">DevEx Tools Team</span>
             <span className="text-[10px] text-[#64748b]">DevEx</span>
           </div>
           <div className="flex items-center gap-4 text-xs text-[#64748b]">
@@ -221,7 +221,7 @@ export default function ContactPage() {
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
-          <p className="text-xs text-[#475569]">&copy; 2026 Isle Works — Stuttgart, Germany. All rights reserved.</p>
+          <p className="text-xs text-[#475569]">&copy; 2026 DevEx Tools Team — Stuttgart, Germany. All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -3,9 +3,9 @@ import Link from "next/link";
 import { MapPin, Users, Cpu, GitBranch, Linkedin, Code2, Server, TestTubes } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About — Isle Works DevEx",
+  title: "About — DevEx Tools Team",
   description:
-    "Isle Works is a Stuttgart-based engineering studio specializing in robotics and DevOps. Meet the 6-person team behind DevEx tool reviews.",
+    "DevEx Tools Team is a Stuttgart-based engineering studio specializing in robotics and DevOps. Meet the 6-person team behind DevEx tool reviews.",
 };
 
 const TEAM = [
@@ -13,7 +13,7 @@ const TEAM = [
     name: "Erik Petit",
     role: "CEO & Founder",
     initials: "EP",
-    bio: "Former robotics lead at Bosch Rexroth. Erik founded Isle Works to bridge the gap between hardware-in-the-loop testing and modern DevOps practices. He oversees the review methodology and technical direction.",
+    bio: "Former robotics lead at Bosch Rexroth. Erik founded DevEx Tools Team to bridge the gap between hardware-in-the-loop testing and modern DevOps practices. He oversees the review methodology and technical direction.",
   },
   {
     name: "Scarlett Ramirez",
@@ -96,7 +96,7 @@ export default function AboutPage() {
               <span className="text-gradient">for Engineers</span>
             </h1>
             <p className="text-lg text-[#94a3b8] leading-relaxed max-w-2xl mx-auto">
-              Isle Works is a Stuttgart-based engineering studio specializing in robotics and DevOps.
+              DevEx Tools Team is a Stuttgart-based engineering studio specializing in robotics and DevOps.
               We review developer tools the way we wish someone had reviewed them for us — with
               rigorous benchmarks, honest tradeoffs, and zero sponsor bias.
             </p>
@@ -107,7 +107,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-white mb-6">Our Story</h2>
             <div className="space-y-4 text-[#94a3b8] leading-relaxed">
               <p>
-                Isle Works started in a small workshop in Stuttgart&apos;s Innovation Park in 2023.
+                DevEx Tools Team started in a small workshop in Stuttgart&apos;s Innovation Park in 2023.
                 Erik Petit and Scarlett Ramirez had spent years building robotics platforms and the
                 infrastructure to support them — and kept running into the same problem: there was
                 no trustworthy resource for comparing developer tools from an engineering perspective.
@@ -120,7 +120,7 @@ export default function AboutPage() {
               </p>
               <p>
                 So they built their own. What started as an internal wiki for tool evaluations grew
-                into DevEx, a public resource maintained by the full Isle Works team of six. Every
+                into DevEx, a public resource maintained by the full DevEx Tools Team of six. Every
                 review on this site represents real hours spent with the tool — benchmarking,
                 breaking, and rebuilding.
               </p>
@@ -198,10 +198,10 @@ export default function AboutPage() {
                   Contact Us
                 </Link>
                 <a
-                  href="mailto:hello@isleworks.dev"
+                  href="mailto:info@devex-tools.net"
                   className="px-6 py-3 border border-white/[0.1] hover:border-white/20 text-[#94a3b8] hover:text-white font-medium rounded-lg transition-all text-sm"
                 >
-                  hello@isleworks.dev
+                  info@devex-tools.net
                 </a>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Cpu className="w-5 h-5 text-[#06b6d4]" />
-            <span className="text-sm font-semibold text-white">Isle Works</span>
+            <span className="text-sm font-semibold text-white">DevEx Tools Team</span>
             <span className="text-[10px] text-[#64748b]">DevEx</span>
           </div>
           <div className="flex items-center gap-4 text-xs text-[#64748b]">
@@ -223,7 +223,7 @@ export default function AboutPage() {
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
-          <p className="text-xs text-[#475569]">&copy; 2026 Isle Works — Stuttgart, Germany. All rights reserved.</p>
+          <p className="text-xs text-[#475569]">&copy; 2026 DevEx Tools Team — Stuttgart, Germany. All rights reserved.</p>
         </div>
       </footer>
     </div>
