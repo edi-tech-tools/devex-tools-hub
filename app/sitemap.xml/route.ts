@@ -29,6 +29,7 @@ const BLOG_SLUGS = [
     "observability-pipeline-migration-practical-guide-2026",
     "container-development-tools-docker-podman-orbstack-2026",
     "ci-cd-tools-showdown-2026-github-actions-gitlab-ci-jenkins-circleci",
+    "serverless-vs-containers-2026-decision-guide",
 ] as const;
 
 const TOOL_SLUGS = [
