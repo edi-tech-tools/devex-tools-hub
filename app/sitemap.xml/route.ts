@@ -30,6 +30,7 @@ const BLOG_SLUGS = [
     "container-development-tools-docker-podman-orbstack-2026",
     "ci-cd-tools-showdown-2026-github-actions-gitlab-ci-jenkins-circleci",
     "serverless-vs-containers-2026-decision-guide",
+    "database-tooling-renaissance-2026-universal-sql-clients",
 ] as const;
 
 const TOOL_SLUGS = [
