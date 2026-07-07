@@ -31,6 +31,7 @@ const BLOG_SLUGS = [
     "ci-cd-tools-showdown-2026-github-actions-gitlab-ci-jenkins-circleci",
     "serverless-vs-containers-2026-decision-guide",
     "database-tooling-renaissance-2026-universal-sql-clients",
+    "monorepo-vs-polyrepo-decision-guide-2026",
 ] as const;
 
 const TOOL_SLUGS = [
