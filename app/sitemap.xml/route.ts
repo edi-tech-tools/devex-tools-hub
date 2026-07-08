@@ -32,6 +32,10 @@ const BLOG_SLUGS = [
     "serverless-vs-containers-2026-decision-guide",
     "database-tooling-renaissance-2026-universal-sql-clients",
     "monorepo-vs-polyrepo-decision-guide-2026",
+    "database-development-tools-2026-comparison",
+    "ai-code-assistants-2026-cursor-vs-windsurf-vs-copilot-vs-codeium",
+    "terminal-emulators-2026-warp-iterm2-hyper-alacritty-kitty",
+    "code-review-tools-guide-2026",
 ] as const;
 
 const TOOL_SLUGS = [

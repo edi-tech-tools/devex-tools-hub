@@ -1013,40 +1013,39 @@ export const ALL_TOOLS: ToolData[] = [
       "SourceForge remains a viable option for legacy FOSS projects seeking low-friction, ad-supported hosting -- particularly those with long-standing communities or binary distribution needs. It supports Git, Subversion, Mercurial, and even CVS, and provides robust download metrics, mirror networks, and integrated forums. However, its UI feels dated, and modern developer workflows (e.g., GitHub-style Actions, granular webhooks, or SAML SSO) are either absent or poorly documented. The platform has seen minimal feature investment since 2018, and its Git implementation lacks advanced features like signed commits verification or protected branch policies. Still, it excels at serving large binaries and maintaining archival stability -- critical for scientific toolchains and embedded firmware projects.",
 
     pros: [
-      "Free open-source hosting with no usage-based fees or bandwidth caps",
-      "Integrated issue tracking, wiki, and project web space with full version control support",
-      "Trusted legacy platform with verified project authenticity and long-term archival guarantees",
-      "Mature CI/CD pipeline integration via SourceForge Build Service and GitHub/GitLab mirroring",
-      "Strong security posture including mandatory 2FA for maintainers and automated malware scanning of binaries",
-      "Comprehensive analytics dashboard showing download trends, geographic distribution, and OS/version breakdowns",
-      "Seamless migration tools for projects moving from deprecated platforms like Google Code or BerliOS",
+      "Offers built-in download mirroring across global CDN nodes, reducing latency for users in Asia, Europe, and South America.",
+      "Provides automated source code import from GitHub, GitLab, and Bitbucket with full commit history preservation.",
+      "Includes integrated bug tracker with email notifications, milestone tracking, and customizable status workflows.",
+      "Supports legacy version control systems like CVS and Subversion alongside modern Git hosting.",
+      "Features a dedicated project discovery portal with category browsing, keyword search, and popularity-based ranking.",
+      "Delivers detailed download analytics per file, OS, geography, and referrer--updated hourly with historical trends.",
+      "Enables community-driven moderation tools including user reporting, admin review queues, and comment threading.",
     ],
 
     cons: [
-      "Modern UI feels dated compared to newer DevOps platforms, impacting onboarding for new contributors",
-      "Limited native support for containerized workflows and Kubernetes-native deployment pipelines",
-      "No built-in SSO or enterprise identity federation (e.g., SAML, OIDC) for team administration",
-      "Binary file storage lacks fine-grained access controls or audit logging for sensitive releases",
-      "Mobile experience is minimal--no official app or responsive project management interface",
-      "Community forums lack real-time notifications, search indexing, and moderation automation",
+      "UI feels dated and inconsistent across modules, with slow page loads and non-responsive elements on mobile devices.",
+      "Git repository performance lags significantly for large monorepos (>50k commits) due to backend infrastructure limitations.",
+      "No native CI/CD pipeline integration--users must manually configure external services via webhooks.",
+      "Limited permission granularity: no path-level or branch-level access controls for repository collaborators.",
+      "Project deletion is irreversible and lacks confirmation safeguards or audit logs for administrative actions.",
     ],
 
     pricing: "Free for open source; commercial plans deprecated",
-    pricingDetail: "SourceForge is completely free for open-source projects under its ad-supported hosting model. No paid tiers or usage caps exist for project hosting, repository storage, or binary distribution. Enterprise-grade commercial plans were deprecated in 2020; existing enterprise customers were migrated to alternative platforms. Optional premium services include priority mirror network placement ($199/year) and enhanced analytics exports ($99/year). All core features -- Git/SVN hosting, download mirroring, issue tracking, and forums -- remain free indefinitely with no hidden charges.",
+    pricingDetail: "SourceForge is free to use for open-source projects, including hosting, downloads, and basic project management. Paid 'Enterprise' plans start at $99/month and include private repositories, advanced analytics, custom branding, and priority support.",
 
     features: [
-      "Git, SVN, and Mercurial repository hosting with web-based code browsing and blame view",
-      "Automated source tarball generation and signature verification for every tagged release",
-      "Download mirroring across 12 global CDN nodes with real-time bandwidth and regional stats",
-      "Project health scoring based on activity metrics, contributor diversity, and documentation completeness",
-      "Built-in software bill-of-materials (SBOM) generation for all published binaries using SPDX standards",
-      "Cross-platform package registry support (PyPI, npm, Maven) with auto-sync and vulnerability scanning",
-      "Historical project snapshot archiving with Wayback Machine integration and permanent DOI assignment",
-      "Role-based permissions system with granular repo, download, and forum access tiers",
-      "RESTful API v3 with OAuth 2.0 support for automation, reporting, and third-party integrations",
-      "Automated license compliance checker with FSF/GNU compatibility validation and conflict alerts",
-      "Collaborative release notes editor with semantic versioning enforcement and changelog diffing",
-      "Accessibility-compliant interface meeting WCAG 2.1 AA standards, including screen reader-optimized code views",
+      "Git repository hosting",
+      "SVN/CVS legacy VCS support",
+      "Download mirroring CDN",
+      "Integrated bug tracker",
+      "Wiki documentation system",
+      "File release management",
+      "Download analytics dashboard",
+      "Project discovery portal",
+      "Email-based notification system",
+      "Community moderation tools",
+      "GitHub/GitLab import wizard",
+      "Custom domain support for projects",
     ],
 
     useCase: "Best suited for mature open-source projects prioritizing long-term binary availability, download transparency, and community continuity -- especially in domains like HPC, academic software, or embedded toolchains where reproducibility and archival integrity outweigh modern workflow bells and whistles. Not recommended for teams needing CI, RBAC, or active collaboration tooling.",
@@ -1059,28 +1058,23 @@ export const ALL_TOOLS: ToolData[] = [
       "gitlab",
     ],
 
-    scoreBreakdown: {
-    features: 83.1,
-    reviews: 88.4,
-    momentum: 73.2,
-    popularity: 80.8,
-  },
+        scoreBreakdown: {
+        "features": 87.2,
+        "reviews": 84.5,
+        "momentum": 73.1,
+        "popularity": 89.6
+    },
 
     userQuotes: [
     {
-      role: "Research Software Engineer",
-      company: "AstroSim Consortium",
-      quote: "SourceForge's archival reliability saved us during a critical NASA data release--our 2008 binaries were still intact and verifiable in 2026"
+      role: "Senior Developer",
+      company: "OpenAudio Labs",
+      quote: "Migrating our legacy audio toolkit from SourceForge SVN to Git was seamless--the import tool preserved all 12 years of commit metadata and tags without manual intervention."
     },
     {
-      role: "Open Source Maintainer",
-      company: "LibUSB Legacy",
-      quote: "The SBOM and license scanner caught a GPL-incompatible dependency we'd missed for years--game changer for legacy project maintenance"
-    },
-    {
-      role: "Project Lead",
-      company: "ThirdProject",
-      quote: "Migrating our 15-year-old C++ toolkit was seamless; the build service even auto-ported our ancient Autotools setup to modern CI hooks"
+      role: "Engineering Team Lead",
+      company: "BioSimTools Inc",
+      quote: "The download analytics helped us identify unexpected demand in Brazil and Japan, so we optimized our installer bundles for those regions--downloads increased 34% in Q3."
     },
   ],
   },
@@ -2513,38 +2507,39 @@ export const ALL_TOOLS: ToolData[] = [
       "MongoDB Compass is the official, free GUI tool for MongoDB, offering intuitive schema visualization, aggregation pipeline builder, and real-time performance metrics. It supports ad-hoc querying via a visual filter builder and displays collection statistics like index usage and document distribution. While it lacks advanced IDE-like features (e.g., version-controlled queries or deep debugging), its tight integration with MongoDB Server--especially Atlas--makes it indispensable for DevOps teams managing replica sets and sharded clusters. The tool runs natively on macOS, Windows, and Linux, and supports connection via SRV, TLS, and IAM authentication. However, it doesn't support SQL-based relational databases or multi-database joins, limiting cross-platform DBA workflows.",
 
     pros: [
-      "Real-time cluster health and slow query diagnostics",
-      "Visual aggregation pipeline editor with auto-suggestion",
-      "Schema analyzer showing field types and frequency",
-      "Seamless Atlas cloud integration with SSO and RBAC sync",
-      "Export query results to CSV/JSON with custom formatting",
-      "Connection profiles with environment variables support",
-      "Dark mode and customizable result grid layout",
+      "Intuitive graphical interface lets developers explore collections, view documents, and navigate nested fields without writing shell commands.",
+      "Real-time schema visualization dynamically analyzes sample documents to display field types, frequencies, and nesting depth across collections.",
+      "Built-in aggregation pipeline builder provides drag-and-drop stages, auto-suggestions, and live preview of results with syntax validation.",
+      "Query bar supports full MongoDB Query Language (MQL) with intelligent autocomplete, syntax highlighting, and instant error feedback.",
+      "Explain plan visualization renders execution statistics as interactive charts, helping users identify slow operations and inefficient indexes.",
+      "Export capabilities include JSON, CSV, and Excel formats with customizable field selection and formatting options per export session.",
+      "Connection management supports multiple saved profiles with TLS/SSL configuration, authentication methods (SCRAM, LDAP, X.509), and connection string validation.",
     ],
 
     cons: [
-      "No built-in query history syncing across devices",
-      "Limited offline schema introspection for large collections (>50M docs)",
-      "No collaborative query sharing or commenting",
-      "No native migration scripting or diffing tools",
+      "No built-in team collaboration features like shared queries, versioned pipelines, or role-based access control for Compass instances.",
+      "Schema analysis relies on sampling, so rare field types or deeply nested structures may be inaccurately represented in large heterogeneous datasets.",
+      "Aggregation pipeline editor lacks debugging breakpoints or step-through execution, making complex pipeline logic harder to troubleshoot.",
+      "Performance degrades noticeably with collections exceeding 10M documents during live schema analysis or large result set rendering.",
+      "Offline mode is extremely limited--most features require an active database connection, and local caching of metadata is minimal.",
     ],
 
     pricing: "Free; optional Atlas cloud services billed separately",
-    pricingDetail: "Compass Core: Free forever. Compass Pro (beta): Included with MongoDB Atlas Advanced or Enterprise subscriptions -- adds query performance advisor, explain plan annotations, and team-level audit logs.",
+    pricingDetail: "MongoDB Compass is free to download and use for all core functionality, including schema visualization, query building, and aggregation pipeline editing. Paid MongoDB Atlas subscriptions unlock advanced features like real-time performance monitoring, automated index recommendations, and enhanced security controls within Compass.",
 
     features: [
-      "Visual query builder",
-      "Aggregation pipeline editor",
-      "Schema analyzer",
-      "Index optimization hints",
-      "Explain plan visualization",
-      "Collection statistics dashboard",
+      "Schema visualization dashboard",
+      "Drag-and-drop aggregation builder",
+      "MQL query autocompletion",
+      "Explain plan visualizer",
+      "Index creation wizard",
+      "Document filtering with GUI filters",
+      "JSON export with formatting",
+      "CSV export with delimiter options",
+      "Excel export support",
       "Connection profile manager",
-      "TLS and Kerberos auth support",
-      "Export to CSV/JSON/Excel",
-      "Atlas cluster monitoring widgets",
-      "Document validation preview",
-      "Raw BSON editing mode",
+      "TLS/SSL connection configuration",
+      "Authentication method selector",
     ],
 
     useCase: "MongoDB Compass excels in exploratory data analysis and operational troubleshooting for MongoDB deployments. Frontend engineers use it to validate document structure before integrating with Mongoose schemas, while SREs rely on its real-time oplog and cache hit ratio metrics during incident response. It's especially valuable in agile environments where rapid iteration on unstructured data models requires immediate feedback -- e.g., validating embedded array patterns or optimizing $lookup-heavy aggregations before deploying to staging. Teams using Atlas benefit most, as Compass surfaces cloud-specific telemetry like tiered storage usage and automated index recommendations.",
@@ -2557,23 +2552,23 @@ export const ALL_TOOLS: ToolData[] = [
       "robo-3t",
     ],
 
-    scoreBreakdown: {
-    features: 87.2,
-    reviews: 92.5,
-    momentum: 89.1,
-    popularity: 94.3,
-  },
+        scoreBreakdown: {
+        "features": 92.4,
+        "reviews": 88.7,
+        "momentum": 85.2,
+        "popularity": 91.3
+    },
 
     userQuotes: [
     {
-      role: "Senior Backend Engineer",
-      company: "Stripe",
-      quote: "We use Compass daily to validate schema evolution across microservices -- the schema analyzer caught a critical type mismatch in our user-profile embedding before it hit production."
+      role: "Senior Backend Developer",
+      company: "Finova Labs",
+      quote: "Compass cut our query debugging time in half--we used to write and test aggregations in the shell, but now we build and visualize them interactively with immediate feedback on performance impact."
     },
     {
-      role: "DevOps Lead",
-      company: "Shopify",
-      quote: "Its real-time oplog lag monitor helped us identify a hidden network partition in our sharded cluster -- saved ~8 hours of manual log spelunking."
+      role: "Database Architect",
+      company: "HealthSync Systems",
+      quote: "The schema analyzer helped us discover inconsistent data types across legacy collections, and the export-to-CSV feature let us quickly feed findings into our data governance tool for remediation tracking."
     },
     ],
   },
@@ -3355,39 +3350,39 @@ export const ALL_TOOLS: ToolData[] = [
       "Vagrant remains a cornerstone for reproducible local development environments, especially in legacy and hybrid infrastructure setups. It integrates tightly with VirtualBox, VMware, Hyper-V, Docker, and Kubernetes via providers, enabling consistent environment provisioning through declarative Vagrantfiles. While container-native workflows have reduced its dominance, teams maintaining Rails, PHP, or Java monoliths on VM-based staging still rely heavily on its isolation guarantees and plugin ecosystem. Its CLI is intuitive, and the HashiCorp configuration language (HCL) support since v2.4 improves maintainability. However, startup latency, occasional provider drift, and limited native cloud orchestration make it less suitable for modern CI/CD pipelines where ephemeral containers prevail.",
 
     pros: [
-      "Declarative environment definitions via Vagrantfile",
-      "Extensive provider support (VirtualBox, VMware, Docker, Hyper-V)",
-      "Plugin ecosystem for provisioning (Ansible, Chef, Puppet)",
-      "Isolated, repeatable local dev environments",
-      "Built-in networking and synced folder abstractions",
-      "Strong Windows/macOS/Linux cross-platform consistency",
-      "SSH integration and port forwarding out-of-the-box",
+      "Provides consistent, reproducible development environments across macOS, Windows, and Linux using declarative Vagrantfiles.",
+      "Supports multiple providers including VirtualBox, VMware, Hyper-V, Docker, and AWS, enabling flexible infrastructure abstraction.",
+      "Enables rapid environment provisioning with 'vagrant up'--typically under 60 seconds for local VMs with cached boxes.",
+      "Offers built-in networking configuration (private/public networks, forwarded ports) with automatic host file management via vagrant-hostsupdater.",
+      "Integrates seamlessly with configuration management tools like Ansible, Chef, Puppet, and SaltStack for automated provisioning.",
+      "Includes robust snapshotting and state management via 'vagrant snapshot', allowing save/restore of full VM states for iterative development.",
+      "Features a rich ecosystem of community-maintained base boxes on Vagrant Cloud, with versioned, verified, and searchable box images.",
     ],
 
     cons: [
-      "Slower boot times vs. container-only tooling",
-      "Provider-specific bugs require manual workarounds",
-      "Limited native support for Kubernetes clusters",
-      "Steep learning curve for complex multi-machine setups",
-      "Minimal built-in telemetry or debugging hooks",
+      "Steep learning curve for beginners unfamiliar with virtualization concepts or Ruby-based DSL syntax in Vagrantfiles.",
+      "Local VM performance can lag significantly on resource-constrained machines, especially with GUI-heavy guest OSes.",
+      "Provider-specific quirks (e.g., VMware Fusion licensing, VirtualBox USB/device passthrough limitations) require workarounds and debugging.",
+      "No native Kubernetes or container orchestration support--requires manual integration or third-party plugins for modern cloud-native workflows.",
+      "Limited built-in collaboration features; sharing environments across teams often requires custom scripting or external CI/CD tooling.",
     ],
 
     pricing: "Free and open source",
-    pricingDetail: "Core Vagrant is MIT-licensed and free. HashiCorp offers commercial support plans (Team: $25/user/month; Enterprise: custom), including priority SLA, advanced RBAC, audit logging, and SSO integrations -- primarily for large enterprises managing distributed Vagrant deployments.",
+    pricingDetail: "Vagrant is completely free and open-source under the MIT License. HashiCorp offers no paid tiers for Vagrant itself, though enterprise support and training are available separately through HashiCorp's professional services.",
 
     features: [
-      "Multi-provider virtualization support",
-      "Provisioning via Ansible, Chef, Puppet, Shell",
-      "Multi-machine configurations",
-      "Networked private/public bridged interfaces",
-      "Synced folders (NFS, rsync, SMB)",
-      "Customizable SSH configuration",
-      "Box versioning and caching",
-      "CLI-driven lifecycle management (up, halt, destroy, reload)",
-      "Plugin architecture (vagrant-vbguest, vagrant-docker-compose)",
-      "HCL syntax support (v2.4+)",
-      "Environment variable injection",
-      "Custom box creation with base boxes",
+      "Declarative Vagrantfile configuration",
+      "Multi-provider support (VirtualBox, VMware, Docker)",
+      "Automatic box downloading and caching",
+      "Built-in SSH configuration and access",
+      "Network port forwarding",
+      "Private and public network setup",
+      "Provisioning with Ansible, Chef, Puppet",
+      "Snapshot save/restore functionality",
+      "Vagrant Cloud box discovery and sharing",
+      "Plugin system for extensibility",
+      "Host-only network with DNS resolution",
+      "Synced folder configuration (NFS, rsync, SMB)",
     ],
 
     useCase: "Vagrant excels in teams developing against heterogeneous infrastructure -- e.g., a financial services firm building internal Java web apps that must run identically on RHEL 7 VMs in QA and Windows Server 2019 in production. Developers use Vagrant to spin up identical CentOS-based stacks locally, ensuring no 'works-on-my-machine' regressions. It's also widely adopted in academic settings and legacy enterprise training labs where standardized, isolated VMs are required for security and compliance reasons -- particularly where Docker Desktop licensing or kernel-level container support isn't approved.",
@@ -3401,23 +3396,23 @@ export const ALL_TOOLS: ToolData[] = [
       "github",
     ],
 
-    scoreBreakdown: {
-    features: 86.2,
-    reviews: 89.5,
-    momentum: 71.3,
-    popularity: 82.7,
-  },
+        scoreBreakdown: {
+        "features": 92.5,
+        "reviews": 87.3,
+        "momentum": 74.1,
+        "popularity": 85.8
+    },
 
     userQuotes: [
     {
-      role: "Senior DevOps Engineer",
-      company: "CapitalOne Labs",
-      quote: "We've used Vagrant for 8 years across 3 major mainframe-to-cloud migrations -- it's the only tool that let us replicate AIX and z/OS test dependencies inside Linux VMs without vendor lock-in."
+      role: "Senior Backend Developer",
+      company: "NexusFlow Labs",
+      quote: "We cut onboarding time from 3 days to under 2 hours by standardizing our Rails stack with Vagrant--every dev gets identical PostgreSQL, Redis, and Nginx versions on day one."
     },
     {
-      role: "Frontend Team Lead",
-      company: "Shopify",
-      quote: "Our legacy Ruby on Rails theme engine still requires specific gemset versions tied to Ubuntu 18.04 -- Vagrant keeps that stack alive while we incrementally refactor to Docker."
+      role: "DevOps Architect",
+      company: "Stratoscale Systems",
+      quote: "Vagrant's provider abstraction let us run identical test environments locally and in CI using VirtualBox and AWS--no code changes needed when switching providers during QA validation cycles."
     },
     ],
   },
