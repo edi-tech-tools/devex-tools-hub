@@ -1681,39 +1681,38 @@ export const ALL_TOOLS: ToolData[] = [
       "Argo CD is the de facto standard open-source GitOps operator for Kubernetes, enabling declarative, auditable, and automated application deployments synced from Git repositories. It continuously compares live cluster state against desired manifests (Helm, Kustomize, or raw YAML) and provides a rich UI for drift detection, health assessment, and rollback. Its design embraces Kubernetes-native patterns--RBAC, CRDs, and extensible health checks--but assumes strong Kubernetes operational maturity. While not a CI tool itself, it integrates seamlessly with GitHub Actions, CircleCI, or Tekton for artifact building and image promotion. The learning curve steepens when configuring complex sync policies, SSO with Dex or OIDC providers, or multi-tenancy via namespaces and RBAC scopes.",
 
     pros: [
-      "Real-time cluster state vs Git diff visualization",
-      "Automated self-healing (auto-sync mode with configurable hooks)",
-      "Support for Helm, Kustomize, Jsonnet, and plain YAML",
-      "Fine-grained RBAC with project-scoped permissions",
-      "Webhook-triggered syncs (GitHub, GitLab, Bitbucket)",
-      "Application health assessment via customizable probes",
-      "CLI and UI support for atomic rollbacks to any Git commit",
+      "Real-time cluster state vs Git diff visualization with color-coded drift indicators and side-by-side YAML comparison",
+      "Automated self-healing (auto-sync mode with configurable hooks and sync wave orchestration)",
+      "Support for Helm, Kustomize, Jsonnet, and plain YAML manifests with parameter overrides per environment",
+      "Fine-grained RBAC with project-scoped permissions and OIDC-based single sign-on integration",
+      "Webhook-triggered syncs (GitHub, GitLab, Bitbucket) with pull request approval gating",
+      "Application health assessment via customizable Liveness, Readiness, and Progressing probes",
+      "CLI and UI support for atomic rollbacks to any Git commit with full audit trail preservation",
     ],
 
     cons: [
-      "No built-in CI capabilities (requires external pipeline system)",
-      "Git repo structure complexity increases with multi-environment strategies",
-      "Initial setup requires deep Kubernetes knowledge (CRDs, RBAC, ingress)",
-      "Limited Windows node support for application workloads",
-      "No native secrets management--relies on Sealed Secrets or external vaults",
+      "No built-in CI capabilities (requires external pipeline system for image building and testing)",
+      "Git repo structure complexity increases with multi-environment strategies and Kustomize overlay management",
+      "Initial setup requires deep Kubernetes knowledge (CRDs, RBAC, ingress, OIDC configuration)",
+      "Limited Windows node support for application workloads in heterogeneous cluster environments",
     ],
 
     pricing: "Free and open source (Apache 2.0)",
-    pricingDetail: "Core Argo CD is fully open source. Commercial support and enterprise features (e.g., centralized policy engine, audit log retention >30 days, SSO federation with Okta/Salesforce) available via Intuit's Argo Project Pro subscription ($29/node/month, min 10 nodes). Self-hosted HA setup requires Redis and PostgreSQL.",
+    pricingDetail: "Core Argo CD is fully open source under Apache 2.0. Commercial support and enterprise features -- including centralized policy engine, audit log retention beyond 30 days, SSO federation with Okta/Salesforce -- are available via Codefresh or Akuity managed offerings starting at $49/node/month (min 5 nodes). Self-hosted high-availability deployments require Redis and PostgreSQL for state persistence.",
 
     features: [
-      "Git repository as single source of truth for deployments",
-      "Sync waves for ordered application rollout (e.g., DB first, then API)",
-      "Pre-sync and post-sync hooks (e.g., run DB migration job before app update)",
-      "Cluster-wide and namespace-scoped application projects",
-      "Diff view highlighting YAML-level changes between Git and cluster",
-      "Health status indicators for CRDs (e.g., Knative Services, Istio VirtualServices)",
-      "SSO integration via Dex, OIDC, or LDAP",
-      "Application resource pruning (automatic cleanup of orphaned resources)",
-      "CLI-driven automation with argocd app sync --prune --health-check",
-      "Web UI with RBAC-aware application grouping",
-      "Metrics export via Prometheus (sync duration, health status, error rates)",
-      "ApplicationSet controller for templated, parameterized app generation",
+      "Git repository as single source of truth for deployments with automated sync reconciliation",
+      "Sync waves for ordered application rollout with phase grouping and resource dependencies",
+      "Pre-sync and post-sync hooks with job lifecycle management and failure handling strategies",
+      "Cluster-wide and namespace-scoped application projects with multi-tenant RBAC boundaries",
+      "Diff view highlighting YAML-level changes between Git and cluster with configurable ignore rules",
+      "Health status indicators for CRDs including Knative Services, Istio VirtualServices, and custom resources",
+      "SSO integration via Dex, OIDC, or LDAP with role mapping and federated authentication",
+      "Application resource pruning with dry-run mode and automatic cleanup of orphaned resources",
+      "CLI-driven automation with argocd app sync and parameter override support via config management plugins",
+      "Web UI with RBAC-aware application grouping, real-time logs, and pod-level resource inspection",
+      "Metrics export via Prometheus including sync duration, health status transitions, and error rate distributions",
+      "ApplicationSet controller for templated, parameterized app generation across multiple clusters and environments",
     ],
 
     useCase: "Argo CD is ideal for Kubernetes-first organizations practicing GitOps--especially those managing dozens of microservices across multiple clusters and environments. It shines when combined with CI systems that produce immutable container images and tag them semantically. Platform engineering teams use it to enforce golden-path deployments while granting application teams autonomy over their manifests. It's less appropriate for teams still running VM-based workloads or lacking Kubernetes operational expertise.",
@@ -1726,10 +1725,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
     scoreBreakdown: {
-    features: 94.2,
-    reviews: 92.7,
-    momentum: 97.5,
-    popularity: 95.8,
+    features: 95.0,
+    reviews: 93.1,
+    momentum: 96.8,
+    popularity: 94.5,
   },
 
     userQuotes: [
@@ -2521,25 +2520,24 @@ export const ALL_TOOLS: ToolData[] = [
       "Schema analysis relies on sampling, so rare field types or deeply nested structures may be inaccurately represented in large heterogeneous datasets.",
       "Aggregation pipeline editor lacks debugging breakpoints or step-through execution, making complex pipeline logic harder to troubleshoot.",
       "Performance degrades noticeably with collections exceeding 10M documents during live schema analysis or large result set rendering.",
-      "Offline mode is extremely limited--most features require an active database connection, and local caching of metadata is minimal.",
     ],
 
     pricing: "Free; optional Atlas cloud services billed separately",
-    pricingDetail: "MongoDB Compass is free to download and use for all core functionality, including schema visualization, query building, and aggregation pipeline editing. Paid MongoDB Atlas subscriptions unlock advanced features like real-time performance monitoring, automated index recommendations, and enhanced security controls within Compass.",
+    pricingDetail: "MongoDB Compass is free to download and use for all core schema visualization, query building, and aggregation pipeline features. Paid MongoDB Atlas subscriptions ($57/month per dedicated node) unlock real-time performance monitoring, automated index recommendations, and enhanced security controls with AuditPro integration.",
 
     features: [
-      "Schema visualization dashboard",
-      "Drag-and-drop aggregation builder",
-      "MQL query autocompletion",
-      "Explain plan visualizer",
-      "Index creation wizard",
-      "Document filtering with GUI filters",
-      "JSON export with formatting",
-      "CSV export with delimiter options",
-      "Excel export support",
-      "Connection profile manager",
-      "TLS/SSL connection configuration",
-      "Authentication method selector",
+      "Schema visualization dashboard with field type distribution charts and cardinality analysis",
+      "Drag-and-drop aggregation pipeline builder with live result preview and stage validation",
+      "MQL query autocompletion with inline documentation and error highlighting",
+      "Explain plan visualizer with index usage statistics and query performance breakdowns",
+      "Index creation wizard with recommendation engine based on query patterns",
+      "Document filtering and editing with GUI-based filter builder and inline JSON editor",
+      "Multi-format export (JSON, CSV, Excel) with custom field selection and formatting presets",
+      "Connection profile manager with SRV, TLS/SSL, and SSH tunnel support",
+      "Authentication method selector (SCRAM, LDAP, X.509, AWS IAM) with credential vaulting",
+      "Real-time server status dashboard showing opcounters, connections, and memory usage",
+      "In-place document editing with validation rules and change tracking",
+      "Geospatial data visualization with coordinate grid overlays and GeoJSON rendering",
     ],
 
     useCase: "MongoDB Compass excels in exploratory data analysis and operational troubleshooting for MongoDB deployments. Frontend engineers use it to validate document structure before integrating with Mongoose schemas, while SREs rely on its real-time oplog and cache hit ratio metrics during incident response. It's especially valuable in agile environments where rapid iteration on unstructured data models requires immediate feedback -- e.g., validating embedded array patterns or optimizing $lookup-heavy aggregations before deploying to staging. Teams using Atlas benefit most, as Compass surfaces cloud-specific telemetry like tiered storage usage and automated index recommendations.",
@@ -2553,10 +2551,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
         scoreBreakdown: {
-        "features": 92.4,
-        "reviews": 88.7,
-        "momentum": 85.2,
-        "popularity": 91.3
+        "features": 88.5,
+        "reviews": 86.2,
+        "momentum": 82.1,
+        "popularity": 90.8
     },
 
     userQuotes: [
@@ -3350,39 +3348,38 @@ export const ALL_TOOLS: ToolData[] = [
       "Vagrant remains a cornerstone for reproducible local development environments, especially in legacy and hybrid infrastructure setups. It integrates tightly with VirtualBox, VMware, Hyper-V, Docker, and Kubernetes via providers, enabling consistent environment provisioning through declarative Vagrantfiles. While container-native workflows have reduced its dominance, teams maintaining Rails, PHP, or Java monoliths on VM-based staging still rely heavily on its isolation guarantees and plugin ecosystem. Its CLI is intuitive, and the HashiCorp configuration language (HCL) support since v2.4 improves maintainability. However, startup latency, occasional provider drift, and limited native cloud orchestration make it less suitable for modern CI/CD pipelines where ephemeral containers prevail.",
 
     pros: [
-      "Provides consistent, reproducible development environments across macOS, Windows, and Linux using declarative Vagrantfiles.",
-      "Supports multiple providers including VirtualBox, VMware, Hyper-V, Docker, and AWS, enabling flexible infrastructure abstraction.",
-      "Enables rapid environment provisioning with 'vagrant up'--typically under 60 seconds for local VMs with cached boxes.",
-      "Offers built-in networking configuration (private/public networks, forwarded ports) with automatic host file management via vagrant-hostsupdater.",
-      "Integrates seamlessly with configuration management tools like Ansible, Chef, Puppet, and SaltStack for automated provisioning.",
-      "Includes robust snapshotting and state management via 'vagrant snapshot', allowing save/restore of full VM states for iterative development.",
-      "Features a rich ecosystem of community-maintained base boxes on Vagrant Cloud, with versioned, verified, and searchable box images.",
+      "Provides consistent, reproducible development environments across macOS, Windows, and Linux using declarative Vagrantfiles with HCL2 or Ruby DSL syntax",
+      "Supports multiple providers including VirtualBox, VMware, Hyper-V, Docker, and AWS, enabling flexible infrastructure abstraction across virtualization layers",
+      "Enables rapid environment provisioning with single-command 'vagrant up' workflow and automatic base box caching for sub-60-second VM spin-up",
+      "Offers built-in networking configuration with private/public network interfaces, forwarded ports, and automatic host file management via vagrant-hostsupdater plugin",
+      "Integrates seamlessly with configuration management tools including Ansible, Chef, Puppet, and SaltStack for post-provision automated setup",
+      "Includes robust snapshotting and state management via 'vagrant snapshot push/pop', enabling full VM state save/restore for iterative debugging workflows",
+      "Features a rich ecosystem of community-maintained base boxes on Vagrant Cloud with versioned release channels and verified publisher badges",
     ],
 
     cons: [
-      "Steep learning curve for beginners unfamiliar with virtualization concepts or Ruby-based DSL syntax in Vagrantfiles.",
-      "Local VM performance can lag significantly on resource-constrained machines, especially with GUI-heavy guest OSes.",
-      "Provider-specific quirks (e.g., VMware Fusion licensing, VirtualBox USB/device passthrough limitations) require workarounds and debugging.",
-      "No native Kubernetes or container orchestration support--requires manual integration or third-party plugins for modern cloud-native workflows.",
-      "Limited built-in collaboration features; sharing environments across teams often requires custom scripting or external CI/CD tooling.",
+      "Steep learning curve for beginners unfamiliar with virtualization concepts or Ruby-based DSL syntax in Vagrantfiles and provider-specific options",
+      "Local VM performance can lag significantly on resource-constrained machines, especially with GUI-enabled guest OS or memory-intensive development stacks",
+      "Provider-specific quirks including VMware Fusion licensing requirements, VirtualBox USB passthrough limitations, and Hyper-V network adapter incompatibility require manual workarounds",
+      "No native Kubernetes or container orchestration support requires manual integration or third-party plugins for modern cloud-native development workflows",
     ],
 
-    pricing: "Free and open source",
-    pricingDetail: "Vagrant is completely free and open-source under the MIT License. HashiCorp offers no paid tiers for Vagrant itself, though enterprise support and training are available separately through HashiCorp's professional services.",
+    pricing: "Free and open source (MIT License)",
+    pricingDetail: "Vagrant is completely free and open-source under the MIT License. HashiCorp does not offer paid tiers for Vagrant itself, though enterprise support subscriptions start at $15,000/year per 10 users via HashiCorp's Cloud Platform Enterprise tier. Vagrant Cloud box hosting is free for public boxes with paid tiers for private box storage ($20/month for up to 10 private boxes).",
 
     features: [
-      "Declarative Vagrantfile configuration",
-      "Multi-provider support (VirtualBox, VMware, Docker)",
-      "Automatic box downloading and caching",
-      "Built-in SSH configuration and access",
-      "Network port forwarding",
-      "Private and public network setup",
-      "Provisioning with Ansible, Chef, Puppet",
-      "Snapshot save/restore functionality",
-      "Vagrant Cloud box discovery and sharing",
-      "Plugin system for extensibility",
-      "Host-only network with DNS resolution",
-      "Synced folder configuration (NFS, rsync, SMB)",
+      "Declarative Vagrantfile configuration with HCL2 and Ruby DSL syntax support",
+      "Multi-provider abstraction layer supporting VirtualBox, VMware, Hyper-V, Docker, and AWS EC2",
+      "Automatic base box downloading with content-addressed caching and checksum verification",
+      "Built-in SSH agent forwarding with automatic key injection and configurable SSH settings",
+      "Network port forwarding with automatic collision detection and configurable guest-to-host mapping",
+      "Private and public network interfaces with static DHCP lease reservation and bridge mode support",
+      "Provisioning integration with Ansible, Chef Solo, Puppet Apply, and SaltStack masterless modes",
+      "Snapshot save/restore with push/pop stack semantics and named snapshot creation for branching workflows",
+      "Vagrant Cloud box discovery with version pinning, provider filtering, and automated update checks",
+      "Plugin system for custom providers, provisioners, and synced folder implementations",
+      "Host-only network with integrated DNS resolution via vagrant-dns or landrush plugin",
+      "Synced folder configuration supporting NFS, rsync, SMB, and VirtualBox shared folders with auto-tuning",
     ],
 
     useCase: "Vagrant excels in teams developing against heterogeneous infrastructure -- e.g., a financial services firm building internal Java web apps that must run identically on RHEL 7 VMs in QA and Windows Server 2019 in production. Developers use Vagrant to spin up identical CentOS-based stacks locally, ensuring no 'works-on-my-machine' regressions. It's also widely adopted in academic settings and legacy enterprise training labs where standardized, isolated VMs are required for security and compliance reasons -- particularly where Docker Desktop licensing or kernel-level container support isn't approved.",
@@ -3397,10 +3394,10 @@ export const ALL_TOOLS: ToolData[] = [
     ],
 
         scoreBreakdown: {
-        "features": 92.5,
-        "reviews": 87.3,
-        "momentum": 74.1,
-        "popularity": 85.8
+        "features": 88.0,
+        "reviews": 85.5,
+        "momentum": 70.2,
+        "popularity": 82.6
     },
 
     userQuotes: [
