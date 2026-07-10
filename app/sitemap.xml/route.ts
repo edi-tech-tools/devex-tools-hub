@@ -36,6 +36,8 @@ const BLOG_SLUGS = [
     "ai-code-assistants-2026-cursor-vs-windsurf-vs-copilot-vs-codeium",
     "terminal-emulators-2026-warp-iterm2-hyper-alacritty-kitty",
     "code-review-tools-guide-2026",
+    "modern-api-documentation-tools-2026",
+    "edge-computing-platforms-2026-cloudflare-workers-deno-deploy-vercel-aws",
 ] as const;
 
 const TOOL_SLUGS = [
