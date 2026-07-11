@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://b2b-software.net/sitemap.xml
+Sitemap: https://devex-tools.net/sitemap.xml
