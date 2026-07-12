@@ -934,27 +934,27 @@ export const ALL_TOOLS: ToolData[] = [
     icon: GitBranch,
     description: "Git and Mercurial repository hosting with built-in CI/CD, PRs, and team collaboration.",
     longDescription:
-      "Bitbucket is a cloud-based version control platform that supports both Git and Mercurial repositories, offering tightly integrated CI/CD pipelines, code review workflows, and enterprise-grade collaboration tools--primarily targeting mid-to-large development teams seeking seamless integration with Atlassian's ecosystem. It provides unlimited private repositories for small teams (up to five users) and scales to thousands of users with granular permission models, IP allowlisting, SAML/SSO, and audit logging compliant with SOC 2, GDPR, and HIPAA. Its native Pipelines CI/CD service executes builds in Docker containers with parallel step execution, caching support, and built-in integrations for AWS, Google Cloud, and Azure; benchmark data shows median build times of 42 seconds for standard Node.js projects using cached dependencies, compared to ~68 seconds on comparable GitHub Actions configurations without advanced caching. Pull request workflows include inline commenting, diff highlighting, required reviewers, merge checks (including branch permissions and status checks), and automated testing enforcement--reducing post-merge defects by up to 37% in internal Atlassian telemetry across 120+ engineering teams. Unlike GitHub, Bitbucket offers first-party Mercurial support and deeper Jira Software integration--enabling bi-directional commit-to-issue linking, automatic branch naming from Jira keys, and sprint-level code activity dashboards. While GitLab provides broader self-hosting flexibility and more extensive DevOps tooling, Bitbucket excels in lightweight, low-friction setup for teams already invested in Atlassian products, with average onboarding time under 15 minutes per developer. It also supports large file storage via Git LFS and enforces pre-receive hooks for policy compliance, with repository size limits capped at 5 GB per repo and 250 MB per file--constraints validated across over 10 million active repositories as of Q2 2024.",
+      "Bitbucket is a Git-based code hosting and collaboration platform owned by Atlassian, optimized for teams already using Jira, Confluence, and Bamboo. It supports private repositories, built-in CI/CD via Bitbucket Pipelines (with 50 free build minutes/month), and seamless two-way Jira issue linking. Ideal for small-to-midsize teams prioritizing tight Atlassian ecosystem integration, it offers robust branch permissions, pull request approvals, and deployment tracking. Compared to GitHub, Bitbucket provides unlimited private repos on all plans but lags in marketplace apps and community visibility; versus GitLab, it lacks self-hosted options and advanced DevOps features like built-in container registry or DAST scanning.",
 
     pros: [
-      "Tight Jira & Confluence integration",
-      "Unlimited private repos on free tier",
-      "Built-in CI/CD with YAML-defined Pipelines",
-      "Granular branch permissions and merge checks",
-      "Smart mirroring for hybrid cloud/on-prem workflows",
-      "Native LFS support",
-      "Pull request approvals with required reviewers",
+      "Unlimited private repositories on all paid plans",
+      "Tight native integration with Jira and Confluence for issue tracking and documentation",
+      "Bitbucket Pipelines offers YAML-defined CI/CD with 50 free build minutes/month",
+      "Fine-grained branch and repository permissions for enterprise compliance",
+      "Pull request approvals, merge checks, and enforced code review workflows",
+      "Free plan includes up to 5 users and unlimited private repos",
+      "Supports both Git and Mercurial (legacy) version control",
     ],
 
     cons: [
-      "No native Windows/macOS CI runners",
-      "Limited marketplace for integrations vs GitHub",
-      "Pipelines timeout after 60 minutes without extension",
-      "Declining community momentum post-2022 acquisition shift",
+      "No self-hosted option since Atlassian discontinued Bitbucket Server in 2024",
+      "Limited third-party CI/CD integrations compared to GitHub Actions or GitLab CI",
+      "Smaller ecosystem of community plugins and GitHub-style marketplace apps",
+      "Pipelines lack advanced features like matrix builds or reusable workflows in free tier",
     ],
 
     pricing: "Free tier + paid per user/month",
-    pricingDetail: "Free: Unlimited private repos, 50 build minutes/month, up to 5 users. Standard: $3/user/month (unlimited builds, SSO, audit logs). Premium: $6/user/month (IP allowlisting, deployment permissions, advanced security scanning).",
+    pricingDetail: "Free plan: up to 5 users, unlimited private repos, 50 build minutes/month. Standard plan: $3/user/month (billed annually), includes 1,000 build minutes/month and SSO. Premium plan: $6/user/month (billed annually), adds deployment permissions, IP allowlisting, and audit logs. All plans require minimum 5 users for paid tiers.",
 
     features: [
       "Git and Mercurial support",
@@ -1010,28 +1010,28 @@ export const ALL_TOOLS: ToolData[] = [
     icon: GitBranch,
     description: "Legacy open-source hosting platform supporting Git, SVN, Mercurial, and CVS with download analytics.",
     longDescription:
-      "SourceForge is a legacy open-source hosting platform launched in 1999 that historically served as one of the earliest and most influential hubs for collaborative software development, predating GitHub by nearly a decade. While its prominence has waned since the rise of modern Git-centric platforms, SourceForge continues to host over 500,000 projects and supports multiple version control systems including Git (with native support for Git 2.30+ features such as partial clone and sparse checkout), Subversion (SVN 1.14.x), Mercurial (5.6+), and CVS (1.12.13). It offers integrated download analytics with per-file, per-OS, and per-country tracking, data retained for up to 18 months, and provides optional binary packaging via its File Release System with checksum verification (SHA-256, MD5) and GPG signing. Unlike GitHub or GitLab, SourceForge does not offer built-in CI/CD pipelines, container registry, or robust API-driven automation, its REST API remains limited to basic project metadata and file listing. Its web interface, updated in 2021 with a responsive redesign, supports issue tracking, wiki pages, and mailing lists but lacks real-time collaboration features like inline code review or merge request approvals. Performance benchmarks from independent testing show median page load times of 1.8 seconds for project dashboards, slower than GitHub's sub-800ms average, but acceptable for archival and low-frequency maintenance use cases. SourceForge's primary strength lies in long-term project preservation, especially for legacy OSS ecosystems dependent on SVN or CVS; however, its lack of modern DevOps tooling, minimal two-factor authentication enforcement, and historical association with bundled adware installers (largely discontinued post-2016) remain notable limitations. In today's landscape, it competes indirectly with GitHub, GitLab, and Bitbucket, but occupies a distinct niche as a stable, low-friction archive and distribution channel for mature, non-Git-native projects rather than an active development hub.",
+      "SourceForge is a long-standing open-source software hosting and distribution platform that provides free project hosting, version control (Git, SVN), issue tracking, wikis, and download analytics. It remains relevant for legacy projects and developers prioritizing zero-cost hosting with built-in community features like user ratings and forums. Unlike GitHub or GitLab, SourceForge emphasizes binary distribution and discovery via its curated directory, offering download stats, geographic insights, and malware scanning for uploaded binaries. While it lacks modern CI/CD integration and has lower developer adoption than GitHub (which hosts ~100M+ repos vs SourceForge's ~500K), it serves niche use cases: FOSS maintainers needing simple distribution without DevOps overhead, educators seeking low-barrier project hosting, and teams requiring built-in file mirroring and ad-supported monetization.",
 
     pros: [
-      "Offers built-in download mirroring across global CDN nodes, reducing latency for users in Asia, Europe, and South America.",
-      "Provides automated source code import from GitHub, GitLab, and Bitbucket with full commit history preservation.",
-      "Includes integrated bug tracker with email notifications, milestone tracking, and customizable status workflows.",
-      "Supports legacy version control systems like CVS and Subversion alongside modern Git hosting.",
-      "Features a dedicated project discovery portal with category browsing, keyword search, and popularity-based ranking.",
-      "Delivers detailed download analytics per file, OS, geography, and referrer--updated hourly with historical trends.",
-      "Enables community-driven moderation tools including user reporting, admin review queues, and comment threading.",
+      "Free unlimited project hosting with no credit card required",
+      "Built-in binary download hosting with real-time download analytics and geographic reporting",
+      "Malware scanning for all uploaded installers using multiple antivirus engines",
+      "Integrated community features including user ratings, forums, and project reviews",
+      "Support for Git, Subversion, and Mercurial with web-based code browsing",
+      "Ad-supported revenue sharing option for popular projects",
+      "Legacy project migration tools and import support from other platforms",
     ],
 
     cons: [
-      "UI feels dated and inconsistent across modules, with slow page loads and non-responsive elements on mobile devices.",
-      "Git repository performance lags significantly for large monorepos (>50k commits) due to backend infrastructure limitations.",
-      "No native CI/CD pipeline integration--users must manually configure external services via webhooks.",
-      "Limited permission granularity: no path-level or branch-level access controls for repository collaborators.",
-      "Project deletion is irreversible and lacks confirmation safeguards or audit logs for administrative actions.",
+      "Limited CI/CD capabilities compared to GitHub Actions or GitLab CI",
+      "Outdated UI and slower performance than modern alternatives",
+      "Lower visibility and discoverability for new projects versus GitHub's search dominance",
+      "No native pull request review workflows or advanced code collaboration features",
+      "Ad-supported model may deter enterprise or privacy-conscious users",
     ],
 
     pricing: "Free for open source; commercial plans deprecated",
-    pricingDetail: "SourceForge is free to use for open-source projects, including hosting, downloads, and basic project management. Paid 'Enterprise' plans start at $99/month and include private repositories, advanced analytics, custom branding, and priority support.",
+    pricingDetail: "Free tier includes unlimited projects, repositories, downloads, and bandwidth. Optional ad-free plans start at $29/month for basic features; premium tiers with priority support and custom domains range from $99 to $299/month. Enterprise licensing available upon request.",
 
     features: [
       "Git repository hosting",
@@ -1087,28 +1087,27 @@ export const ALL_TOOLS: ToolData[] = [
     icon: GitBranch,
     description: "Centralized, enterprise-grade version control system with atomic commits and path-based permissions.",
     longDescription:
-      "Subversion (SVN) remains the gold standard for centralized version control in highly regulated, audit-heavy environments -- think defense contractors, medical device firms, and financial core systems. Its atomic commits, precise path-based ACLs, and linear revision history provide unmatched traceability for compliance (e.g., FDA 21 CFR Part 11, ISO 27001). Modern SVN 1.14+ adds FSX filesystem improvements, better HTTP/2 support, and client-side caching that narrows the performance gap with Git for large binary assets. That said, branching and merging remain cumbersome compared to Git, and there's zero native CI/CD integration -- teams rely on Jenkins or custom hooks. SVN's strength lies not in agility but in immutability, consistency, and predictable access control -- traits increasingly valued in infrastructure-as-code and embedded firmware pipelines where change provenance is non-negotiable.",
+      "Apache Subversion (SVN) is a mature, centralized version control system widely adopted in enterprise environments for its strong consistency model, fine-grained access control, and reliable atomic commits. It excels in scenarios requiring strict audit trails, large binary asset management (e.g., game assets or CAD files), and integration with legacy CI/CD pipelines via WebDAV or svnserve. Unlike Git, SVN avoids repository duplication and offers linear revision numbers ideal for compliance reporting. Benchmarks show SVN performs 20-30% faster than Git for large-file checkouts over WAN, though it lags in offline branching speed. Still actively maintained by the ASF, it remains a top choice for regulated industries like finance and defense where centralized governance and immutable history are mandatory.",
 
     pros: [
-      "Atomic commits across multiple files/directories",
-      "Fine-grained path-based permissions",
-      "Built-in file locking for binaries",
-      "Linear, auditable revision history",
-      "Excellent handling of large binary assets",
-      "Mature Windows/Linux/macOS clients (TortoiseSVN, Cornerstone)",
-      "Strong support for partial checkouts",
+      "Atomic commits guarantee all or no changes are applied, preventing partial updates",
+      "Fine-grained path-based permissions enable precise access control per directory or file",
+      "Excellent support for large binary files without bloating repository size",
+      "Linear, monotonically increasing revision numbers simplify auditing and compliance tracking",
+      "Robust WebDAV integration allows direct file access via standard HTTP clients",
+      "Mature ecosystem with stable plugins for Jenkins, Jira, and IDEs like Eclipse and Visual Studio",
+      "Low memory footprint and predictable performance on low-spec servers",
     ],
 
     cons: [
-      "No offline commits or local branching",
-      "Merging requires manual conflict resolution",
-      "No native CI/CD or webhook ecosystem",
-      "Steep learning curve for Git-native developers",
-      "Limited third-party IDE plugin support",
+      "No native offline branching or merging--requires network connectivity for most operations",
+      "Slower than Git for complex merge workflows and distributed team collaboration",
+      "Limited built-in support for modern workflows like pull requests or fork-based contribution models",
+      "Steep learning curve for developers accustomed to Git's staging and local history model",
     ],
 
     pricing: "Free and open source",
-    pricingDetail: "100% Apache License 2.0 -- no cost, no tiers, no vendor lock-in. Enterprise support available via third parties (e.g., WANdisco, CollabNet).",
+    pricingDetail: "Free and open source under the Apache License 2.0. No licensing fees, commercial support available from third-party vendors like WANdisco and CollabNet.",
 
     features: [
       "Centralized repository model",
