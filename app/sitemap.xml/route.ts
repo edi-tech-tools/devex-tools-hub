@@ -38,6 +38,7 @@ const BLOG_SLUGS = [
     "code-review-tools-guide-2026",
     "modern-api-documentation-tools-2026",
     "edge-computing-platforms-2026-cloudflare-workers-deno-deploy-vercel-aws",
+    "code-editor-landscape-2026-vscode-neovim-zed",
 ] as const;
 
 const TOOL_SLUGS = [
