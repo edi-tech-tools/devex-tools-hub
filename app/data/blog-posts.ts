@@ -3356,7 +3356,7 @@ Unless you need pre-built AIOps anomaly detection *today*, start open. Migrate u
    Engineers route logs to cheap storage--but skip parsing, enrichment, or indexing. Result: "I have logs, but I can't query them." *Fix*: Parse at ingestion (Promtail's \`docker\` or \`crio\` parsers), add structured labels (\`level\`, \`request_id\`, \`user_id\`), and index only high-value fields (Loki's \`__error__\`, \`duration_ms\`). Unstructured logs should be rare--not default.
 
 4. **Skipping Validation Tooling**  
-   "It's sending data!" ≠ "It's sending *correct* data." One team deployed OTel agents but missed misconfigured \`OTEL_EXPORTER_OTLP_ENDPOINT\`, silently dropping 92% of traces. *Fix*: Deploy \`otelcol-contrib\`'s \`debug\` exporter + lightweight validation jobs (e.g., verify traceID presence in logs *and* traces every 5m). Measure signal completeness--not just volume.
+   "It's sending data!" != "It's sending *correct* data." One team deployed OTel agents but missed misconfigured \`OTEL_EXPORTER_OTLP_ENDPOINT\`, silently dropping 92% of traces. *Fix*: Deploy \`otelcol-contrib\`'s \`debug\` exporter + lightweight validation jobs (e.g., verify traceID presence in logs *and* traces every 5m). Measure signal completeness--not just volume.
 
 Observability maturity isn't about volume. It's about verifiable, actionable context--delivered consistently, sustainably, and at scale. The pipeline isn't the destination. It's the prerequisite for knowing what your system *actually does*--not what you hope it does.
 
