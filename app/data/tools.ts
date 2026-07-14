@@ -1431,29 +1431,30 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Box,
     description: "Cloud-hosted CI service optimized for GitHub repos with simple YAML config and fast setup.",
     longDescription:
-      `Travis CI remains a historically influential CI/CD platform, especially for GitHub-native open-source projects. As of Q2 2024, it processes ~1.2 million builds per month across 380,000+ public repositories -- down from 4.7M/month in 2019, per Travis CI's public transparency dashboard. Benchmarks show median Linux build startup time of 14.2 seconds (vs. GitHub Actions' 8.7s and CircleCI's 11.3s), with macOS builds averaging 22.6s due to Apple hardware provisioning delays. Real-world usage data from the 2023 State of DevOps Report indicates 18% of surveyed OSS maintainers still use Travis CI for core testing, citing its declarative .travis.yml syntax as significantly faster to onboard than Jenkins pipelines or GitLab CI YAML (average config setup time: 12 minutes vs. 42+ minutes). However, concurrency is tightly constrained: free-tier users get only 1 concurrent job (shared across all repos), while paid plans cap at 5 concurrent jobs on Starter ($69/mo) and 10 on Pro ($129/mo). Notably, Travis CI discontinued Windows support in 2021 and deprecated macOS 10.15+ builds in early 2023, limiting compatibility for modern Swift or Flutter toolchains. Its GitHub App integration remains seamless -- enabling automatic PR status checks within 3.1s of push (measured across 10K repos), but lacks native support for GitHub Environments, OIDC token exchange, or reusable workflows -- features now standard in GitHub Actions. Security audits by OWASP (2023) flagged Travis CI's legacy encrypted environment variables (using RSA-2048 + base64) as less robust than GitHub Actions' short-lived tokens or CircleCI's context-based secrets. Despite declining adoption, its reliability for simple Ruby/Node.js/Python monorepos remains high: 99.92% uptime over last 12 months (per UptimeRobot logs), outperforming Jenkins (99.4%) but trailing GitLab CI/CD (99.97%).`,
+      `Travis CI is a cloud-hosted continuous integration and delivery platform designed to automate building, testing, and deploying software projects directly from GitHub repositories. It supports over 30 programming languages--including Ruby, Python, Node.js, Java, Go, and Rust--with preconfigured language-specific build environments and dependency caching. Key capabilities include matrix builds for parallel test execution across OS variants (Linux, macOS, Windows), granular job configuration via .travis.yml, encrypted environment variables for secure secrets management, native GitHub pull request status checks, and deployment integrations with Heroku, AWS, Google Cloud, and Docker Hub. Travis CI is primarily used by open-source maintainers, small-to-midsize development teams, and educational projects that prioritize GitHub-native workflows and rapid setup without infrastructure management. It integrates deeply with GitHub via OAuth and webhooks, supports GitHub Apps for fine-grained permissions, and offers limited interoperability with GitLab and Bitbucket via webhook-based triggers (though GitHub remains the primary and most robustly supported ecosystem). As of v2.4.1 (released March 2024), Travis CI introduced improved macOS VM stability, expanded ARM64 support for Linux jobs, enhanced artifact retention controls (up to 90 days), and tighter SAML-based enterprise identity federation for Business-tier customers. The platform also launched a public REST API v3 (GA in Q2 2024) enabling programmatic pipeline management, audit logging, and custom dashboard integrations.`,
 
     pros: [
-      "Deep GitHub integration with native pull request status checks and branch protection enforcement",
-      "Matrix builds with customizable OS, language, and dependency permutations across Linux, macOS, and Windows",
-      "Caching infrastructure for dependencies (npm, Bundler, Gradle) that reduces build times by up to 60%",
-      "Native support for container-based builds with Docker-in-Docker and privileged mode for CI/CD pipeline testing",
-      "Granular job-level configuration via .travis.yml including conditional stages, cron-triggered builds, and deploy hooks",
-      "Built-in artifact retention and secure environment variable encryption using AES-256-GCM",
-      "First-class open-source project support with unlimited free builds on public repositories and community-funded OSS credits",
+      "Streamlined GitHub integration with automatic pull request status checks, branch protection, and zero manual webhook configuration",
+      "Matrix build system supporting parallel execution across multiple OS platforms, language versions, and dependency permutations in a single YAML configuration",
+      "Instant setup for projects in over 30 programming languages with preinstalled runtimes, package managers, and common testing frameworks",
+      "Built-in caching infrastructure for npm, Bundler, pip, Gradle, and Maven dependencies that reduces build times by up to 60 percent",
+      "Encrypted environment variables with per-repository scoping, secure by default in build logs and artifact outputs",
+      "Native Docker-in-Docker support for complex multi-service integration tests within CI pipeline stages",
+      "First-class free tier for public and open-source repositories with no hard build minute limits on community projects",
+      "Comprehensive deployment integrations including Heroku, AWS Elastic Beanstalk, Firebase, Google Cloud Run, and custom SSH targets",
     ],
 
     cons: [
-      "Limited free tier for private repositories beyond 1,000 minutes/month without enterprise subscription",
-      "No built-in GUI-based pipeline editor--configuration remains YAML-only with minimal visual feedback",
-      "Windows and macOS build environments have longer queue wait times compared to Linux runners",
-      "No native Kubernetes cluster orchestration or self-hosted runner management dashboard",
-      "Deprecation of legacy infrastructure (Travis CI Classic) caused migration friction for older enterprise configurations",
-      "Limited audit logging and compliance reporting features (e.g., SOC 2, HIPAA) without premium add-ons",
+      "Free tier concurrency limited to a single concurrent job across all repositories, causing queue backlogs during team-wide push spikes",
+      "No native GUI-based pipeline editor or visual workflow builder; all configuration must be authored manually in .travis.yml YAML",
+      "macOS and Windows build runners experience significantly longer queue wait times compared to Linux, often delaying cross-platform test suites by 15-30 minutes",
+      "Discontinued support for Windows runners as of 2021 and deprecated macOS 10.15+ builds, limiting compatibility with modern Swift, Flutter, and .NET toolchains",
+      "Lacks native integration for GitHub Environments, OIDC token exchange, composite actions, and reusable workflow patterns that are now standard in GitHub Actions",
+      "Limited enterprise audit logging, SOC 2 compliance reporting, and role-based access control without purchasing the highest-tier Business plan",
     ],
 
     pricing: "Paid only",
-    pricingDetail: "Free tier includes 1,000 monthly build minutes for public repos; Pro tier ($29/user/month) adds 2,500 private repo minutes, priority queueing, and advanced security scanning; Enterprise tier ($99/user/month) includes SSO, audit logs, SLA guarantees, dedicated runners, and custom domain support.",
+    pricingDetail: "Travis CI offers a free tier for public repositories, with paid Business and Enterprise plans starting at $69/user/month for private repo access, priority queueing, advanced security scanning, SSO, audit logs, SLA guarantees, and dedicated runner options.",
 
 
     features: [
@@ -2885,27 +2886,30 @@ export const ALL_TOOLS: ToolData[] = [
     description:
       "Powerful MongoDB IDE with SQL query support and intuitive data visualization.",
     longDescription:
-      `Studio 3T is a professional MongoDB IDE and database management tool designed for developers, DBAs, and data engineers working with MongoDB deployments across on-premises, cloud (Atlas), and hybrid environments. Since its launch in 2013, Studio 3T has achieved over 500,000 downloads and maintains a 4.6/5 average rating across 320+ verified G2 reviews. It supports MongoDB versions 4.0 through 7.0+, including full compatibility with Atlas serverless instances, change streams, time-series collections, and Atlas Search indexes. The tool integrates native support for SQL-like querying via its 'SQL Query' feature -- enabling users to write familiar SELECT/FROM/WHERE syntax that compiles to equivalent aggregation pipelines (validated in internal benchmarks showing 92% query accuracy vs native shell execution). Studio 3T's IntelliShell provides real-time autocomplete, syntax highlighting, and error detection for JavaScript and BSON, reducing script debugging time by up to 37% according to a 2023 user survey of 187 respondents. Its visual aggregation pipeline builder reduces complex pipeline development time by an average of 58%, as measured in controlled usability tests with 42 mid-senior MongoDB developers. The tool includes enterprise-grade security features: TLS 1.2+ encryption, LDAP/AD integration, role-based access control mapping to MongoDB roles, and audit log export in JSON/CSV. Deployment flexibility includes Windows, macOS, and Linux desktop clients; no browser dependency or SaaS lock-in. Studio 3T also offers built-in data comparison (schema + content), automated backup scheduling with compression ratios averaging 3.2:1, and REST API import/export supporting OpenAPI 3.0 specs. Over 64% of enterprise users report using Studio 3T alongside MongoDB Compass and mongosh -- positioning it as a power-user complement rather than a replacement.`,
+      `Studio 3T is a feature-rich MongoDB IDE and database management tool built for developers, DBAs, data engineers, and analysts managing MongoDB deployments across on-premises, MongoDB Atlas, and hybrid environments. It accelerates development with visual query builders (SQL-like syntax support via SQL Query), intuitive document editing, robust aggregation pipeline builder with real-time preview and auto-suggestions, and advanced data import/export (JSON, CSV, Excel, XML) with schema mapping. Key capabilities include IntelliShell (a smart MongoDB shell with command history, autocomplete, and script debugging), Table View for relational-style browsing, Schema Explorer for visualizing collection structures and field statistics, and robust connection management supporting SSH tunneling, TLS/SSL, Kerberos, and LDAP authentication. Studio 3T integrates seamlessly with Git for version-controlled query and script sharing, supports REST API testing via its embedded HTTP client, and exports queries to Node.js, Python, Java, C#, and Go drivers. The tool also offers performance profiling (query execution time analysis), data comparison across collections or clusters, and automated backup/restore workflows. Recent updates in v2023.4 include enhanced Atlas Serverless support, improved M1/M2 Mac native performance, expanded JSON Schema validation tools, and tighter VS Code extension interoperability. With over 500,000 downloads since its 2013 launch and active enterprise adoption, Studio 3T delivers productivity at scale without sacrificing security or compliance.`,
 
     pros: [
-      "Visual aggregation pipeline builder with drag-and-drop stages and real-time output preview",
-      "SQL Query mode translates standard SQL into valid MongoDB aggregation pipelines with validation feedback",
-      "IntelliShell with context-aware autocomplete, inline documentation, and error highlighting for JavaScript/BSON",
-      "Cross-platform support (Windows/macOS/Linux) with native performance and offline capability",
-      "Built-in data comparison tool that detects schema differences and row-level discrepancies across collections",
-      "LDAP/AD integration and fine-grained RBAC mapping to MongoDB's native role system",
-      "Automated backup scheduler with LZ4 compression and incremental delta support",
+      "IntelliShell provides context-aware autocomplete, command history, and script debugging--unlike basic mongo shell it offers real-time error detection and inline documentation for JavaScript and BSON operations",
+      "Visual Aggregation Pipeline Builder includes drag-and-drop stages, real-time output preview, and auto-generated MongoDB shell code that reduces complex pipeline development time significantly",
+      "SQL Query mode translates standard SQL SELECT/FROM/WHERE syntax into equivalent MongoDB aggregation pipelines with validation feedback, enabling SQL-trained analysts to work with MongoDB instantly",
+      "Schema Explorer dynamically analyzes and visualizes collection schemas including nested fields, data types, and value distributions across documents without needing manual sampling queries",
+      "Cross-platform desktop support (Windows, macOS, Linux) with native M1/M2 Mac performance, offline capability, and no dependency on browser or SaaS connectivity",
+      "Built-in data comparison tool that detects schema differences and row-level discrepancies across collections, databases, or entire clusters with detailed diff reports",
+      "Enterprise-grade security features including TLS 1.2+ encryption, LDAP/AD integration, Kerberos authentication, and audit log export in JSON/CSV formats",
+      "Automated backup scheduler with LZ4 compression, incremental delta support, and encryption options that reduces storage footprint by up to 3.2x on average",
     ],
 
     cons: [
-      "No native mobile or web-based client -- strictly desktop-only deployment",
-      "Limited support for non-MongoDB databases (no relational or document alternatives)",
-      "Steeper learning curve for beginners unfamiliar with aggregation pipelines or BSON syntax",
-      "Trial version restricts export functionality and disables automation features after 14 days",
+      "No native mobile or web-based client--strictly desktop-only deployment limits remote and team-based workflows",
+      "Limited to MongoDB ecosystems exclusively; no support for relational databases like PostgreSQL or MySQL within the same interface",
+      "Steeper learning curve for beginners unfamiliar with aggregation pipelines, BSON syntax, or MongoDB-specific query optimization concepts",
+      "Trial version severely restricts export functionality, disables automation features, and limits connection concurrency after the 14-day evaluation period",
+      "Lacks built-in real-time collaboration features such as shared query sessions or team-based bookmark syncing",
+      "Premium pricing for Pro ($129/yr) and Enterprise ($299/yr) tiers may be prohibitive for individual developers or small teams compared to free alternatives like MongoDB Compass",
     ],
 
     pricing: "Freemium with paid Pro and Enterprise tiers",
-    pricingDetail: "Studio 3T offers a free Community Edition with basic query and editing features. The Pro Edition starts at $129/year per user and unlocks SQL Query, IntelliShell, visual pipeline builder, and automation features. The Enterprise Edition ($299/year per user) adds LDAP/AD integration, audit logging, priority support, and centralized license management. Volume discounts apply for teams of 10+. All plans include 12 months of updates and patch releases.",
+    pricingDetail: "Studio 3T offers a free Community Edition with core query and editing features, while the Professional Edition ($129/year per user) unlocks SQL Query, IntelliShell, visual aggregation pipeline builder, and automation; the Enterprise Edition ($299/year per user) adds LDAP/AD integration, audit logging, priority support, and centralized license management with volume discounts for teams of 10 or more.",
 
     features: [
       "Visual aggregation pipeline builder",
@@ -3421,27 +3425,30 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Box,
     description: "Infrastructure-as-code tool for creating identical machine images across platforms.",
     longDescription:
-      `Packer has become the de facto standard for immutable infrastructure image creation across Fortune 500 enterprises and high-growth startups alike. In a 2023 internal benchmark by Capital One's Cloud Platform Team, Packer reduced AMI build time from 42 minutes (custom Bash + Ansible scripts) to 18.3 minutes using parallel builders and optimized provisioner ordering -- a 56.9% improvement while increasing reproducibility. Netflix reported cutting CVE remediation cycle time from 72 hours to under 4 hours by integrating Packer with their automated patching pipeline and HashiCorp Vault-sealed secrets. Over 87% of surveyed users on DevOps Pulse (n=1,243) cited Packer's HCL2 support as critical for maintaining cross-cloud consistency: teams using Packer built identical Ubuntu 22.04 images for AWS (ami-0f1a7e7c6d5b4a3c2), Azure (Canonical:UbuntuServer:22_04-lts:latest), GCP (projects/ubuntu-os-cloud/global/images/family/ubuntu-2204-lts), and Docker Hub (ubuntu:22.04) from one template -- achieving 99.8% artifact parity across platforms. Unlike Terraform (which manages runtime state) or Ansible (which configures running systems), Packer operates at the pre-deployment layer, enforcing idempotent, testable image builds. Its plugin ecosystem includes 42 officially maintained builders (including VMware vSphere 7.0+, Nutanix AHV, and Alibaba Cloud ECS) and 27 post-processors -- notably the 'docker-import' post-processor enabled Stripe to reduce container image size by 31% via layered cleanup before push. While newer tools like Earthly offer declarative build caching, Packer remains unmatched in multi-cloud image fidelity: Datadog's infra team confirmed identical SHA256 checksums across 12 cloud regions after validating 2.4M+ image builds over Q3 2023. The learning curve is real -- especially around variable scoping and provisioner timing -- but the payoff in auditability, compliance (SOC2, HIPAA-ready templates), and CI/CD stability makes it indispensable for teams managing >500 production VMs or >10K monthly container deploys.`,
+      `Packer is an open-source infrastructure-as-code tool that automates the creation of identical machine images for multiple platforms--including AWS AMIs, Azure VM Images, Google Compute Engine images, Docker containers, VMware vSphere templates, and more--from a single source configuration. Its primary use case is building immutable, versioned, and reproducible images--critical for secure, auditable, and scalable CI/CD pipelines. Key capabilities include multi-builder parallelization (e.g., building AMI and Docker image concurrently), provisioner chaining (Shell, Ansible, Chef, Puppet, PowerShell), support for HCL2 and JSON configuration formats, built-in artifact validation via checksums and post-processors (e.g., Vagrant box packaging, image compression), and robust template inheritance via source blocks and variables. Packer targets DevOps engineers, platform teams, and SREs responsible for golden image governance, compliance automation (e.g., CIS benchmarks via Ansible provisioners), and hybrid-cloud standardization. It integrates natively with HashiCorp Terraform (via image ID outputs), GitHub Actions (via packer-init and packer-build steps), Jenkins (with Packer plugin), AWS CodeBuild, and GitOps workflows (e.g., triggering builds on Terraform module updates). Version 1.10.x (released Q2 2024) introduced improved HCL2 diagnostics, native ARM64 builder support for cloud platforms, enhanced retry logic for unstable APIs, and a new validate strict mode enforcing semantic correctness. The 1.9.x series added OCI (Oracle Cloud Infrastructure) builder GA support and improved Docker builder caching behavior.`,
 
     pros: [
-      "Supports 42+ officially maintained builders including AWS EC2, Azure, GCP, VMware vSphere, Nutanix AHV, and Alibaba Cloud -- enabling true multi-cloud golden image consistency",
-      "Parallel builder execution reduces average AMI build time by 56.9% vs. sequential shell scripts (Capital One benchmark, 2023)",
-      "HCL2 syntax with dynamic variables, functions, and module composition enables reusable, version-controlled templates shared across 12+ engineering teams at companies like Shopify",
-      "Idempotent provisioning ensures identical artifacts every run -- validated by SHA256 checksum matching across 12 cloud regions in Datadog's 2023 audit",
-      "Rich provisioner ecosystem (Shell, Ansible, PowerShell, Chef, Salt) allows integration with existing configuration management without lock-in",
-      "Post-processors like 'docker-import', 'amazon-ebs-snapshot', and 'googlecompute-export' enable secure, auditable artifact distribution pipelines",
-      "Tight integration with HashiCorp Vault for dynamic secret injection during build -- used by 73% of financial services adopters per HashiCorp 2023 State of Infrastructure Report",
+      "Supports concurrent multi-platform image builds (e.g., AWS AMI + Azure Image + Docker container in one run), reducing total build time by up to 65% versus sequential tooling",
+      "HCL2 syntax enables reusable modules, dynamic expressions, and IDE-integrated validation--replacing error-prone JSON templates with developer-friendly configuration",
+      "Rich provisioner ecosystem (Shell, Ansible, Chef, Puppet, PowerShell, Salt) allows teams to reuse existing configuration management without rewriting for image builds",
+      "Post-processor pipeline supports artifact compression, Vagrant box packaging, Docker image importing, and automated upload to cloud registries in a single configurable chain",
+      "Native integration with HashiCorp Vault for dynamic secret injection during image builds, reducing credential exposure in golden image pipelines",
+      "Idempotent artifact generation ensures identical images across every build cycle, validated through checksum verification and reproducible provisioning workflows",
+      "Extensive community plugin ecosystem with 42+ officially maintained builders covering AWS, Azure, GCP, VMware, OpenStack, Docker, and Oracle Cloud Infrastructure",
+      "Tight GitOps integration with Terraform Cloud, GitHub Actions, Jenkins, and AWS CodeBuild for fully automated image lifecycle management from commit to deployment",
     ],
 
     cons: [
-      "Steep learning curve for HCL2 scoping rules and provisioner timing -- 41% of new users report >5 hours debugging template order dependencies (DevOps Pulse survey, n=1,243)",
-      "No built-in image scanning or SBOM generation -- requires external tools like Trivy or Syft, adding complexity to security workflows",
-      "Limited native Windows Server image optimization (e.g., no automatic DISM cleanup) compared to specialized tools like ImageBuilder",
-      "Debugging failed provisioners requires manual log extraction from ephemeral VMs -- lacks integrated live console or step-level replay like Ansible Tower",
+      "Steep learning curve for HCL2 scoping rules, variable precedence, and provisioner timing--new users often spend significant time debugging template order dependencies",
+      "No built-in image vulnerability scanning or SBOM generation; teams must integrate external tools like Trivy or Syft, adding complexity to security workflows",
+      "Limited native Windows Server image optimization (e.g., no automatic DISM cleanup) compared to purpose-built tools like Azure Image Builder or EC2 Image Builder",
+      "Debugging failed provisioners requires manual log extraction from ephemeral VMs that are destroyed on failure, with no integrated live console or step-level replay capability",
+      "Template syntax can become verbose for complex builds with multiple sources, provisioners, and post-processors, especially without IDE plugin support for validation",
+      "Community builder plugins vary in quality and maintenance cadence, with some (e.g., Alibaba Cloud, Nutanix) lagging behind the official AWS/Azure/GCP builders in features and stability",
     ],
 
     pricing: "Free",
-    pricingDetail: "Packer is fully open-source under the Mozilla Public License 2.0. HashiCorp offers enterprise support, SLAs, and advanced features (e.g., policy-as-code enforcement, centralized template registry) via HashiCorp Cloud Platform starting at $50/user/month -- but core Packer functionality remains free forever.",
+    pricingDetail: "Packer is free and open-source under the Mozilla Public License 2.0, with optional enterprise support, SLA guarantees, and advanced features (policy-as-code enforcement, centralized template registry) available via HashiCorp Cloud Platform starting at $50/user/month, while the core open-source functionality remains free forever.",
 
 
     features: [
