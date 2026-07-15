@@ -40,6 +40,9 @@ const BLOG_SLUGS = [
     "edge-computing-platforms-2026-cloudflare-workers-deno-deploy-vercel-aws",
     "code-editor-landscape-2026-vscode-neovim-zed",
     "kubernetes-operator-patterns-2026-crd-ai-cluster-management",
+    "secrets-management-tools-2026-developer-guide",
+    "developer-experience-revolution-part-1",
+    "package-managers-2026-npm-pnpm-yarn-bun",
 ] as const;
 
 const TOOL_SLUGS = [
