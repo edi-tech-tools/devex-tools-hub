@@ -43,6 +43,7 @@ const BLOG_SLUGS = [
     "secrets-management-tools-2026-developer-guide",
     "developer-experience-revolution-part-1",
     "package-managers-2026-npm-pnpm-yarn-bun",
+    "kubernetes-monitoring-tools-2026-prometheus-grafana-datadog",
 ] as const;
 
 const TOOL_SLUGS = [
