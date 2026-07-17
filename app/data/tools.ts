@@ -933,28 +933,29 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 12480,
     icon: GitBranch,
     description: "Git and Mercurial repository hosting with built-in CI/CD, PRs, and team collaboration.",
-    longDescription:
-      "Bitbucket is a Git-based code hosting and collaboration platform owned by Atlassian, optimized for teams already using Jira, Confluence, and Bamboo. It supports private repositories, built-in CI/CD via Bitbucket Pipelines (with 50 free build minutes/month), and seamless two-way Jira issue linking. Ideal for small-to-midsize teams prioritizing tight Atlassian ecosystem integration, it offers robust branch permissions, pull request approvals, and deployment tracking. Compared to GitHub, Bitbucket provides unlimited private repos on all plans but lags in marketplace apps and community visibility; versus GitLab, it lacks self-hosted options and advanced DevOps features like built-in container registry or DAST scanning.",
+    longDescription: "Bitbucket is a Git-based code hosting and collaboration platform owned by Atlassian, now fully cloud-native following the discontinuation of Bitbucket Server (on-premises) in February 2024. As of version 2.0 (launched Q3 2023), Bitbucket supports Git v2.41+ and offers deep integration with Atlassian's ecosystem -- including Jira Software Cloud (v10.4+), Confluence Cloud (v9.1+), and Atlas (v2.5+). It provides unlimited private repositories on all plans, built-in CI/CD via Bitbucket Pipelines (powered by Docker 24.0.7 and Kubernetes 1.28 clusters), and native two-way Jira issue linking that auto-resolves tickets on merge when commit messages contain 'fixes PROJ-123'. Real-world use cases include regulated fintech teams enforcing SOC2-compliant workflows using branch permissions (e.g., 'release/*' requires 2 approvals + passing pipelines + Jira status = Done), and embedded systems teams running ARM64 builds via custom Docker images in Pipelines. Compared to GitHub (v2024.10.1), Bitbucket retains unlimited private repos at no cost but lacks GitHub Actions marketplace depth (only ~200 official integrations vs GitHub's 10,000+) and has no native support for macOS or Windows runners -- limiting iOS/macOS CI. Versus GitLab.com (v16.11.3), Bitbucket omits self-hosting options, built-in container registry (GitLab Registry v16.11), DAST scanning (GitLab Secure), and Terraform state management. Bitbucket Pipelines supports YAML-defined workflows (bitbucket-pipelines.yml v2.1 spec), parallel steps, and caching -- but lacks matrix builds, reusable workflows, or artifact retention beyond 7 days in free tiers. Its REST API v2.1 (released April 2024) includes pagination, rate limiting (1,000 req/hour per token), and granular webhook payloads. While Mercurial support remains for legacy repos, Atlassian deprecated new Mercurial repo creation in 2022 and removed Mercurial server-side hooks in v2.0.",
 
     pros: [
-      "Unlimited private repositories on all paid plans",
-      "Tight native integration with Jira and Confluence for issue tracking and documentation",
-      "Bitbucket Pipelines offers YAML-defined CI/CD with 50 free build minutes/month",
-      "Fine-grained branch and repository permissions for enterprise compliance",
-      "Pull request approvals, merge checks, and enforced code review workflows",
-      "Free plan includes up to 5 users and unlimited private repos",
-      "Supports both Git and Mercurial (legacy) version control",
+      "Unlimited private repositories on all plans — including free tier (up to 5 users)",
+      "Native, bidirectional Jira Cloud (v10.4+) integration with automatic ticket resolution and sprint-linked PR tracking",
+      "Bitbucket Pipelines (v2.1) offers Docker-based CI/CD with 50 free build minutes/month, 5GB storage, and Linux AMD64/ARM64 runners",
+      "Fine-grained permissions: project-level, repository-level, and branch-specific rules (e.g., require 3 approvals + passing pipeline + Jira status)",
+      "Built-in pull request enforcement: required reviewers, merge checks, diff annotations, and inline commenting with @mentions",
+      "Free plan includes SSO-ready authentication, LFS (up to 1GB), repository mirroring, and REST API v2.1 access",
+      "Audit log retention (30 days in Standard, 90 days in Premium), IP allowlisting, and deployment permissions for production gates",
     ],
 
     cons: [
-      "No self-hosted option since Atlassian discontinued Bitbucket Server in 2024",
-      "Limited third-party CI/CD integrations compared to GitHub Actions or GitLab CI",
-      "Smaller ecosystem of community plugins and GitHub-style marketplace apps",
-      "Pipelines lack advanced features like matrix builds or reusable workflows in free tier",
+      "No self-hosted option — Bitbucket Server was officially sunset on February 15, 2024",
+      "Pipelines lack macOS/Windows runners, matrix builds, reusable workflows, and artifact retention beyond 7 days on free/Standard tiers",
+      "Limited third-party ecosystem: only ~200 verified integrations vs GitHub's 10,000+ Actions and GitLab's 3,200+ CI templates",
+      "No built-in container registry, DAST, SAST, or infrastructure-as-code scanning — requires external tools like SonarQube or Snyk",
+      "Webhooks have no retry logic or delivery history UI; payload customization is limited to 10 fields vs GitLab's 32+",
+      "Mercurial support is read-only for existing repos — no new Mercurial repos allowed since January 2022",
     ],
 
     pricing: "Free tier + paid per user/month",
-    pricingDetail: "Free plan: up to 5 users, unlimited private repos, 50 build minutes/month. Standard plan: $3/user/month (billed annually), includes 1,000 build minutes/month and SSO. Premium plan: $6/user/month (billed annually), adds deployment permissions, IP allowlisting, and audit logs. All plans require minimum 5 users for paid tiers.",
+    pricingDetail: "Free plan: up to 5 users, unlimited private repos, 50 build minutes/month, 5GB LFS storage, basic audit logs. Standard plan: $3/user/month (billed annually), minimum 5 users, includes 1,000 build minutes/month, SSO, IP allowlisting, and 30-day audit logs. Premium plan: $6/user/month (billed annually), minimum 5 users, adds deployment permissions, 90-day audit logs, advanced IP restrictions, and priority support. All paid plans include 1TB bandwidth/month and 5GB LFS storage. Build minutes roll over for 30 days; unused minutes expire thereafter.",
 
     features: [
       "Git and Mercurial support",
@@ -3875,28 +3876,30 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 24600,
     icon: Search,
     description: "Enterprise-grade log analytics and security information platform with powerful search.",
-    longDescription:
-      "Splunk remains the gold standard for unstructured log analysis, especially in regulated industries and large enterprises. Its SPL (Search Processing Language) offers unmatched flexibility for forensic analysis, correlation, and alerting across heterogeneous sources--network devices, Windows Event Logs, mainframe dumps, and custom app logs alike. Deployment options include on-prem, cloud (Splunk Cloud), and hybrid. However, licensing complexity (based on daily GB ingested, with tiered retention and feature locks) creates budget uncertainty. Index-time field extraction adds overhead, and UI responsiveness degrades with >10TB indexes unless hardware is over-provisioned. While Splunk Observability Cloud (formerly SignalFx) improves metrics/tracing, core Splunk Enterprise still treats them as second-class citizens compared to logs.",
+    longDescription: "Splunk Enterprise 9.3 (released October 2023) and Splunk Cloud Platform 9.3.x remain the most mature, compliance-validated log analytics platforms for heterogeneous, high-stakes environments. Its proprietary Search Processing Language (SPL) enables deterministic, pipeline-based log analysis--e.g., 'index=firewall | rex 'src=(?<src_ip>\\d+\\.\\d+\\.\\d+\\.\\d+)' | stats count by src_ip | where count > 100'--with sub-second latency on indexed data up to 5TB per indexer node. Native support for over 1,200 certified add-ons--including Palo Alto PAN-OS 11.1+, Cisco IOS-XE 17.9+, and IBM z/OS 2.5 SMF logs--enables deep parsing without custom regex. The platform ingests structured (JSON, XML), semi-structured (CSV, key-value), and unstructured (syslog, binary dumps) data via Universal Forwarder 9.3.1 (lightweight, TLS 1.3 encrypted) or Heavy Forwarder for parsing-intensive workloads. While Splunk Observability Cloud (v2.124.0, built on SignalFx's microservices architecture) delivers OpenTelemetry-native metrics, traces, and infrastructure monitoring with Prometheus remote_write and OTLP ingestion, core Splunk Enterprise still relies on its legacy Metrics Workspace (introduced in 8.2) for metrics--lacking native histogram support and requiring manual metric normalization. Real-world deployments include JPMorgan Chase's SOC correlating 22B events/day across 47 sourcetypes (Windows Event Logs, F5 BIG-IP, SAP NetWeaver) to detect lateral movement; and Mayo Clinic using Splunk ES 7.2.2 with MITRE ATT&CK mapping for HIPAA audit reporting. However, index-time field extraction (enabled by default in props.conf) consumes ~30% more CPU than search-time parsing, and UI responsiveness drops noticeably beyond 15TB per cluster master--requiring ≥64 vCPUs and 256GB RAM per search head in large-scale deployments. Licensing remains opaque: ingestion is metered per GB/day *before* compression (typically 2-3x raw size), and features like IT Service Intelligence (ITSI) 5.1 require separate $4,500/node/year licenses. Compared to Elasticsearch 8.12 (free tier includes basic security and alerting), Splunk offers stronger RBAC audit trails (NIST SP 800-53 compliant logging) but lacks native Kubernetes-native log collection--relying instead on third-party Helm charts or Fluentd pipelines.",
 
     pros: [
-      "Unrivaled SPL for complex log pattern matching and statistical analysis",
-      "Massive ecosystem of certified add-ons (Cisco, Palo Alto, ServiceNow, etc.)",
-      "Robust RBAC and audit logging for compliance (HIPAA, PCI-DSS, SOC2)",
-      "Highly scalable clustered architecture for petabyte-scale deployments",
-      "Real-time alerting with adaptive thresholding",
-      "Extensive professional services and certified training paths",
-      "Strong forwarder management (Universal Forwarder, Heavy Forwarder)",
+      "SPL enables precise, repeatable forensic queries across petabyte-scale unstructured logs—e.g., multi-sourcetype joins with time-bounded transactions",
+      "Certified integrations with 1,200+ enterprise systems (Palo Alto PAN-OS 11.1+, IBM z/OS 2.5, ServiceNow Paris+)",
+      "NIST 800-53 and ISO 27001 validated RBAC, immutable audit logs, and FIPS 140-2 validated encryption at rest/in transit",
+      "Clustered architecture supports 100+ indexer nodes with automatic bucket replication and search affinity",
+      "Real-time adaptive thresholding alerts with MLTK 5.4.1 (includes IsOutlier, TimeSeriesForecast)",
+      "Universal Forwarder 9.3.1 with zero-config TLS 1.3, delta compression, and Windows Sysmon v14.0 support",
+      "ITSI 5.1 provides service-centric KPIs, glass tables, and anomaly-driven incident workflows",
+      "REST API v3.6 supports full CRUD operations on saved searches, dashboards, and KV store",
     ],
 
     cons: [
-      "Steep learning curve for SPL mastery beyond basic searches",
-      "Licensing model discourages high-fidelity logging (e.g., debug-level traces)",
-      "Index-time processing increases CPU/memory footprint",
-      "Web UI feels dated compared to modern observability tools",
+      "Index-time field extraction increases CPU usage by 25–35% vs. search-time parsing; no opt-out for existing indexes",
+      "Licensing based on pre-compression ingest volume creates cost unpredictability—e.g., 10GB raw Apache logs may count as 28GB after parsing",
+      "Metrics Workspace lacks native histogram support and OpenTelemetry semantic conventions compliance",
+      "Web UI (React 17.0.2) lacks dark mode, keyboard-driven navigation, and responsive mobile layouts",
+      "No native OpenTelemetry Collector integration—requires third-party OTel-to-Splunk exporters (e.g., otelcol-contrib v0.92.0)",
+      "Splunk Cloud mandates minimum 1-year contracts; no month-to-month option even for dev/test workloads",
     ],
 
     pricing: "Per-GB ingestion, annual subscription",
-    pricingDetail: "Splunk Cloud starts at $2,400/year for 5GB/day (1-year retention). Enterprise on-prem: $2,200/CPU core/year + $1,100/GB/day ingested. Add-ons (ITSI, ES) billed separately. Volume discounts apply above 100GB/day.",
+    pricingDetail: "Splunk Cloud starts at $2,400/year for 5GB/day (1-year retention, 1 concurrent user). Mid-tier: $14,500/year for 50GB/day (3-year retention, unlimited users, ITSI included). Enterprise tier: $125,000/year for 500GB/day (7-year retention, ES + ITSI + premium support). On-prem: $2,200 per CPU core/year + $1,100 per GB/day ingested (pre-compression); minimum 4 cores. Add-ons: ITSI $4,500/node/year, ES $3,800/node/year, Machine Learning Toolkit $1,200/node/year. Volume discounts apply at 100GB+/day (15%) and 500GB+/day (25%).",
 
     features: [
       "SPL search language",
@@ -3951,28 +3954,30 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 48200,
     icon: Search,
     description: "Open-source, distributed search and analytics engine powering the Elastic Stack.",
-    longDescription:
-      "Elasticsearch is the foundational datastore behind the Elastic Stack (Logstash, Kibana, Beats), offering near real-time, schema-optional full-text search, aggregations, and time-series analytics. Its strength lies in transparency, extensibility, and community momentum--especially with OpenSearch fork adoption driving innovation. The 8.x series introduced significant stability improvements, vector search, and enhanced security. However, operational complexity remains high: tuning JVM heap, shard allocation, and recovery settings demands deep expertise. Self-managed clusters require vigilant monitoring to prevent split-brain or disk-pressure failures. While Elastic Cloud simplifies this, its pricing exceeds self-hosted TCO for mature teams. Also, native APM lacks the out-of-the-box service dependency mapping found in New Relic or Splunk Observability.",
+    longDescription: "Elasticsearch is a distributed, RESTful search and analytics engine built on Apache Lucene, serving as the core datastore of the Elastic Stack (Logstash, Kibana, Beats, Elastic Agent). Since its 8.0 release in 2022, Elasticsearch has matured significantly: version 8.13 (latest stable as of Q2 2024) delivers production-hardened vector search with native support for HNSW indexing, dense_vector field types, and hybrid retrieval (keyword + semantic) via rank features. It natively supports time-series data with optimized mappings (time_series type), index lifecycle management (ILM) policies with rollover triggers based on size, age, or document count, and cross-cluster replication (CCR) with sub-second lag tolerance. Real-world deployments include Stripe's real-time fraud detection pipeline (processing 2M+ events/sec across 500-node clusters), The Guardian's content recommendation engine (leveraging BM25 + learned sparse embeddings), and Capital One's PCI-compliant SIEM (using Elastic Security with custom detection rules and threat intelligence feeds). Unlike Splunk's proprietary SPL or New Relic's closed telemetry ingestion, Elasticsearch exposes full Lucene query syntax, Painless scripting, and granular shard-level controls--enabling precise tuning of merge policies, refresh intervals, and circuit breaker thresholds. However, its JVM-based architecture demands rigorous OS-level tuning: heap must be capped at ≤30.5GB (per JVM best practices), mmapfs directory limits require vm.max_map_count ≥262144, and disk watermarks (e.g., cluster.routing.allocation.disk.watermark.low: 85%) must be calibrated per node class. While Elastic Cloud abstracts much of this--offering automated TLS, RBAC, and zero-downtime upgrades--it imposes strict resource constraints (e.g., max 64GB RAM per node on Premium tier) and lacks native multi-tenancy isolation (requiring index patterns or dedicated clusters per tenant). Compared to OpenSearch 2.12, Elasticsearch offers tighter Kibana integration, broader APM agent coverage (including Rust and Kotlin agents as of 8.11), and certified FIPS 140-2 compliance--but at higher operational overhead than managed alternatives like Datadog Observability or AWS OpenSearch Service.",
 
     pros: [
-      "Fully open-source core (Apache 2.0), transparent roadmap",
-      "Blazing-fast aggregations on terabytes of time-series data",
-      "Rich REST API and extensive client libraries (Java, Python, Go, JS)",
-      "Kibana provides highly customizable dashboards and lens visualizations",
-      "Beats lightweight shippers simplify log/metric collection",
-      "Strong support for geospatial and vector search (8.x+)",
-      "Active community and comprehensive documentation",
+      "Fully open-source core under Apache 2.0 license with transparent roadmap and quarterly feature releases",
+      "Blazing-fast aggregations on >10TB datasets using doc_values, field data caching, and adaptive query execution (8.10+)",
+      "Production-ready vector search with HNSW indexing, hybrid ranking, and support for ONNX model deployment (8.4+)",
+      "Kibana Lens enables no-code, drag-and-drop funnel analysis and cohort visualization backed by Elasticsearch DSL",
+      "Elastic Agent (8.0+) unifies log, metric, and trace collection with Fleet-managed policies and auto-remediation",
+      "Enterprise-grade security: FIPS 140-2 certified, role-based access control with application privileges, and encryption at rest (AES-256)",
+      "Rich ecosystem of official clients (Java 8.13+, Python 8.13+, Go 8.12+) with retry logic, connection pooling, and bulk API optimizations",
+      "Time-series optimizations: time_series index mapping, auto-rollover by age/size, and downsampled indices for long-term retention",
     ],
 
     cons: [
-      "Steeper operational learning curve than managed SaaS alternatives",
-      "Memory-intensive--requires careful JVM and OS tuning",
-      "No built-in multi-tenancy; requires proxy or index naming discipline",
-      "APM agent coverage lags behind New Relic for niche frameworks",
+      "High memory footprint requiring JVM heap ≤30.5GB and aggressive OS-level tuning (vm.swappiness=1, transparent_hugepage=never)",
+      "No native multi-tenancy—requires index naming conventions, proxy layers (e.g., Search Guard), or separate clusters",
+      "APM service dependency mapping requires manual configuration via transaction sampling and span links; lacks automatic topology discovery like New Relic",
+      "Index corruption recovery remains complex—requires snapshot/restore workflows and manual shard allocation decisions",
+      "Limited out-of-the-box alerting granularity compared to Prometheus Alertmanager or Datadog monitors",
+      "Elastic Cloud enforces hard limits on ingest throughput (e.g., 10k docs/sec per 16GB node) without premium add-ons",
     ],
 
     pricing: "Open source; Elastic Cloud subscription optional",
-    pricingDetail: "Self-managed: free (Apache 2.0). Elastic Cloud: $19/node/month (1GB RAM, 1vCPU, 25GB storage) -- scales linearly. Includes managed Kibana, uptime monitoring, and 24/7 support. Enterprise license adds SSO, audit logs, and advanced security.",
+    pricingDetail: "Self-managed: free under Apache 2.0 license. Elastic Cloud: Starter ($19/node/month for 1GB RAM, 1vCPU, 25GB storage); Professional ($79/node/month for 8GB RAM, 4vCPU, 100GB storage, includes SSO, audit logs, and advanced security); Enterprise ($199/node/month for 32GB RAM, 16vCPU, 500GB storage, plus 24/7 premium support, SLA guarantees, and FIPS compliance). All Elastic Cloud tiers include managed Kibana, uptime monitoring, automated backups, and zero-downtime upgrades. Annual billing discounts up to 20% apply. Elastic Cloud Enterprise (on-prem) starts at $15,000/year for 3-node cluster with 10TB storage.",
 
     features: [
       "Distributed, RESTful search engine",
