@@ -44,7 +44,10 @@ const BLOG_SLUGS = [
     "developer-experience-revolution-part-1",
     "package-managers-2026-npm-pnpm-yarn-bun",
     "kubernetes-monitoring-tools-2026-prometheus-grafana-datadog",
-    "feature-flags-experimentation-platforms-2026-developer-experience",
+    "feature-flags-experimentation-platforms-2026-developer-experience"
+  "api-testing-tools-2026-comparison",
+  "gitops-workflows-2026-argocd-vs-flux",
+  "kubernetes-secrets-management-2026-vault-vs-sealed-secrets-vs-external-secrets-vs-sops",,
 ] as const;
 
 const TOOL_SLUGS = [
