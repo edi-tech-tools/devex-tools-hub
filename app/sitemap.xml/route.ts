@@ -49,6 +49,7 @@ const BLOG_SLUGS = [
     "gitops-workflows-2026-argocd-vs-flux",
     "platform-engineering-tools-practices-2026",
     "kubernetes-secrets-management-2026-vault-vs-sealed-secrets-vs-external-secrets-vs-sops",
+    "best-free-open-source-developer-tools-2026",
 ] as const;
 
 const TOOL_SLUGS = [
