@@ -50,6 +50,7 @@ const BLOG_SLUGS = [
     "platform-engineering-tools-practices-2026",
     "kubernetes-secrets-management-2026-vault-vs-sealed-secrets-vs-external-secrets-vs-sops",
     "best-free-open-source-developer-tools-2026",
+    "developer-documentation-tools-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
