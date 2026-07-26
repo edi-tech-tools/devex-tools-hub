@@ -51,6 +51,7 @@ const BLOG_SLUGS = [
     "kubernetes-secrets-management-2026-vault-vs-sealed-secrets-vs-external-secrets-vs-sops",
     "best-free-open-source-developer-tools-2026",
     "developer-documentation-tools-2026-guide",
+    "developer-environment-automation-2026-devcontainers-nix-flox",
 ] as const;
 
 const TOOL_SLUGS = [
