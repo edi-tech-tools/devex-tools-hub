@@ -187,7 +187,7 @@ export default function TermsPage() {
               These Terms shall be governed by and construed in accordance with the laws of the
               State of California, without regard to its conflict of law provisions. Any disputes
               arising under these Terms shall be resolved in the federal or state courts located
-              in Seattle, Washington.</p>
+              in Seattle, Washington.
             </p>
           </section>
 

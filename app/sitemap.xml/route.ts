@@ -52,6 +52,7 @@ const BLOG_SLUGS = [
     "best-free-open-source-developer-tools-2026",
     "developer-documentation-tools-2026-guide",
     "developer-environment-automation-2026-devcontainers-nix-flox",
+    "vs-code-extensions-for-developer-productivity-in-2026",
 ] as const;
 
 const TOOL_SLUGS = [
