@@ -53,6 +53,7 @@ const BLOG_SLUGS = [
     "developer-documentation-tools-2026-guide",
     "developer-environment-automation-2026-devcontainers-nix-flox",
     "vs-code-extensions-for-developer-productivity-in-2026",
+    "api-gateway-showdown-2026-kong-vs-aws-vs-apigee-vs-nginx",
 ] as const;
 
 const TOOL_SLUGS = [
