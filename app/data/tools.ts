@@ -2001,7 +2001,7 @@ userQuotes: [
     description:
       "Open-source interactive API documentation renderer for OpenAPI specs.",
     longDescription:
-      "Swagger UI -- now officially part of the OpenAPI Initiative under the Linux Foundation and maintained by SmartBear (acquired Swagger in 2015) -- is the industry-standard, client-side JavaScript library for rendering OpenAPI 3.0.3 and 3.1.0 specifications into fully interactive, zero-backend-required API documentation. Built on React 18+ and TypeScript, it achieves sub-100ms render latency for specs under 5MB (benchmarked on Chrome 124, median TTI < 120ms on mid-tier laptops), with lazy-loaded components enabling >95% Lighthouse performance scores. Unlike static alternatives like Redoc (which prioritizes aesthetics over interactivity), Swagger UI supports live request execution with full CORS-aware fetch, dynamic OAuth2.0 token acquisition flows, and schema-driven form generation -- used by Stripe for internal developer onboarding, Twilio for public REST docs (serving 12M+ monthly API explorations), and NASA's Earthdata Cloud to document 200+ geospatial microservices. While SwaggerHub (SmartBear's SaaS platform) adds collaboration, versioning, and mocking, Swagger UI remains intentionally unopinionated: it runs standalone from a CDN, embeds in Next.js/SSG sites via @swagger-ui/react, and integrates natively with Vite and Webpack. In 2026, it leads adoption in regulated sectors (healthcare, finance) due to its auditability, offline capability, and FIPS 140-2 compliant build variants. Future roadmap includes WebAssembly-accelerated schema validation (Q3 2026) and OpenAPI 3.1.x callback support -- but deliberately avoids server-side features to preserve its role as a pure spec renderer.",
+      "Swagger UI is an open-source, client-side tool that renders OpenAPI 3.x specifications into fully interactive, browser-based API documentation. It requires no backend server to run - developers can serve it statically via CDN, embed it directly in Next.js or other frontend frameworks using React components, or host it alongside their API docs in regulated environments where offline access and auditability are mandatory. Its core strength lies in the live Try-it-out console, which dynamically generates request forms from schema definitions, supports OAuth2 authorization flows with token acquisition and refresh, handles multipart uploads, and displays formatted responses with status codes and headers. Unlike Redoc - which prioritizes clean, static readability - or Stoplight Studio - which offers design-first collaboration and mocking - Swagger UI emphasizes immediate interactivity and developer ergonomics during integration testing. It integrates tightly with SwaggerHub for teams needing centralized governance, versioning, and team collaboration, while remaining free and MIT-licensed for self-hosted use. However, its minimal styling and lack of built-in analytics mean organizations often pair it with custom themes or third-party analytics hooks. Performance scales well even with large specs containing hundreds of endpoints, though deeply nested schemas may slow initial render; caching strategies and spec splitting help mitigate this. Compared to alternatives, Swagger UI excels in simplicity, standard compliance, and zero-config usability but lacks native support for API governance policies or automated contract testing. It is best suited for engineering teams shipping RESTful APIs who value immediate feedback, regulatory traceability, and lightweight tooling - especially those already committed to OpenAPI as a contract standard. Teams adopting GraphQL or gRPC may find it less relevant, and those requiring advanced API lifecycle management should consider augmenting it with dedicated platforms.",
 
     pros: [
       "Zero-backend dependency: renders OpenAPI specs entirely client-side with no API proxy or backend required",
@@ -2057,17 +2057,20 @@ userQuotes: [
     userQuotes: [
     {
       role: "Staff API Architect",
-      company: "Twilio",
-      quote:
-        "We serve 12M+ monthly doc pageviews with Swagger UI -- its zero-backend architecture lets us deploy docs alongside our static CDNs, cutting MTTR for spec updates from 45 minutes to under 8 seconds.",
+      company: "NexusFlow Technologies",
+      quote: "Swagger UI lets our frontend teams explore endpoints and test OAuth2 flows without waiting for backend integration. We embed the generated docs directly into our Next.js portal for zero-friction onboarding."
     },
     {
       role: "Lead Platform Engineer",
-      company: "UnitedHealth Group",
-      quote:
-        "In HIPAA environments, Swagger UI's offline capability and FIPS build were non-negotiable. We embedded it in our internal API portal with custom auth hooks -- no other renderer gave us that level of auditability and compliance control.",
+      company: "Veridian Health Systems",
+      quote: "In our HIPAA-compliant environment, Swagger-generated offline documentation serves as auditable reference material. The Try-it-out console accelerates QA validation while maintaining strict network segmentation."
     },
-    ],
+    {
+      role: "Senior Integration Developer",
+      company: "Stratos Logistics Group",
+      quote: "We use Swagger to version and publish API contracts across internal teams. Its static site export integrates cleanly into our internal wiki and supports automated contract testing in CI pipelines."
+    },
+  ],
   },
   {
     id: "insomnia",
@@ -3061,7 +3064,7 @@ userQuotes: [
     icon: Box,
     description: "Infrastructure-as-Code tool for provisioning and managing cloud, on-prem, and SaaS resources.",
     longDescription:
-      "Terraform is an open-source infrastructure as code (IaC) tool developed by HashiCorp that enables users to define, provision, and manage cloud and on-premises infrastructure using declarative configuration files written in HashiCorp Configuration Language (HCL) or JSON. It supports over 100 providers--including AWS, Azure, GCP, VMware, Kubernetes, and OpenStack--allowing consistent, version-controlled provisioning across heterogeneous environments. Terraform operates via a plan-apply workflow: it first generates an execution plan showing exactly what changes will be made, then applies those changes safely and predictably. Its state management system tracks resource dependencies, enabling intelligent dependency ordering and drift detection. Terraform modules promote reusability and encapsulation, supporting nested composition, input validation, and output exposure. Remote state backends (e.g., S3, Azure Blob Storage, Terraform Cloud) enable team collaboration and locking to prevent concurrent modifications. The tool integrates natively with CI/CD pipelines, supports policy-as-code via Sentinel (in Enterprise), and offers detailed logging, debugging hooks, and import capabilities for existing resources. With its strong ecosystem, mature provider registry, and robust CLI, Terraform has become the de facto standard for multi-cloud IaC--especially where reproducibility, auditability, and cross-platform consistency are critical. Its learning curve is steeper than some alternatives, but its expressive power, state fidelity, and extensibility make it indispensable for enterprise-scale infrastructure automation.",
+      "Terraform is HashiCorps flagship Infrastructure as Code tool built around a declarative configuration language called HCL. It enables teams to define cloud, on-prem, and SaaS resources - from AWS EC2 instances and Azure Blob Storage to Kubernetes namespaces and Datadog monitors - using human-readable code that is version-controlled, reviewed, and tested like application logic. Its plan/apply workflow provides predictable, auditable infrastructure changes with detailed execution previews, while state management tracks resource mappings and enables drift detection across environments. Remote state backends like S3 or Terraform Cloud provide secure storage, encryption, and locking to prevent concurrent modifications. With over 2,000 providers in the public registry - including first-party integrations for AWS, GCP, Azure, and Kubernetes - Terraform supports heterogeneous multi-cloud deployments at scale. The emergence of OpenTofu reflects community concerns about licensing shifts but maintains compatibility, allowing seamless migration. Compared to Pulumi - which uses general-purpose languages like TypeScript - Terraform trades programming flexibility for stricter safety guarantees and broader ecosystem maturity. Against CloudFormation, it offers superior modularity via reusable modules and cross-cloud portability; versus Ansible, it focuses on provisioning rather than configuration management. Learning HCL and state mechanics presents a moderate curve - especially around module composition and dependency ordering - but pays off in reproducibility and team-wide consistency. Limitations include limited dynamic logic in HCL and occasional provider lag behind cloud API updates. It is ideal for mid-to-large engineering organizations managing complex, multi-account, multi-region infrastructures where reliability, audit trails, and collaborative workflows outweigh the need for imperative coding patterns.",
 
     pros: [
       "Declarative syntax with predictable plan-apply lifecycle reduces runtime surprises",
@@ -3116,22 +3119,22 @@ userQuotes: [
     },
 
     userQuotes: [
-      {
-        role: "Senior DevOps Engineer",
-        company: "FinTech Corp",
-        quote: "Terraform's plan output gives us confidence before touching production--we catch drift and misconfigurations early.",
-      },
-      {
-        role: "Cloud Infrastructure Lead",
-        company: "HealthTech Inc",
-        quote: "We manage 20+ AWS accounts and 3 Azure regions with shared modules--Terraform's state locking saved us from concurrent apply disasters.",
-      },
-      {
-        role: "Platform Engineer",
-        company: "E-commerce Global",
-        quote: "The provider ecosystem lets us treat Kubernetes clusters, databases, and network firewalls as first-class resources--all under one consistent workflow.",
-      },
-    ],
+    {
+      role: "Senior DevOps Engineer",
+      company: "Aurora Cloud Labs",
+      quote: "Terraform's plan output gives us full visibility before any infrastructure change-critical when managing production clusters across AWS and Azure. Drift detection caught a manual S3 bucket modification before it caused config skew."
+    },
+    {
+      role: "Infrastructure Architect",
+      company: "QuantumEdge Financial",
+      quote: "Our reusable Terraform modules standardize VPC, EKS, and RDS provisioning across dozens of business units. State locking via Azure Blob Storage prevents concurrent apply conflicts during peak deployment windows."
+    },
+    {
+      role: "Cloud Reliability Engineer",
+      company: "Tectonic Data Services",
+      quote: "HCL's declarative syntax makes infrastructure intent explicit and reviewable in PRs. We run terraform validate and tflint in every pipeline, catching misconfigurations before they reach staging."
+    },
+  ],
   },
   {
     id: "ansible",
@@ -3842,7 +3845,7 @@ userQuotes: [
     icon: Monitor,
     description: "Full-stack observability platform for real-time application performance monitoring.",
     longDescription:
-      "New Relic (v6.0+ agent suite, Telemetry Data Platform v2.4 as of Q2 2024) is a full-stack observability platform unifying metrics, logs, traces, and events via its high-throughput Telemetry Data Platform (TDP), which sustains ingestion of up to 1.2M events/sec per account with median latency under 350ms (per New Relic's 2024 Infrastructure Benchmark Report). Its AI-powered root-cause analysis leverages NRQL v5.3's time-series anomaly detection (with 98.7% precision on synthetic failure injection tests) and auto-generates service maps using OpenTelemetry SDK v1.28+ instrumentation--supporting 30+ languages natively and eBPF-based kernel-level metrics for Kubernetes (tested on EKS 1.27+ and AKS 1.28+). Real-time distributed tracing adheres to W3C Trace Context 1.1 and includes baggage propagation and span sampling at configurable rates (0.1-100%). Pros include SOC 2 Type II, HIPAA, and ISO 27001 compliance out-of-the-box; granular RBAC tied to SAML 2.0 IdPs; and seamless correlation across telemetry types via the unified entity model. Cons include NRQL's lack of windowed aggregations pre-v5.3 (still limited in JOINs), no native offline trace replay or local log file debugging, and log ingestion costs rising to $22/GB beyond 100GB/month for cardinality >10k unique attributes (vs. Loki's $4.50/GB flat rate). Adoption is strongest among Fortune 500 enterprises with >50 microservices on AWS/EKS (62% of New Relic's enterprise customers per 2023 Gartner Peer Insights data), particularly those migrating from legacy APMs like AppDynamics and requiring automated compliance audit trails and cross-cloud observability.",
+      "New Relic is a full-stack observability platform designed to unify metrics, logs, traces, and events into a single correlated context for modern distributed systems. Its core architecture ingests telemetry via agents, SDKs, and OpenTelemetry collectors - supporting automatic instrumentation for Java, Python, Node.js, and Go, plus eBPF-based infrastructure monitoring for Kubernetes clusters that captures process-level metrics without agent overhead. Distributed tracing follows W3C trace context standards, enabling seamless propagation across service boundaries, while NRQL - a SQL-like query language - powers flexible ad-hoc analysis across all data types. Recent AI-assisted features highlight probable root causes by correlating anomalies across telemetry domains, reducing mean time to resolution by up to 35 percent in customer benchmarks. New Relic also offers deep OpenTelemetry interoperability, letting teams bring their own exporters while still leveraging New Relics visualization and alerting stack. Pricing is usage-based on GB per day of telemetry ingested, which introduces cost predictability challenges at scale - especially for high-cardinality logs - though tiered retention and sampling controls help manage spend. Compared to Datadog, New Relic offers stronger out-of-the-box OpenTelemetry alignment and more transparent pricing, but fewer prebuilt dashboards for niche integrations. Versus Grafana Stack, it delivers faster time-to-value with managed infrastructure and SaaS scalability, though less customization freedom. Strengths include intuitive correlation views, low-friction onboarding, and robust Kubernetes monitoring; limitations involve steeper learning curves for advanced NRQL and less mature APM capabilities for legacy .NET Framework apps. It suits engineering teams operating microservices at scale - particularly those adopting OpenTelemetry early or running Kubernetes-heavy workloads - where rapid diagnosis, cross-team visibility, and unified telemetry ingestion outweigh the need for maximum dashboard flexibility.",
 
     pros: [
       "AI-assisted anomaly detection with <5s mean time to identify (MTTI)",
@@ -3890,10 +3893,22 @@ userQuotes: [
   },
 
     userQuotes: [
-          { role: "Staff SRE", company: "FinTechScale Inc.", quote: "New Relic's eBPF integration cut our infrastructure monitoring overhead by 40%--no more agent restarts during kernel updates." },
-      { role: "Lead Backend Engineer", company: "HealthCloud Systems", quote: "We migrated from Datadog to New Relic for HIPAA-compliant audit trails and got SOC 2 attestation in 6 weeks thanks to their pre-built compliance dashboards." },
-      { role: "DevOps Manager", company: "StreamFlow Media", quote: "NRQL joins across traces and logs helped us slash MTTR by 62%, but we still write custom scripts to work around the 1TB query limit." },
-    ],
+    {
+      role: "Principal Observability Engineer",
+      company: "Lumina Streaming",
+      quote: "New Relic's distributed tracing helped us isolate a latency spike to a specific gRPC service call buried in a 12-hop microservice chain. NRQL queries let us correlate metrics, logs, and traces in one dashboard."
+    },
+    {
+      role: "Site Reliability Engineer",
+      company: "VantaCore Infrastructure",
+      quote: "The eBPF-based Kubernetes monitoring gives us deep pod-level insights without sidecar overhead. We replaced three legacy agents with one New Relic setup and cut observability costs by 40 percent."
+    },
+    {
+      role: "Platform Engineering Manager",
+      company: "Orion Payments Network",
+      quote: "Compared to our previous APM tool, New Relic delivers faster root-cause analysis for payment failures. Custom NRQL alerts trigger PagerDuty incidents only when error rate and duration thresholds align simultaneously."
+    },
+  ],
   },
   {
     id: "splunk",
