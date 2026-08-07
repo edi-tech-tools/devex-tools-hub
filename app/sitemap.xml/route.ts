@@ -60,8 +60,9 @@ const BLOG_SLUGS = [
     "wasm-frontend-tooling-2026-rust-go-assemblyscript",
     "local-development-environments-2026-guide",
     "debugging-techniques-2026-practical-guide",
-    "modern-cicd-pipeline-2026-design-guide",
-    "pull-request-cycle-time-2026-guide",
+  "modern-cicd-pipeline-2026-design-guide",
+  "pull-request-cycle-time-2026-guide",
+  "dev-containers-reproducible-local-environments-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
