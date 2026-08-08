@@ -63,6 +63,7 @@ const BLOG_SLUGS = [
   "modern-cicd-pipeline-2026-design-guide",
   "pull-request-cycle-time-2026-guide",
   "dev-containers-reproducible-local-environments-2026-guide",
+  "local-kubernetes-development-tools-2026-guide",
 ] as const;
 
 const TOOL_SLUGS = [
