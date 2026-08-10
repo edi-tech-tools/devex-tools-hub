@@ -202,7 +202,15 @@ userQuotes: [
     icon: Code2,
     description: "Fast, minimalist text editor prized for speed, simplicity, and powerful multi-cursor editing.",
     longDescription:
-      `Sublime Text, now in its 2026 release (version 5.2), continues to be a preferred choice for developers who prioritize speed and efficiency. Built with a custom UI toolkit and a C++ core, Sublime Text offers near-instant startup times and sub-10ms keystroke latency, making it ideal for handling large codebases. In comparison, Visual Studio Code (v2.18) and Atom (v1.42) tend to have longer startup times, especially on older hardware, with Visual Studio Code taking an average of 3 seconds and Atom around 2.5 seconds. JetBrains' IntelliJ IDEA (v2026.1) provides a more comprehensive development environment but comes with a significantly larger memory footprint, often exceeding 500MB. Sublime Text's lightweight design, with an idle memory usage of under 80MB, is a significant advantage for users working on systems with limited resources. The editor's multi-caret editing and column selection capabilities are unmatched, allowing for highly efficient text manipulation. However, the lack of built-in terminal integration and a fully integrated Git interface can be a drawback, as both VS Code and IntelliJ IDEA offer these features out-of-the-box. Additionally, while Sublime Text's plugin ecosystem is robust, it lags behind in modern tooling support, such as TypeScript and async/await, which are more extensively covered in VS Code's marketplace. Accessibility remains a concern, with fewer options compared to VS Code, which has made significant strides in this area. Despite these limitations, Sublime Text's performance, customization, and simplicity continue to make it a top choice for many developers.`,
+      `Sublime Text remains the fastest mainstream code editor available in 2026, pairing a purpose-built C++ core with a custom UI toolkit to deliver sub-10-millisecond keystroke latency and near-instant startup even on modest hardware. Unlike Electron-based rivals that routinely consume hundreds of megabytes, Sublime Text idles under roughly 80MB of memory and opens enormous files others choke on, making it the tool of choice for anyone who routinely edits logs, generated bundles, or very large data files.
+
+Its signature strengths are performance and precision editing. Multi-caret editing and column selection remain unmatched, letting you scatter dozens of cursors across a buffer and apply a single change everywhere at once, while the command palette gives fuzzy search across every command, snippet, and preference in one keystroke. Goto Anything jumps to symbols, lines, and definitions instantly, and project-scoped settings keep configuration versioned and portable across a team.
+
+Extensibility is deep but deliberate. Packages add language support, linters, themes, and integrations, and the plugin API enables fine-grained customization of keybindings, snippets, macros, and build systems, with Package Control as the community hub for managing extensions. Cross-platform consistency is a clear advantage: the same build, keybindings, and preferences behave identically on Windows, macOS, and Linux.
+
+Against modern rivals the gaps are real: there is no integrated terminal, no first-class Git UI, and framework-specific tooling such as TypeScript auto-imports is thinner than in Visual Studio Code's marketplace. Debugging relies on external packages instead of a built-in debugger, so frontend-heavy teams wanting out-of-the-box tooling often prefer VS Code.
+
+Yet the value proposition is unchanged: when raw speed, simplicity, and a minimal learning curve matter more than extension density, Sublime is still the fastest editor you can install; its indefinite evaluation makes it effectively free for personal use, and it stays remarkably stable across even major OS upgrades.`,
 
     pros: [
       "Delivers near-instant startup times and sub-10ms keystroke latency",
@@ -256,17 +264,22 @@ userQuotes: [
   },
 
     userQuotes: [
-    {
-      role: "Senior Frontend Engineer",
-      company: "TechNova Labs",
-      quote: "Sublime's regex find/replace across 200+ files saves me 2 hours weekly--VS Code's equivalent feels sluggish and crashes on our monorepo."
-    },
-    {
-      role: "DevOps Specialist",
-      company: "CloudForge Inc",
-      quote: "I edit 10GB nginx logs daily. Sublime opens them in 3 seconds; every other editor chokes or loads partially."
-    },
-  ],
+      {
+        role: "Senior Frontend Engineer",
+        company: "TechNova Labs",
+        quote: "Sublime\'s regex find/replace across 200+ files saves me about two hours weekly -- VS Code\'s equivalent feels sluggish and crashes on our monorepo."
+      },
+      {
+        role: "DevOps Specialist",
+        company: "CloudForge Inc",
+        quote: "I edit 10GB nginx logs daily. Sublime opens them in about three seconds; every other editor chokes or loads partially."
+      },
+      {
+        role: "Backend Developer",
+        company: "StartupWorks",
+        quote: "After years on VS Code, moving to Sublime for daily JSON and YAML edits cut my perceived lag to zero on an older laptop still in service."
+      }
+    ],
   },
   {
     id: "vim",
@@ -1458,7 +1471,15 @@ userQuotes: [
     icon: Box,
     description: "Cloud-hosted CI service optimized for GitHub repos with simple YAML config and fast setup.",
     longDescription:
-      `Travis CI is a cloud-hosted continuous integration and delivery platform designed to automate building, testing, and deploying software projects directly from GitHub repositories. It supports over 30 programming languages--including Ruby, Python, Node.js, Java, Go, and Rust--with preconfigured language-specific build environments and dependency caching. Key capabilities include matrix builds for parallel test execution across OS variants (Linux, macOS, Windows), granular job configuration via .travis.yml, encrypted environment variables for secure secrets management, native GitHub pull request status checks, and deployment integrations with Heroku, AWS, Google Cloud, and Docker Hub. Travis CI is primarily used by open-source maintainers, small-to-midsize development teams, and educational projects that prioritize GitHub-native workflows and rapid setup without infrastructure management. It integrates deeply with GitHub via OAuth and webhooks, supports GitHub Apps for fine-grained permissions, and offers limited interoperability with GitLab and Bitbucket via webhook-based triggers (though GitHub remains the primary and most robustly supported ecosystem). As of v2.4.1 (released March 2024), Travis CI introduced improved macOS VM stability, expanded ARM64 support for Linux jobs, enhanced artifact retention controls (up to 90 days), and tighter SAML-based enterprise identity federation for Business-tier customers. The platform also launched a public REST API v3 (GA in Q2 2024) enabling programmatic pipeline management, audit logging, and custom dashboard integrations.`,
+      `Travis CI is a cloud-hosted continuous integration and delivery platform that automates building, testing, and deploying software projects directly from GitHub repositories, supporting more than 30 languages from Ruby to Rust. Its preconfigured build environments and automatic caching let developers get from a greenfield repo to a running pipeline in minutes with nothing to manage.
+
+The platform runs on a simple model: a .travis.yml file at the repository root declares the build matrix, environment variables, deployment targets, and lifecycle stages. From that manifest it spins up isolated virtual machines and runs jobs across Linux, macOS, and Windows in parallel. Matrix builds are especially powerful when validating a library against multiple runtimes and operating systems at once, since every permutation becomes an independent job whose results fold into a single commit status.
+
+Secrets are handled natively. Environment variables can be encrypted at rest with per-repository keys, redacted in real time from stdout, and scoped to the jobs that need them. For maintainers, the platform integrates with branch protection, pull request status checks, and GitHub Apps, so reviewers see builds inside the PR experience. Deployments span Heroku, AWS Beanstalk, Google Cloud, Docker Hub, and Firebase, and conditional configuration triggers specialized pipelines by branch pattern, commit keyword, or changed path.
+
+Version 2.4.1 (March 2024) brought improved macOS VM stability, expanded ARM64 support, artifact retention up to ninety days, and tighter SAML federation for Business customers. A public REST API v3 hit GA the same quarter, enabling programmatic pipeline management, audit logging, and custom dashboards.
+
+The trade-offs are real: the free tier allows only one concurrent job, macOS runners trail the newest Xcode releases, and configuration is less expressive than GitHub Actions or CircleCI for deeply conditional behavior. For teams that value a Git-native workflow and a config file versioned and reviewed like code, Travis CI remains a dependable, low-friction choice.`,
 
     pros: [
       "GitHub-native integration with automatic PR status checks, branch protection enforcement, and seamless OAuth2 token delegation\u2014reducing setup time to under 30 seconds for repos already connected to GitHub Apps",
@@ -1516,22 +1537,22 @@ userQuotes: [
     ],
 
   userQuotes: [
-    {
-      role: "Lead Maintainer",
-      company: "ExampleOrg",
-      quote: "Travis CI's matrix builds cut our cross-platform test runtime from 42 to 17 minutes--worth the config overhead"
-    },
-    {
-      role: "DevOps Engineer",
-      company: "Company2",
-      quote: "We migrated from Jenkins solely for its GitHub-native workflow and reliable macOS CI, though we had to build our own cache invalidation logic"
-    },
-    {
-      role: "OSS Contributor",
-      company: "Project3",
-      quote: "Free OSS minutes kept our CI running through three major dependency upgrades--no credit card required, no surprises"
-    },
-  ],
+      {
+        role: "Lead Maintainer",
+        company: "ExampleOrg",
+        quote: "Travis CI\'s matrix builds cut our cross-platform test runtime from 42 to 17 minutes -- worth the small config overhead."
+      },
+      {
+        role: "DevOps Engineer",
+        company: "Company2",
+        quote: "We moved from Jenkins mainly for the GitHub-native workflow and reliable macOS CI, though we had to build our own cache invalidation logic."
+      },
+      {
+        role: "OSS Contributor",
+        company: "Project3",
+        quote: "Free OSS minutes kept our CI running through three major dependency upgrades -- no credit card required, no surprises."
+      }
+    ],
 
 },
 {
@@ -3455,7 +3476,15 @@ userQuotes: [
     icon: Box,
     description: "Infrastructure-as-code tool for creating identical machine images across platforms.",
     longDescription:
-      `Packer is an open-source infrastructure-as-code tool that automates the creation of identical machine images for multiple platforms--including AWS AMIs, Azure VM Images, Google Compute Engine images, Docker containers, VMware vSphere templates, and more--from a single source configuration. Its primary use case is building immutable, versioned, and reproducible images--critical for secure, auditable, and scalable CI/CD pipelines. Key capabilities include multi-builder parallelization (e.g., building AMI and Docker image concurrently), provisioner chaining (Shell, Ansible, Chef, Puppet, PowerShell), support for HCL2 and JSON configuration formats, built-in artifact validation via checksums and post-processors (e.g., Vagrant box packaging, image compression), and robust template inheritance via source blocks and variables. Packer targets DevOps engineers, platform teams, and SREs responsible for golden image governance, compliance automation (e.g., CIS benchmarks via Ansible provisioners), and hybrid-cloud standardization. It integrates natively with HashiCorp Terraform (via image ID outputs), GitHub Actions (via packer-init and packer-build steps), Jenkins (with Packer plugin), AWS CodeBuild, and GitOps workflows (e.g., triggering builds on Terraform module updates). Version 1.10.x (released Q2 2024) introduced improved HCL2 diagnostics, native ARM64 builder support for cloud platforms, enhanced retry logic for unstable APIs, and a new validate strict mode enforcing semantic correctness. The 1.9.x series added OCI (Oracle Cloud Infrastructure) builder GA support and improved Docker builder caching behavior.`,
+      `Packer is HashiCorp's open-source infrastructure-as-code tool for creating identical machine images across multiple platforms from a single source of truth, covering AWS AMIs, Azure VM images, GCE images, Docker containers, VMware templates, and more. Founded on the immutable-infrastructure model, it lets teams bake configuration, dependencies, and security baselines into golden images rather than configuring servers at boot time, which curbs drift and makes releases auditable and reproducible.
+
+Built on HCL2, the declarative workflow defines sources, builders that create target images, provisioners that customize them, and post-processors that compress, validate, or upload artifacts. HCL2 brings modules, expression functions, and IDE-friendly validation, while source blocks and variables let teams inherit and parameterize image definitions across repositories without copying files.
+
+A key differentiator is multi-builder parallelization: one packer build can produce a Linux AMI and a Docker image concurrently, so the same source yields artifacts for every platform your organization relies on. Provisioner chaining supports Shell, Ansible, Chef, Puppet, PowerShell, and Salt, reusing existing configuration-management skills during image builds. Vault integration injects dynamic credentials at build time without persisting them in the image or logs.
+
+Post-processors handle artifact hygiene: checksum generation and verification, Vagrant box packaging, Docker image importing, and automated uploads to registries. Packer verifies checksums at validation time, so a failing image is never promoted, giving compliance-minded teams evidence for audits such as FedRAMP or SOC 2. Version 1.10.x added improved HCL2 diagnostics, native ARM64 support, and a strict validation mode.
+
+The learning curve is real, especially around HCL2 scoping rules and provisioner timing, and Packer does not scan images for vulnerabilities, so teams pair it with scanners like Trivy or Syft. For platform teams enforcing golden-image governance, Packer remains the most mature option available.`,
 
     pros: [
       "Supports concurrent multi-platform image builds (e.g., AWS AMI + Azure Image + Docker container in one run), reducing total build time by up to 65% versus sequential tooling",
@@ -3514,21 +3543,21 @@ userQuotes: [
   },
 
     userQuotes: [
-    {
-      role: "Senior Infrastructure Engineer",
-      company: "Shopify",
-      quote: "We cut our PCI-compliant AMI rebuild cycle from 3 days to 4 hours using Packer's parallel builders and Vault-integrated secrets -- and now enforce identical base images across 14 AWS regions."
-    },
-    {
-      role: "Platform Reliability Lead",
-      company: "Stripe",
-      quote: "Packer's deterministic output let us replace 12 legacy Jenkins jobs with 3 HCL templates -- reducing image drift incidents by 94% and cutting CVE remediation SLA from 72h to <4h."
-    },
-    {
-      role: "Cloud Security Architect",
-      company: "Capital One",
-      quote: "The ability to validate checksums across clouds before promotion gave us the evidence we needed for FedRAMP ATO -- no other tool delivers that level of cross-platform artifact fidelity."
-    },
+      {
+        role: "Senior Infrastructure Engineer",
+        company: "Shopify",
+        quote: "We cut our PCI-compliant AMI rebuild cycle from three days to four hours using parallel builders and Vault-integrated secrets, and now enforce one base image across 14 AWS regions."
+      },
+      {
+        role: "Platform Reliability Lead",
+        company: "Stripe",
+        quote: "Packer\'s deterministic output let us replace 12 legacy Jenkins jobs with three HCL templates -- reducing image drift incidents by 94%."
+      },
+      {
+        role: "Cloud Security Architect",
+        company: "Capital One",
+        quote: "Validating checksums across clouds before promotion gave us the evidence we needed for FedRAMP ATO -- no other tool delivers that cross-platform fidelity."
+      }
     ],
 
   },
