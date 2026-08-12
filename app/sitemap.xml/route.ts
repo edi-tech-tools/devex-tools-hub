@@ -64,6 +64,10 @@ const BLOG_SLUGS = [
   "pull-request-cycle-time-2026-guide",
   "dev-containers-reproducible-local-environments-2026-guide",
   "local-kubernetes-development-tools-2026-guide",
+    "code-search-and-repo-intelligence-tools-2026-guide",
+    "ci-cd-caching-strategies-2026-guide",
+    "ci-cd-pipeline-optimization-tips-2026",
+    "spinnaker-vs-gitlab-ci-vs-github-actions-2026",
 ] as const;
 
 const TOOL_SLUGS = [
