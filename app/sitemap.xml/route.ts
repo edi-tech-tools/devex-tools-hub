@@ -68,6 +68,7 @@ const BLOG_SLUGS = [
     "ci-cd-caching-strategies-2026-guide",
     "ci-cd-pipeline-optimization-tips-2026",
     "spinnaker-vs-gitlab-ci-vs-github-actions-2026",
+    "opentelemetry-observability-2026-practical-guide",
 ] as const;
 
 const TOOL_SLUGS = [

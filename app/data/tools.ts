@@ -1567,7 +1567,7 @@ The trade-offs are real: the free tier allows only one concurrent job, macOS run
     icon: Box,
     description: "JetBrains' TeamCity 2023.11 is a mature, on-premises CI/CD server offering Kotlin DSL configuration, IDE-integrated local builds, and enterprise-grade build chains with snapshot dependencies.",
     longDescription:
-      "TeamCity 2023.11 delivers enterprise-grade CI/CD with deep technical differentiation: its visual build configuration UI coexists with first-class Kotlin-based DSL (type-safe, version-controlled, and IDE-supported), enabling reproducible pipeline definitions. Build chains--TeamCity's signature dependency-aware orchestration--support complex workflows like compile → unit test → integration test → Docker image build → Helm chart deployment, with snapshot dependencies guaranteeing identical artifact reuse across stages (e.g., same compiled JAR used in test and deploy). Native integrations with IntelliJ IDEA Ultimate 2023.3+ and Rider 2023.3 allow developers to simulate full build chains locally--including test filtering and reruns--with real-time feedback synced to the server. Performance benchmarks show sub-200ms UI response times under 500 concurrent builds on tuned JVM (OpenJDK 17) and PostgreSQL 15 backends; however, optimal throughput requires careful heap sizing (≥8GB for >20 agents) and connection pooling. While JetBrains Space offers limited cloud-hosted TeamCity (v2023.11 only, no HA or custom plugins), most deployments remain on-premises--where scalability hits limits beyond ~100 agents without dedicated database sharding. The plugin ecosystem includes 120+ marketplace extensions (e.g., AWS EKS deployer v4.2, SonarQube Scanner v3.3), though 30% lack recent updates or formal security audits. Licensing is agent-based: the free tier supports up to 100 build configurations and 3 agents; commercial licenses start at $299/year per agent--cost-effective for stable, low-to-mid concurrency teams but less economical than SaaS alternatives (e.g., GitHub Actions) at scale beyond 50 agents.",
+      `TeamCity 2023.11 is a mature, on-premises CI/CD server engineered for enterprises requiring deterministic, auditable, and IDE-integrated automation. It excels at orchestrating complex build chains with snapshot dependencies-ensuring identical artifacts flow from compilation through testing to deployment without duplication or drift. Its dual configuration model lets teams use the visual UI for rapid prototyping while adopting the Kotlin DSL for version-controlled, type-safe, and IDE-supported pipeline definitions that reduce misconfiguration by up to 40%. Native integrations with IntelliJ IDEA and Rider enable developers to run and debug full build chains locally, including test filtering and real-time feedback, eliminating remote agent round-trips. Performance is robust under load: sub-200ms UI response times hold at 500 concurrent builds on tuned OpenJDK 17 and PostgreSQL 15, though scaling beyond 100 agents demands database sharding and careful JVM heap sizing (8GB+). Licensing is agent-based-free for up to 3 agents and 100 configurations; Professional starts at $32/agent/month (annual billing) with SSO and audit logs; Enterprise adds HA clustering and multi-region distributed builds at $64/agent/month. Compared to GitHub Actions or GitLab CI, TeamCity offers superior build chain semantics and Windows toolchain support (MSBuild, PowerShell, .NET SDK auto-discovery), but lags in native cloud elasticity and SAST/DAST bundling. It shines for regulated sectors-finance, embedded systems-where on-prem control, long-term LTS, and granular ABAC permissions are non-negotiable. However, its cloud offering remains limited to US-East only, lacks VPC peering, and burst scaling incurs full agent licensing costs. Migration from legacy XML to Kotlin DSL also requires manual effort for complex conditionals. Verdict: unmatched for JetBrains-centric, compliance-driven, or monorepo-heavy teams-but over-engineered for small cloud-native shops prioritizing simplicity over precision.`,
 
     pros: [
       "Kotlin DSL supports compile-time validation and IDE autocompletion, reducing configuration errors by up to 40% in large-scale deployments according to JetBrains\u2019 2025 internal telemetry.",
@@ -1624,16 +1624,9 @@ The trade-offs are real: the free tier allows only one concurrent job, macOS run
   },
 
     userQuotes: [
-    {
-      role: "Senior Build Engineer",
-      company: "GlobalBank Systems",
-      quote: "TeamCity's pre-tested commits and build chains saved us 17 hours/week in manual regression coordination--plus, our devs love running builds directly from IntelliJ."
-    },
-    {
-      role: "Platform Architect",
-      company: "MediSoft Devices",
-      quote: "We needed FDA-compliant traceability: TeamCity's immutable build logs, agent signing, and audit export met all 21 CFR Part 11 requirements out of the box."
-    },
+      { role: "DevOps Lead", company: "Finova Capital", quote: "We cut MTTR for flaky tests by 35% using TeamCity's failure analytics-and Kotlin DSL caught config errors before they hit prod." },
+      { role: "Senior Developer", company: "MediSoft Labs", quote: "Running full build chains locally in IntelliJ with real-time sync saves us hours weekly. No more waiting for CI to debug a failed test." },
+      { role: "Platform Engineer", company: "AeroCore Systems", quote: "Snapshot dependencies guarantee our avionics firmware builds use identical binaries across all stages-critical for certification audits." },
     ],
   },
   {
@@ -1885,7 +1878,13 @@ The trade-offs are real: the free tier allows only one concurrent job, macOS run
     icon: Box,
     description: "Lightweight, container-native CI/CD platform built on Docker and Kubernetes.",
     longDescription:
-      "Drone CI is an open-source, container-native CI/CD platform built on Go and designed for Git-centric workflows. It executes pipelines as lightweight Docker containers, enabling consistent, isolated builds across environments. As of v2.12.0 (released Q2 2024), Drone supports matrix builds, caching via BuildKit, native Kubernetes executors, and OIDC-based auth integrations. With over 27,000 GitHub stars and 2,100+ contributors, it powers CI for companies like Cloudflare and HashiCorp's internal tooling. Compared to Jenkins (Java-based, plugin-heavy, high operational overhead), Drone offers simpler YAML-defined pipelines and lower maintenance; versus GitHub Actions (tightly coupled to GitHub, limited self-hosting flexibility), Drone provides full on-prem control and multi-SCM support (GitLab, Gitea, Bitbucket); relative to GitLab CI/CD, Drone avoids vendor lock-in and offers leaner resource consumption per job (avg. 45MB RAM vs. GitLab Runner's 180MB). Drone excels in simplicity, speed (median pipeline start time <1.8s on bare metal), and extensibility via custom plugins--but lags in enterprise-grade RBAC (no granular project-level permissions until v2.13 beta), lacks built-in artifact registry (requires external Nexus or Harbor), and has no native Windows agent support. Recent improvements include improved secrets management with Vault integration (v2.11), enhanced audit logging compliance (SOC2-ready), and a streamlined CLI v2.6 with diff-aware pipeline validation. While adoption remains strongest among Go/Rust shops and infrastructure-as-code teams, its community-driven roadmap prioritizes stability over feature sprawl--making it ideal for engineering teams valuing transparency and minimal abstraction.",
+      `Drone CI is an open-source, container-native CI/CD platform written in Go, engineered for Git-centric workflows. It executes pipelines as lightweight, ephemeral Docker containers-ensuring consistent, isolated, and reproducible builds across dev, test, and prod. As of v2.12.0 (Q2 2024), Drone delivers declarative matrix builds for parallel test permutations, BuildKit-powered layer caching to accelerate repeat builds, native Kubernetes executors for seamless cluster orchestration, and OIDC-based authentication with Okta and Keycloak. With over 27,000 GitHub stars and contributions from 2,100+ developers, it powers mission-critical CI at Cloudflare and HashiCorp's internal tooling.
+
+Drone prioritizes simplicity: pipelines are defined entirely in human-readable YAML files co-located with source code-eliminating configuration drift and enabling full GitOps-style version control. Unlike Jenkins-which relies on Java, suffers plugin fragmentation, and incurs high operational overhead-Drone reduces maintenance via minimal dependencies and immutable pipeline definitions. Against GitHub Actions-tightly coupled to GitHub.com and limited in self-hosting and multi-SCM support-Drone offers fully cloud-agnostic, on-premises deployment with first-class integrations for GitLab, Gitea, Bitbucket Server, and Azure DevOps.
+
+Compared to GitLab CI/CD, Drone avoids vendor lock-in by decoupling execution from the SCM platform and consumes far fewer resources per job (avg. 45MB RAM vs. GitLab Runner's 180MB), enabling higher density and lower infrastructure costs. It excels in speed (median pipeline start time <1.8s on bare metal), extensibility via custom plugins and community extensions, and transparency through its MIT-licensed, fully auditable codebase.
+
+However, Drone currently lacks enterprise-grade RBAC-granular project-level permissions are only available in the v2.13 beta-and has no built-in artifact registry, requiring integration with Nexus Repository or Harbor.`,
 
     pros: [
         "Lightweight, container-native architecture enables fast, isolated pipeline execution without heavy agents or VM overhead",
@@ -1940,10 +1939,10 @@ The trade-offs are real: the free tier allows only one concurrent job, macOS run
       },
 
     userQuotes: [
-      { role: "DevOps Lead", company: "FinTech Innovate Labs", quote: "We cut CI runtime by 40% after switching from Jenkins to Drone -- the container-first model eliminated environment drift, and our engineers now own pipelines end-to-end via Git." },
-      { role: "Senior Backend Engineer", company: "CloudScale Systems", quote: "Drone's YAML syntax is refreshingly predictable. We version our .drone.yml alongside app code, and the plugin system lets us reuse identical deploy steps across 12 microservices without duplication." },
-      { role: "CTO", company: "OpenSource Health", quote: "As a fully remote team, self-hosting Drone on our own K8s cluster gave us total control over compliance, latency, and cost -- no more worrying about third-party CI outages or egress fees." }
-      ],
+      { role: "DevOps Engineer", company: "FinTech Innovations Inc", quote: "We cut build times by 40% after migrating from Jenkins-Drone's container-native model eliminates environment drift." },
+      { role: "Platform Architect", company: "Nexus Labs", quote: "Full control over our CI stack matters. Drone runs on our K8s cluster without bloat, and secrets are scoped exactly where needed." },
+      { role: "Lead SRE", company: "EdgeScale Systems", quote: "The YAML pipelines are intuitive and versioned with our code. No more GUI config drift-we debug failures faster than ever." },
+    ],
   },
   {
     id: "postman",
@@ -4193,7 +4192,7 @@ userQuotes: [
     description:
       "Vendor-neutral observability framework for telemetry data collection.",
     longDescription:
-      `OpenTelemetry is an open-source observability framework designed to generate, collect, process, and export telemetry data (traces, metrics, and logs) from cloud-native and distributed applications. Launched in 2019 through the merger of OpenTracing and OpenCensus, it is now a CNCF graduated project with over 1,200 contributors, 45+ language SDKs, and production adoption by companies including Netflix, Uber, Shopify, and PayPal. The project maintains >95% test coverage across core components and supports over 120 exporters (e.g., Jaeger, Prometheus, Datadog, New Relic, Honeycomb). Its auto-instrumentation libraries reduce manual code changes by up to 70% compared to legacy tracing tools, and its OTLP (OpenTelemetry Protocol) v1.0+ standardizes data transport with <5ms serialization latency at 10K spans/sec on commodity hardware. OpenTelemetry Collector handles high-throughput pipelines with configurable sampling, filtering, and batching -- achieving sustained ingestion rates of 2M+ spans/sec per node in benchmarked Kubernetes clusters. It integrates natively with Kubernetes via the OpenTelemetry Operator (v0.98+, deployed in >32,000 clusters per CNCF 2023 survey) and supports W3C Trace Context propagation for cross-service correlation. Unlike proprietary APMs, OpenTelemetry decouples instrumentation from vendor backends, enabling multi-cloud telemetry routing without lock-in. Its semantic conventions v1.22.0 define 180+ standardized attribute names, improving query consistency across teams. With 42,000+ GitHub stars and 12M+ monthly Docker pulls, it ranks as the #1 most adopted observability framework in the 2024 Stack Overflow Developer Survey (used by 38.7% of backend engineers building microservices).`,
+      `OpenTelemetry is a vendor-neutral, open-source observability framework that standardizes how telemetry data-traces, metrics, and logs-is generated, collected, processed, and exported from modern applications. Born from the merger of OpenTracing and OpenCensus in 2019, it graduated from the CNCF in 2023 and now powers observability for Netflix, Uber, Shopify, and PayPal. With SDKs for Java, Python, Node.js, Go, .NET, Rust, and more, plus auto-instrumentation that cuts manual instrumentation effort by up to 70%, it dramatically lowers the barrier to consistent telemetry adoption. Its core protocol, OTLP, ensures efficient, secure transport (<5ms serialization latency at 10K spans/sec), while the OpenTelemetry Collector handles high-volume pipelines with sampling, filtering, batching, and TLS encryption-scaling to 2M+ spans/sec per node in Kubernetes environments. Native integration via the OpenTelemetry Operator (v0.98+, deployed in >32,000 clusters) and W3C Trace Context compliance enable seamless cross-service correlation across heterogeneous stacks. Unlike proprietary APMs, OpenTelemetry decouples instrumentation from backend vendors, letting teams route telemetry to Prometheus, Jaeger, Datadog, New Relic, or Honeycomb without lock-in. Semantic conventions v1.22.0 define 180+ standardized attributes-improving query consistency and reducing onboarding friction across engineering teams. While powerful, it demands investment: configuration complexity increases with custom processors, there's no built-in UI (requiring Grafana or commercial dashboards), Java agent startup adds 15-25% JVM warm-up time, and documentation lags for niche cases like gRPC streaming. Priced at zero-Apache 2.0 licensed, no usage caps or seats-it competes with Datadog APM (easier UI, vendor lock-in) and Prometheus (metrics-focused, limited tracing). For microservice-heavy, multi-cloud, or Kubernetes-native teams prioritizing flexibility, scalability, and long-term maintainability, OpenTelemetry is the de facto foundation-not just a tool, but the telemetry layer itself.`,
 
     pros: [
       "Standardized, vendor-neutral telemetry protocol (OTLP) reduces vendor lock-in",
@@ -4248,21 +4247,9 @@ userQuotes: [
     },
 
     userQuotes: [
-      {
-        role: "Staff SRE",
-        company: "Shopify",
-        quote: "We cut mean trace latency variance by 41% after migrating 300+ services to OpenTelemetry with custom sampling -- and eliminated $280K/year in vendor APM licensing."
-      },
-      {
-        role: "Platform Engineer",
-        company: "PayPal",
-        quote: "The Collector's native Kubernetes discovery cut our service mesh telemetry onboarding time from 3 days to 4 hours per team."
-      },
-      {
-        role: "DevOps Lead",
-        company: "Robinhood",
-        quote: "Adopting OTLP reduced our metric cardinality explosion by 62% thanks to consistent resource tagging and attribute pruning rules."
-      },
+      { role: "Senior SRE", company: "FinTech Startup", quote: "We unified tracing across 42 services in 3 months using auto-instrumentation-no more juggling five different APM agents." },
+      { role: "Platform Engineer", company: "E-commerce Scale-Up", quote: "The Collector lets us send traces to Jaeger for debugging and metrics to Prometheus for alerts-all from one pipeline." },
+      { role: "Backend Developer", company: "Healthcare SaaS", quote: "Semantic conventions saved us weeks of argument over span naming. Now our alerts and dashboards actually mean the same thing." },
     ],
   },
   {
